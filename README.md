@@ -18,5 +18,4 @@ Changes should be made on a feature branch and proposed through pull requests fo
 
 ## Access
 
-Owner: khoinguyenvn48. 
-KVI to be invited as a GitHub collaborator with write access.
+Owner: khoinguyenvn48.KVI to be invited as a GitHub collaborator with write access.
