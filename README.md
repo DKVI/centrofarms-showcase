@@ -4,7 +4,12 @@ This private repository is the collaborative development copy of the Centrofarms
 
 - Live production demo: https://centrofarms-showcase-demo.vercel.app/
 - Main source file: [index.html](./index.html)
+- Vietnamese page: [vi/index.vi.html](./vi/index.vi.html)
 - Development: open `index.html` in a browser or static HTTP server.
+
+## Showcase pages
+
+The English and Vietnamese showcases share hash routes for Home, Specialty Coffee, Poultry, Agrisolution, and Contact. The Agrisolution page presents EnviroPro 3-2-1 product facts and application rates from the supplied product data sheet; certification and performance claims are intentionally limited to the wording supported by that source.
 
 ## Image assets
 
@@ -18,5 +23,4 @@ Changes should be made on a feature branch and proposed through pull requests fo
 
 ## Access
 
-Owner: khoinguyenvn48. 
-KVI to be invited as a GitHub collaborator with write access.
+Owner: khoinguyenvn48.KVI to be invited as a GitHub collaborator with write access.
