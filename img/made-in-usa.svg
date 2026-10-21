@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 120" role="img">
+  <path fill="#b22234" d="M28 13h124v12H28zm0 24h124v12H28zm0 24h124v12H28zm0 24h124v12H28z"/>
+  <path fill="#fff" d="M28 25h124v12H28zm0 24h124v12H28zm0 24h124v12H28z"/>
+  <path fill="#3c3b6e" d="M28 13h57v36H28z"/>
+  <g fill="#fff">
+    <circle cx="37" cy="21" r="2"/><circle cx="50" cy="21" r="2"/><circle cx="63" cy="21" r="2"/><circle cx="76" cy="21" r="2"/>
+    <circle cx="43" cy="31" r="2"/><circle cx="56" cy="31" r="2"/><circle cx="69" cy="31" r="2"/>
+    <circle cx="37" cy="41" r="2"/><circle cx="50" cy="41" r="2"/><circle cx="63" cy="41" r="2"/><circle cx="76" cy="41" r="2"/>
+  </g>
+  <text x="90" y="111" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#333">MADE IN U.S.A.</text>
+</svg>
