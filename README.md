@@ -23,4 +23,4 @@ Changes should be made on a feature branch and proposed through pull requests fo
 
 ## Access
 
-Owner: KVI (development environment only, not production)
+Owner: KVI (production)
