@@ -1,6 +1,6 @@
-# Centrofarms™ Showcase
+# CentroFarms™ Showcase
 
-This private repository is the collaborative development copy of the Centrofarms website.
+This private repository is the collaborative development copy of the CentroFarms website.
 
 - Live production demo: https://centrofarms-showcase-demo.vercel.app/
 - Main source file: [index.html](./index.html)
