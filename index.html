@@ -292,9 +292,9 @@ main{min-height:calc(100vh - 205px)}.page{display:none;animation:rise .35s ease}
     <button class="drop-toggle" id="naturalToggle" aria-label="Mở menu Naturals" aria-expanded="false" aria-controls="naturalDrop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button>
     <div class="dropmenu" id="naturalDrop"><a href="https://centrofarms.com/en/" target="_blank" rel="noopener noreferrer"><span class="salt-dot">✦</span><span>Salt / Himalayan Pink Salt</span><span style="margin-left:auto">↗</span></a></div>
   </div>
-  <div class="nav-entry"><a class="nav-link internal" id="navCoffee" href="#/coffee">CentroFarms™ Specialty Coffee</a></div>
-  <div class="nav-entry"><a class="nav-link internal" id="navPoultry" href="#/poultry">CentroFarms™ Poultry</a></div>
-  <div class="nav-entry"><a class="nav-link internal" id="navAgrisolutions" href="#/agrisolution">CentroFarms™ Agrisolutions</a></div>
+  <div class="nav-entry"><a class="nav-link internal" id="navCoffee" href="#/coffee">CentroFarms™ Coffee &amp; Herb Estates</a></div>
+  <div class="nav-entry"><a class="nav-link internal" id="navAgrisolutions" href="#/agrisolution">CentroFarms™ AgriSolutions</a></div>
+  <div class="nav-entry"><a class="nav-link internal" id="navPoultry" href="#/poultry">CentroFarms™ Poultry Farms</a></div>
   <div class="nav-entry nav-contact-mobile" style="display:none"><a class="nav-link" href="https://centrofarms.com/lien-he/" target="_blank" rel="noopener noreferrer">Contact ↗</a></div>
  </nav>
  <div class="head-cta"><div class="language-switch" id="languageSwitch"><button type="button" class="language-toggle" id="languageToggle" aria-label="Choose language" aria-haspopup="true" aria-expanded="false" aria-controls="languageMenu">EN <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="m6 9 6 6 6-6"/></svg></button><div class="language-menu" id="languageMenu" role="group" aria-label="Choose language"><span class="language-option active" aria-current="page">English <span>EN</span></span><a class="language-option" href="./vi/index.vi.html" lang="vi">Tiếng Việt <span>VI</span></a></div></div><a class="contact-link" href="https://centrofarms.com/lien-he/" target="_blank" rel="noopener noreferrer">Contact <span style="margin-left:8px">↗</span></a><button class="mobile-toggle" id="mobileToggle" aria-label="Mở menu" aria-expanded="false"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
@@ -480,8 +480,8 @@ document.documentElement.lang='en';
 const tagline=q('.topline'); if(tagline)tagline.textContent='CENTROFARMS™  /  NATURALS · SPECIALTY COFFEE · POULTRY · AGRISOLUTIONS';
 const natural=q('#naturalGroup > a');if(natural){natural.href='https://centrofarms.com/en/';natural.innerHTML='CentroFarms™ Naturals <span class="external-icon">↗</span>';}
 const salt=q('#naturalDrop a');if(salt)salt.href='https://centrofarms.com/en/';
-const coffeeLink=q('#navCoffee');if(coffeeLink)coffeeLink.textContent='CentroFarms™ Specialty Coffee';
-const poultryLink=q('#navPoultry');if(poultryLink)poultryLink.textContent='CentroFarms™ Poultry';
+const coffeeLink=q('#navCoffee');if(coffeeLink)coffeeLink.textContent='CentroFarms™ Coffee & Herb Estates';
+const poultryLink=q('#navPoultry');if(poultryLink)poultryLink.textContent='CentroFarms™ Poultry Farms';
 all('.nav-contact-mobile a,.contact-link').forEach(a=>{a.href='#/contact';a.target='_self';a.removeAttribute('rel');a.innerHTML='Contact <span aria-hidden="true">↗</span>';});
 q('.head-cta .contact-link')?.setAttribute('id','navContact');
 
