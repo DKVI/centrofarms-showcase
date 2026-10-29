@@ -13,9 +13,7 @@ The English and Vietnamese showcases share hash routes for Home, Specialty Coffe
 
 ## Image assets
 
-**Current limitation:** The repository's HTML file references the production demo's `/assets/*.webp` images by absolute URLs. The original asset bundle has **not yet been committed** here. Do not delete/change the Vercel production project until the assets have been migrated to this repository.
-
-To make the repository fully standalone, upload the assets directory from the local `centrofarms_github_ready.zip` source bundle and change absolute production asset URLs back to relative `/assets/` URLs (or `assets/` for local preview).
+All image assets used by the English and Vietnamese pages are stored locally in `img/`. The HTML references these files with relative paths, so the images are available when previewing the site locally.
 
 ## Workflow
 
