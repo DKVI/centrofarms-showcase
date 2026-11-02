@@ -5577,24 +5577,36 @@
         pointer-events: none;
       }
       #page-poultry .cf-gallery-aside {
+        display: flex;
+        flex-direction: column;
         padding: 13px;
         background: #eaf0e7;
         border-radius: 16px;
       }
       #page-poultry .cf-gallery-aside img {
+        display: block;
+        width: 100%;
         height: 310px;
+        flex: 0 0 310px;
+        object-fit: cover;
         border-radius: 10px;
       }
-      #page-poultry .cf-gallery-aside span {
+      #page-poultry .cf-gallery-aside-copy {
+        padding: 22px 14px 18px;
+      }
+      #page-poultry .cf-gallery-aside-copy span {
         display: block;
-        font-size: 10px;
+        color: #42684f;
+        font-size: 11px;
         font-weight: 800;
         letter-spacing: 1.4px;
-        padding: 24px 13px 0;
+        line-height: 1.5;
       }
-      #page-poultry .cf-gallery-aside p {
-        padding: 0 13px;
-        font-size: 12px;
+      #page-poultry .cf-gallery-aside-copy p {
+        margin: 9px 0 0;
+        color: #53665b;
+        font-size: 14px;
+        line-height: 1.7;
       }
       #page-poultry .cf-jv {
         padding: 100px 0;
@@ -5749,6 +5761,7 @@
         }
         #page-poultry .cf-gallery-aside img {
           height: 230px;
+          flex-basis: 230px;
         }
         #page-poultry .cf-jv-image {
           height: 430px;
@@ -6320,11 +6333,14 @@
                 src="img/d46a9652d75168b89c4eca930c20a11de7a07dba.webp"
                 loading="lazy"
                 alt="Site plan and aerial property overview"
-              /><span>AGRICULTURAL LAND &amp; FACILITIES</span>
-              <p>
-                Actual assets, site conditions and available infrastructure vary
-                from project to project.
-              </p>
+              />
+              <div class="cf-gallery-aside-copy">
+                <span>AGRICULTURAL LAND &amp; FACILITIES</span>
+                <p>
+                  Actual assets, site conditions and available infrastructure
+                  vary from project to project.
+                </p>
+              </div>
             </div>
           </div>
         </section>
