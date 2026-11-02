@@ -13,6 +13,14 @@
       type="image/webp"
       href="img/a9431ba808bd0123e16594bc6e1e6c3dc072743b.webp"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"
+    ></script>
     <title>CentroFarms™ — Three divisions. One vision.</title>
     <style>
       #page-agrisolution .agri-analysis-feature {
@@ -2438,8 +2446,11 @@
       .editorial-modal {
         border: 0;
         padding: 0;
+        box-sizing: border-box;
+        width: min(680px, calc(100vw - 34px));
         max-width: min(680px, calc(100vw - 34px));
         max-height: min(88vh, 850px);
+        overflow: hidden;
         background: #fffefa;
         border-radius: 23px;
         box-shadow: 0 25px 100px #091d17a8;
@@ -2450,6 +2461,8 @@
         backdrop-filter: blur(5px);
       }
       .modal-content {
+        box-sizing: border-box;
+        width: 100%;
         padding: 39px 43px 35px;
         overflow-y: auto;
         max-height: 88vh;
@@ -2488,6 +2501,28 @@
         font-size: 13px;
         line-height: 1.9;
         margin: 0 0 12px;
+      }
+      .editorial-modal .cf-model-detail-image {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 190px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin: 0 0 22px;
+      }
+      .editorial-modal .cf-model-detail-copy h4 {
+        font-family: inherit;
+        color: #315541;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 25px 0 10px;
+      }
+      .editorial-modal .cf-model-detail-copy p {
+        color: #5c7362;
+        font-size: 14px;
+        line-height: 1.85;
+        margin: 0 0 14px;
       }
       .modal-close {
         width: 37px;
@@ -5020,7 +5055,7 @@
       }
     </style>
     <style>
-      /* CentroFarms Poultry & Farmland: embedded sub-page redesign */
+      /* CentroFarms™ Poultry & Farmland: embedded sub-page redesign */
       #page-poultry {
         --cf-dark: #17352c;
         --cf-muted: #52645b;
@@ -5441,6 +5476,21 @@
         padding: 110px 0;
         background: #eaf0e7;
       }
+      #page-poultry .cf-expansion-intro {
+        padding: 0 36px 36px;
+      }
+      #page-poultry .cf-expansion-intro h2 {
+        margin-top: 12px;
+      }
+      #page-poultry .cf-expansion-intro p {
+        max-width: 760px;
+        margin-bottom: 0;
+      }
+      @media (max-width: 760px) {
+        #page-poultry .cf-expansion-intro {
+          padding: 0 16px 28px;
+        }
+      }
       #page-poultry .cf-expansion-grid {
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -5492,8 +5542,23 @@
         position: relative;
         background: #dce6d3;
       }
-      #page-poultry .cf-gallery-main > img {
+      #page-poultry .cf-farm-swiper {
+        position: absolute;
+        inset: 0;
+        width: 100%;
         height: 100%;
+        border-radius: inherit;
+      }
+      #page-poultry .cf-farm-swiper .swiper-slide {
+        overflow: hidden;
+      }
+      #page-poultry .cf-farm-swiper .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
+        user-select: none;
       }
       #page-poultry .cf-gallery-controls {
         position: absolute;
@@ -5508,19 +5573,8 @@
         font-weight: 800;
         letter-spacing: 1.5px;
         text-shadow: 0 1px 5px #15271b;
-      }
-      #page-poultry .cf-gallery-controls > div {
-        display: flex;
-        gap: 7px;
-      }
-      #page-poultry .cf-gallery-controls button {
-        border: 0;
-        background: #fff;
-        color: #18382b;
-        border-radius: 9px;
-        width: 42px;
-        height: 42px;
-        font-size: 20px;
+        z-index: 5;
+        pointer-events: none;
       }
       #page-poultry .cf-gallery-aside {
         padding: 13px;
@@ -5738,8 +5792,49 @@
         }
       }
     </style>
-  <!-- Photography: Images in img/ are supplied project materials. Gallery imagery is illustrative and should be verified before representing any specific asset. -->
-  </head>
+    <!-- Photography: Images in img/ are supplied project materials. Gallery imagery is illustrative and should be verified before representing any specific asset. -->
+  <style>
+/* Updated Poultry content from the supplied document; scoped to this page. */
+#page-poultry .cf-hi h3{font-size:27px;line-height:1.2;margin:22px 0 14px;letter-spacing:-.6px}
+#page-poultry .cf-hi-feature p{color:#dbe6d6}
+#page-poultry .cf-hi-feature{isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:530px;padding:32px;background:#17352c}
+#page-poultry .cf-hi-feature>img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}
+#page-poultry .cf-hi-feature::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(18,44,33,.08) 5%,rgba(18,44,33,.18) 42%,rgba(18,44,33,.92) 100%)}
+#page-poultry .cf-hi-feature>.cf-hi-no,
+#page-poultry .cf-hi-feature>h3,
+#page-poultry .cf-hi-feature>p{position:relative;z-index:2}
+#page-poultry .cf-hi-feature>.cf-hi-no{align-self:flex-start;padding:8px 11px;border:1px solid rgba(255,255,255,.4);border-radius:999px;background:rgba(23,53,44,.42);color:#fff}
+#page-poultry .cf-hi-feature h3{margin:24px 0 12px;color:#fff;font-size:clamp(42px,4.3vw,60px);line-height:1.02;letter-spacing:-2px}
+#page-poultry .cf-hi-feature h3 span{display:block;margin-top:5px;color:#d4e5ac;font-size:.58em;letter-spacing:-.5px}
+#page-poultry .cf-hi-feature p{max-width:320px;color:#f2f4ec;font-size:15px;line-height:1.7}
+#page-poultry .cf-hi-feature:hover>img{transform:scale(1.025);transition:transform .5s ease}
+#page-poultry .cf-doc-model-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:start}
+#page-poultry .cf-doc-model-card{background:#234536;border:1px solid #355d48;border-radius:18px;padding:32px}
+#page-poultry .cf-doc-model-card>.cf-eyebrow{color:#c7dc84}
+#page-poultry .cf-doc-model-card h3{color:#fff;font-size:31px;line-height:1.15;margin:20px 0 30px;letter-spacing:-.6px}
+#page-poultry .cf-doc-model-card h4{font-family:inherit;color:#e3edcf;font-size:14px;line-height:1.5;margin:25px 0 10px}
+#page-poultry .cf-doc-model-card p{color:#c8d6cd;font-size:14px;line-height:1.85}
+#page-poultry .cf-doc-model-card.cf-model-card-interactive{display:flex;flex-direction:column;align-items:flex-start}
+#page-poultry .cf-model-card-interactive h4,
+#page-poultry .cf-model-card-interactive p{display:none}
+#page-poultry .cf-model-card-interactive h3{margin-bottom:20px}
+#page-poultry .cf-model-learn-more{margin-top:auto;padding:0 0 3px;border:0;border-bottom:1px solid #c7dc84;background:none;color:#e3edcf;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+#page-poultry .cf-model-learn-more:hover{color:#c7dc84}
+#page-poultry .cf-model-learn-more:focus-visible{outline:2px solid #c7dc84;outline-offset:5px}
+#page-poultry .cf-expansion-grid article{padding:28px;background:#fff;border:1px solid #dce3d6;border-radius:17px}
+#page-poultry .cf-expansion-grid article>.cf-eyebrow{font-size:9px}
+@media(max-width:1100px){#page-poultry .cf-doc-model-grid{grid-template-columns:1fr}#page-poultry .cf-doc-model-card{padding:32px}}
+@media(max-width:760px){#page-poultry .cf-doc-model-card{padding:24px}}
+@media(max-width:510px){#page-poultry .cf-hi-feature{min-height:420px;padding:26px}}
+</style>
+<style>
+#page-poultry .cf-model-photo{width:calc(100% + 64px);max-width:none;height:215px;object-fit:cover;margin:-32px -32px 28px;border-radius:18px 18px 0 0}
+#page-poultry .cf-doc-model-card{overflow:hidden}
+#page-poultry .cf-expansion-photo{width:calc(100% + 56px);max-width:none;height:200px;object-fit:cover;margin:-28px -28px 25px}
+#page-poultry .cf-expansion-grid article{overflow:hidden}
+#page-poultry .cf-thesis-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){#page-poultry .cf-model-photo{width:calc(100% + 48px);margin:-24px -24px 24px;height:210px}}
+</style></head>
   <body>
     <div class="topline">
       CENTROFARMS™ &nbsp; / &nbsp; AGRISOLUTIONS · SPECIALTY COFFEE · NATURALS ·
@@ -6126,12 +6221,12 @@
         <div class="shell cf-hero">
           <div class="cf-hero-copy">
             <span class="cf-eyebrow"><i></i> CENTROFARMS™ POULTRY</span>
-            <h1>Rooted in land.<br /><em>Built for generations.</em></h1>
+            <h1>American farmland.<br /><em>Long-term ownership.</em></h1>
             <p class="cf-hero-lead">
               Building long-term wealth through American farmland.
             </p>
             <p>
-              CentroFarms brings private investors and farming families together
+              CentroFarms™ brings private investors and farming families together
               to acquire, modernize and grow income-producing poultry operations
               in the United States.
             </p>
@@ -6162,305 +6257,7 @@
             >
           </div>
         </div>
-        <section class="cf-thesis" id="cf-thesis">
-          <div class="shell cf-thesis-layout">
-            <div class="cf-thesis-img">
-              <img
-                src="img/143q4m143q4m143q.png"
-                loading="lazy"
-                alt="Open farmland and wooded agricultural property"
-              />
-              <div class="cf-img-tag">
-                A FOUNDATION YOU CAN BUILD ON <span>↗</span>
-              </div>
-            </div>
-            <div class="cf-thesis-copy">
-              <span class="cf-eyebrow">01 / The Investment Case</span>
-              <h2>More than a farm.<br /><em>A lasting asset.</em></h2>
-              <p class="cf-large">
-                CentroFarms gives investors an opportunity to build long-term
-                wealth through ownership of income-producing agricultural real
-                estate in the United States.
-              </p>
-              <p>
-                Through our <strong>Build Together</strong> investment model, we
-                partner with private investors and farming families to acquire,
-                modernize, and expand commercial poultry operations. Combining
-                poultry production agreements with property ownership and
-                disciplined management, our aim is to generate operating income,
-                pay down debt, and build equity over time.
-              </p>
-              <p>
-                Our approach also provides a foundation for future agricultural
-                expansion and for families seeking an active business presence
-                in the United States.
-              </p>
-              <a class="cf-inline-link" href="#cf-model"
-                >Discover how the model works <span>↗</span></a
-              >
-            </div>
-          </div>
-        </section>
-        <section class="shell cf-highlights" id="cf-highlights">
-          <div class="cf-section-head">
-            <div>
-              <span class="cf-eyebrow">THE OPPORTUNITY AT A GLANCE</span>
-              <h2>Grounded in what<br /><em>matters most.</em></h2>
-            </div>
-          </div>
-          <div class="cf-highlight-grid">
-            <article class="cf-hi cf-hi-feature">
-              <span class="cf-hi-no">01 / LAND</span
-              ><strong class="cf-big-number">30–50<span>+ acres</span></strong>
-              <h3>Room to build and grow</h3>
-              <p>
-                Typical target land area for a commercial farm site, depending
-                on the project.
-              </p>
-              <img
-                src="img/1f8a5e452a08a67cbd0ee2e6ea9a5fcfc65c7eb6.webp"
-                alt="Wide agricultural landscape"
-                loading="lazy"
-              />
-            </article>
-            <article class="cf-hi">
-              <span class="cf-hi-no">02 / PRODUCTION</span>
-              <div class="cf-hi-icon">↗</div>
-              <h3>Reduced major input cost exposure</h3>
-              <p>
-                Under the proposed contract structure, the production partner
-                supplies birds, feed and veterinary services.
-              </p>
-            </article>
-            <article class="cf-hi">
-              <span class="cf-hi-no">03 / MARKET</span>
-              <div class="cf-hi-icon">✳</div>
-              <h3>Essential food production</h3>
-              <p>
-                Poultry serves continuing protein demand, with financial
-                outcomes dependent on contracts, costs and performance.
-              </p>
-            </article>
-            <article class="cf-hi">
-              <span class="cf-hi-no">04 / PARTICIPATION</span>
-              <div class="cf-hi-icon">◎</div>
-              <h3>Potential investor pathways</h3>
-              <p>
-                Some structures may support E-2 or EB-5 consideration, subject
-                to legal and immigration requirements.
-              </p>
-            </article>
-            <article class="cf-hi">
-              <span class="cf-hi-no">05 / GROWTH</span>
-              <div class="cf-hi-icon">＋</div>
-              <h3>Complementary opportunities</h3>
-              <p>
-                Selected sites may accommodate coffee logistics, fertilizer
-                distribution, pasture or orchards.
-              </p>
-            </article>
-          </div>
-        </section>
-        <section class="cf-process" id="cf-model">
-          <div class="shell">
-            <div class="cf-section-head cf-section-head-light">
-              <div>
-                <span class="cf-eyebrow">02 / HOW THE MODEL WORKS</span>
-                <h2>
-                  A practical model.<br /><em>Built for the long term.</em>
-                </h2>
-              </div>
-            </div>
-            <div class="cf-process-grid">
-              <article class="cf-process-item">
-                <img
-                  src="img/143q4m143q4m143q.png"
-                  alt="Inside a commercial poultry facility"
-                  loading="lazy"
-                />
-                <div class="cf-process-text">
-                  <span>01 <i></i> POULTRY OPERATIONS</span>
-                  <h3>Operating income through production</h3>
-                  <p>
-                    Contract production is designed to limit exposure to major
-                    poultry inputs. The proposed production partner covers feed,
-                    chicks and veterinary care, while the farm manages
-                    facilities, labor, utilities and operational performance.
-                  </p>
-                  <ul>
-                    <li>Recurring poultry production cycles</li>
-                    <li>Revenue potential under suitable contracts</li>
-                    <li>Performance and costs remain important</li>
-                  </ul>
-                </div>
-              </article>
-              <article class="cf-process-item">
-                <img
-                  src="img/8dbea2828663069bb3a58c96ff160e31ad499eb2.webp"
-                  alt="Poultry houses and farm infrastructure"
-                  loading="lazy"
-                />
-                <div class="cf-process-text">
-                  <span>02 <i></i> ASSET OWNERSHIP</span>
-                  <h3>Building equity in land and facilities</h3>
-                  <p>
-                    The model focuses on agricultural land, poultry houses and
-                    equipment. Operating income is intended to meet expenses and
-                    service debt, potentially increasing equity as loan balances
-                    decline.
-                  </p>
-                  <ul>
-                    <li>Tangible land and infrastructure</li>
-                    <li>Disciplined financing and debt reduction</li>
-                    <li>
-                      USDA, SBA or other financing evaluated where appropriate
-                    </li>
-                  </ul>
-                </div>
-              </article>
-              <article class="cf-process-item">
-                <img
-                  src="img/3cf69cde3fd3c0a2b161a00acf6e61eb3d30a887.webp"
-                  alt="Electronic controllers used in poultry farm operations"
-                  loading="lazy"
-                />
-                <div class="cf-process-text">
-                  <span>03 <i></i> INVESTOR PARTICIPATION</span>
-                  <h3>International opportunities, thoughtfully structured</h3>
-                  <p>
-                    Active agricultural operations may be relevant to
-                    international investors considering U.S. business
-                    opportunities. Potential E-2 and EB-5 pathways depend on
-                    nationality, structure, capital, jobs and legal
-                    requirements.
-                  </p>
-                  <ul>
-                    <li>Active operating-business approach</li>
-                    <li>Project-specific immigration assessment</li>
-                    <li>Clear reporting and partner responsibilities</li>
-                  </ul>
-                </div>
-              </article>
-              <article class="cf-process-item">
-                <img
-                  src="img/1f8a5e452a08a67cbd0ee2e6ea9a5fcfc65c7eb6.webp"
-                  alt="Agricultural land with space for multiple potential uses"
-                  loading="lazy"
-                />
-                <div class="cf-process-text">
-                  <span>04 <i></i> FUTURE POTENTIAL</span>
-                  <h3>Possibilities beyond the core operation</h3>
-                  <p>
-                    Where property conditions and approvals allow, additional
-                    agricultural businesses may be evaluated alongside poultry.
-                    Each opportunity requires its own commercial and operational
-                    review.
-                  </p>
-                  <ul>
-                    <li>Development driven by site suitability</li>
-                    <li>Phased evaluation of new activities</li>
-                    <li>Core poultry model remains the foundation</li>
-                  </ul>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section class="shell cf-equity">
-          <div class="cf-equity-copy">
-            <span class="cf-eyebrow">THE LONG-TERM VIEW</span>
-            <h2>Income today.<br /><em>Equity over time.</em></h2>
-            <p>
-              Our objective is to establish a productive agricultural business,
-              operate it responsibly, service financing and gradually build
-              ownership value.
-            </p>
-            <p>
-              Equity growth depends on operating performance, financing terms
-              and property values. Appreciation and tax benefits are not
-              guaranteed.
-            </p>
-          </div>
-          <div class="cf-equity-steps">
-            <div>
-              <span>01</span><b>Acquire</b
-              ><small>Land and production infrastructure</small>
-            </div>
-            <div>
-              <span>02</span><b>Operate</b
-              ><small>Commercial poultry production</small>
-            </div>
-            <div>
-              <span>03</span><b>Manage</b
-              ><small>Expenses, financing and risk</small>
-            </div>
-            <div>
-              <span>04</span><b>Build</b
-              ><small>Long-term equity and optionality</small>
-            </div>
-          </div>
-        </section>
-        <section class="cf-expansion" id="cf-expansion">
-          <div class="shell">
-            <div class="cf-section-head">
-              <div>
-                <span class="cf-eyebrow">03 / BEYOND POULTRY</span>
-                <h2>One property.<br /><em>More possibilities.</em></h2>
-              </div>
-            </div>
-            <div class="cf-expansion-grid">
-              <article>
-                <img
-                  src="img/8dbea2828663069bb3a58c96ff160e31ad499eb2.webp"
-                  loading="lazy"
-                  alt="Modern poultry farm buildings"
-                /><span>01 / CORE BUSINESS</span>
-                <h3>Commercial Poultry</h3>
-                <p>
-                  Four to eight automated, biosecure houses where approved site
-                  capacity and production requirements permit.
-                </p>
-              </article>
-              <article>
-                <img
-                  src="img/a95942ebf10538326d85bfec5e58840d5a44ed59.webp"
-                  loading="lazy"
-                  alt="Coffee warehouse and storage area"
-                /><span>02 / LOGISTICS</span>
-                <h3>Specialty Coffee</h3>
-                <p>
-                  Potential climate-controlled storage and staging for
-                  Vietnamese and other origin-specific green coffee beans.
-                </p>
-              </article>
-              <article>
-                <img
-                  src="img/agrisolution-frass-granules-sharp.jpg"
-                  loading="lazy"
-                  alt="Farm machinery representing agricultural distribution"
-                /><span>03 / DISTRIBUTION</span>
-                <h3>Organic Fertilizer</h3>
-                <p>
-                  Potential storage and distribution of EnviroPro 3-2-1 and
-                  black soldier fly larvae frass-based products.
-                </p>
-              </article>
-              <article>
-                <img
-                  src="img/7d5f33f03e9d1aa10fc0eded5c6a8893eced2770.webp"
-                  loading="lazy"
-                  alt="Agricultural land with established tree cover"
-                /><span>04 / LAND USE</span>
-                <h3>Other Agriculture</h3>
-                <p>
-                  Cattle pasture, pecan or fruit orchards and equipment storage,
-                  where appropriate for the property.
-                </p>
-              </article>
-            </div>
-          </div>
-        </section>
-        <section class="shell cf-farm-gallery">
+<section class="cf-thesis" id="cf-thesis"><div class="shell cf-thesis-layout"><div class="cf-thesis-img"><img src="img/1bdjq81bdjq81bdj.jpg" loading="lazy" alt="Agricultural property and farmland"><div class="cf-img-tag">THE INVESTMENT THESIS <span>↗</span></div></div><div class="cf-thesis-copy"><span class="cf-eyebrow">01 / THE INVESTMENT THESIS</span><h2>Building Long-Term Wealth<br><em>Through American Farmland</em></h2><p>CentroFarms™ gives investors an opportunity to build long-term wealth through ownership of income-producing agricultural real estate in the United States.</p><p>Through our Build Together investment model, we partner with private investors and farming families to acquire, modernize, and expand commercial poultry operations. By combining established poultry production agreements with real estate ownership and efficient farm management, we aim to generate operating income, pay down debt, and build equity over time.</p><p>Our approach is designed to create more than a poultry operation. It provides a foundation for long-term asset ownership, potential expansion into complementary agricultural businesses, and opportunities for families looking to establish an active business presence in the United States.</p></div></div></section><section class="shell cf-highlights" id="cf-highlights"><div class="cf-section-head"><div><span class="cf-eyebrow">02 / KEY INVESTMENT HIGHLIGHTS</span><h2>A foundation for<br><em>long-term growth.</em></h2></div></div><div class="cf-highlight-grid"><article class="cf-hi cf-hi-feature"><img src="img/3cf69cde3fd3c0a2b161a00acf6e61eb3d30a887.webp" alt="Farm buildings among mature agricultural fields" loading="lazy"><span class="cf-hi-no">01 / LAND</span><h3>30&#8211;60+<span>Acres</span></h3><p>Target land area for a typical commercial farm site, depending on the project.</p></article><article class="cf-hi"><span class="cf-hi-no">02</span><h3>Reduced Operating Cost Exposure</h3><p>Under our structured partnership model, our national agri-food partner supplies the livestock, feed, and veterinary programs - covering approximately 70% of primary live-production operating costs, reducing the farm owner&#x27;s direct exposure to these major costs.</p></article><article class="cf-hi"><span class="cf-hi-no">03</span><h3>Essential Food Production</h3><p>Poultry serves a consistent source of protein demand, although farm income remains subject to operating costs, contract terms, and production risks.</p></article><article class="cf-hi"><span class="cf-hi-no">04</span><h3>Potential Investor Visa Pathways</h3><p>Certain projects may be structured to support L-1, E-2 or EB-5 eligibility, subject to the specific business structure and applicable immigration requirements.</p></article><article class="cf-hi"><span class="cf-hi-no">05</span><h3>Opportunities for Expansion</h3><p>Farm sites may support complementary businesses such as organic fertilizer distribution, specialty coffee logistics, cattle, and orchards, where zoning and site conditions permit.</p></article></div></section><section class="cf-process cf-doc-model" id="cf-model"><div class="shell"><div class="cf-section-head cf-section-head-light"><div><span class="cf-eyebrow">03 / HOW THE MODEL WORKS</span><h2>Operate with purpose.<br><em>Build equity over time.</em></h2></div></div><div class="cf-doc-model-grid"><article class="cf-doc-model-card"><img class="cf-model-photo" src="img/1f8a5e452a08a67cbd0ee2e6ea9a5fcfc65c7eb6.webp" alt="Aerial view of commercial poultry houses" loading="lazy"><span class="cf-eyebrow">01</span><h3>Operating Income Through Poultry Production</h3><h4>A production model designed to limit major cost exposure</h4><p>Feed, chicks, and veterinary care are among the largest costs in poultry production (approximately 70%). Under our proposed contract production structure, the production partner covers 100% of these expenses, allowing the farm to focus on facility ownership, maintenance, utilities, labor, and overall operational performance.</p><h4>Recurring production cycles</h4><p>Commercial poultry houses operate through repeated production cycles. With suitable contracts and consistent performance, these cycles can support recurring operating revenue and help the business meet its financing obligations.</p><h4>Demand for an essential product</h4><p>Poultry is a staple protein in the American food market. While demand provides a strong foundation for the industry, profitability still depends on production agreements, operating efficiency, financing costs, and other market conditions.</p></article><article class="cf-doc-model-card"><img class="cf-model-photo" src="img/1bdjq81bdjq81bdj.jpg" alt="Agricultural land and supporting buildings" loading="lazy"><span class="cf-eyebrow">02</span><h3>Building Equity Through Land and Infrastructure</h3><h4>Ownership of tangible assets</h4><p>Investors participate in a business built around physical assets, including agricultural land, commercial poultry houses, and production equipment. Ownership rights and collateral arrangements depend on the project&#x27;s legal structure and financing documents.</p><h4>Using operating income to pay down debt</h4><p>Our model is designed to use farm operating income to cover expenses, service debt, and gradually reduce outstanding loan balances. As debt is repaid, the business may build additional equity in its land and facilities, subject to property values and the terms of its financing.</p><p>Where appropriate, we will evaluate USDA, SBA, and other financing programs to determine which options are available for each project.</p><h4>A long-term asset for future generations</h4><p>Agricultural real estate can provide a foundation for long-term family wealth and future business expansion. Property appreciation, tax treatment, and depreciation benefits depend on market conditions, ownership structure, and applicable tax rules; none should be assumed as a guaranteed outcome.</p></article><article class="cf-doc-model-card"><img class="cf-model-photo" src="img/d46a9652d75168b89c4eca930c20a11de7a07dba.webp" alt="Aerial property overview showing farm layout" loading="lazy"><span class="cf-eyebrow">03</span><h3>Opportunities for International Investors</h3><h4>An active operating business</h4><p>CentroFarms™ develops and operates commercial agricultural businesses rather than relying solely on passive property ownership. This operating structure may be relevant to international investors exploring U.S. business and immigration opportunities.</p><h4>Evaluating L-1, E-2 and EB-5 pathways</h4><p>Depending on the investor&#x27;s nationality, investment amount, ownership structure, job creation, and other requirements, a qualifying project may offer a potential pathway under the L-1 Intracompany Transferee, E-2 Treaty Investor, or EB-5 Immigrant Investor program.</p><p>Rural EB-5 projects may qualify for specific investment thresholds and visa set-asides when they meet the applicable legal requirements. However, agricultural land or a rural location alone does not establish eligibility. Each project must be evaluated with qualified immigration counsel before any visa-related representations are made.</p><h4>A transparent, asset-backed business</h4><p>We aim to give investors a clear understanding of the business, including its real estate, operating agreements, financing, expenses, and performance. Our goal is to make the investment structure understandable from the outset, with clear reporting and defined responsibilities for each partner.</p></article></div></div></section><section class="cf-expansion" id="cf-expansion"><div class="shell"><div class="cf-expansion-intro"><span class="cf-eyebrow">COMPLEMENTARY AGRICULTURAL OPPORTUNITIES</span><h2>Expanding Beyond Poultry</h2><p>A typical CentroFarms™ site may offer opportunities to develop complementary agricultural businesses alongside its core poultry operations. Any additional use will depend on available land, infrastructure, zoning, environmental requirements, and commercial demand.</p></div><div class="cf-expansion-grid"><article><img class="cf-expansion-photo" src="img/9feff132dd9920744634f96324a36cb2284289e3.webp" loading="lazy" alt="Commercial poultry houses viewed from above"><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span><h3>Commercial Poultry</h3><p>Four to eight automated, biosecure broiler poultry houses or two  to four breeder houses, depending on the site&#x27;s design, production requirements, and approved capacity.</p></article><article><img class="cf-expansion-photo" src="img/a95942ebf10538326d85bfec5e58840d5a44ed59.webp" loading="lazy" alt="CentroFarms™ green coffee packaging"><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span><h3>Specialty Coffee Logistics</h3><p>Climate-controlled storage and staging for Vietnamese and other origin-specific arabica green coffee beans, serving specialty coffee buyers and distributors.</p></article><article><img class="cf-expansion-photo" src="img/agrisolution-frass-granules-sharp.jpg" loading="lazy" alt="Black soldier fly frass fertilizer material"><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span><h3>Organic Fertilizer Distribution</h3><p>Storage and distribution of fertilizer products, including EnviroFlight | Darling Ingredients’ EnviroPro 3-2-1 and black soldier fly larvae frass-based products, subject to applicable requirements.</p></article><article><img class="cf-expansion-photo" src="img/Ears-corn.webp" loading="lazy" alt="Corn growing in an agricultural field"><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span><h3>Additional Agricultural Uses</h3><p>Cattle pasture, pecan or fruit orchards, and equipment storage where appropriate for the property.</p></article></div></div></section>        <section class="shell cf-farm-gallery">
           <div class="cf-section-head">
             <div>
               <span class="cf-eyebrow">A LOOK AT THE LAND</span>
@@ -6468,29 +6265,54 @@
             </div>
           </div>
           <div class="cf-gallery-layout">
-            <div class="cf-gallery-main">
-              <img
-                id="cfGalleryMain"
-                src="img/9feff132dd9920744634f96324a36cb2284289e3.webp"
-                alt="View of poultry farm"
-              />
-              <div class="cf-gallery-controls">
-                <span id="cfGalleryCounter">01 / 06</span>
-                <div>
-                  <button
-                    type="button"
-                    id="cfGalleryPrev"
-                    aria-label="Previous farm photo"
-                  >
-                    ←</button
-                  ><button
-                    type="button"
-                    id="cfGalleryNext"
-                    aria-label="Next farm photo"
-                  >
-                    →
-                  </button>
+            <div
+              class="cf-gallery-main"
+              role="region"
+              aria-label="Farm photo slideshow"
+              tabindex="0"
+            >
+              <div class="swiper cf-farm-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="img/1bdjq81bdjq81bdj.jpg"
+                      alt="Aerial view of agricultural land and farm buildings"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/9feff132dd9920744634f96324a36cb2284289e3.webp"
+                      alt="Commercial poultry houses across the farm"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/3cf69cde3fd3c0a2b161a00acf6e61eb3d30a887.webp"
+                      alt="Farm buildings set among agricultural fields"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/143q4m143q4m143q.png"
+                      alt="Rural farmland and agricultural buildings"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="img/a95942ebf10538326d85bfec5e58840d5a44ed59.webp"
+                      alt="Coffee trees growing on an agricultural estate"
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
+              </div>
+              <div class="cf-gallery-controls">
+                <span id="cfGalleryCounter" aria-live="polite" aria-atomic="true"
+                  >01 / 05</span
+                >
               </div>
             </div>
             <div class="cf-gallery-aside">
@@ -6506,48 +6328,7 @@
             </div>
           </div>
         </section>
-        <section class="cf-jv" id="cf-jv">
-          <div class="shell cf-jv-layout">
-            <div class="cf-jv-copy">
-              <span class="cf-eyebrow">04 / OUR JOINT VENTURE APPROACH</span>
-              <h2>Build Together.<br /><em>Grow with purpose.</em></h2>
-              <p class="cf-large">
-                CentroFarms works alongside investors as a co-investment and
-                operating partner.
-              </p>
-              <p>
-                We help identify properties, evaluate facilities, coordinate
-                modernization and develop operating plans appropriate to the
-                project. Our approach combines hands-on farm management with
-                automated feeding and watering, computerized climate controls,
-                ventilation and biosecurity measures.
-              </p>
-              <p>
-                The shared goal is a well-managed agricultural business with
-                tangible assets, disciplined financing and room for future
-                growth.
-              </p>
-              <a class="cf-btn cf-btn-primary" href="#/contact"
-                >Discuss a partnership <span>↗</span></a
-              >
-            </div>
-            <div class="cf-jv-image">
-              <img
-                src="img/143q4m143q4m143q.png"
-                loading="lazy"
-                alt="Commercial poultry farm interior and operating facilities"
-              />
-              <div class="cf-jv-overlay">
-                <span>THE BUILD TOGETHER PRINCIPLE</span
-                ><b
-                  >Acquire wisely.<br />Operate efficiently.<br />Build lasting
-                  value.</b
-                >
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="shell cf-close">
+<section class="cf-jv" id="cf-jv"><div class="shell cf-jv-layout"><div class="cf-jv-copy"><span class="cf-eyebrow">04 / THE BUILD TOGETHER JOINT VENTURE MODEL</span><h2>Co-investment.<br><em>Shared responsibility.</em></h2><p>CentroFarms™ works alongside investors as a co-investment and operating partner. We help identify suitable properties, evaluate existing facilities, coordinate modernization, and develop operating plans designed around the needs of each project.</p><p>Our approach combines practical farm management with technology, including automated feeding and watering systems, computerized climate controls, modern ventilation, and biosecurity measures. These systems are intended to improve operational consistency, reduce avoidable inefficiencies, and support the long-term performance of the facilities.</p><p>Through our Build Together model, investors and CentroFarms™ work toward a shared goal: building a well-managed agricultural business with tangible assets, disciplined financing, and room for future growth.</p><p>The focus is straightforward: acquire the right assets, operate them efficiently, manage risk carefully, and build lasting value over time.</p><a class="cf-btn cf-btn-primary" href="#/contact">Discuss a partnership <span>↗</span></a></div><div class="cf-jv-image"><img src="img/143q4m143q4m143q.png" loading="lazy" alt="Rural farmland and agricultural buildings"><div class="cf-jv-overlay"><span>THE BUILD TOGETHER PRINCIPLE</span><b>Acquire the right assets.<br>Operate efficiently.<br>Build lasting value.</b></div></div></div></section>        <section class="shell cf-close">
           <div>
             <span class="cf-eyebrow">LET’S BUILD WHAT LASTS</span>
             <h2>The next chapter<br /><em>starts together.</em></h2>
@@ -6558,7 +6339,7 @@
             </p>
           </div>
           <a class="cf-btn cf-btn-primary" href="#/contact"
-            >Connect with CentroFarms <span>↗</span></a
+            >Connect with CentroFarms™ <span>↗</span></a
           >
         </section>
       </section>
@@ -7533,9 +7314,63 @@
         const showDialog = (dlg) => {
           if (typeof dlg.showModal === "function") dlg.showModal();
         };
-        [productDialog, letterDialog].forEach((dlg) => {
+        const modelDialog = document.createElement("dialog");
+        modelDialog.className = "editorial-modal";
+        modelDialog.id = "modelDialog";
+        modelDialog.setAttribute("aria-label", "Investment model details");
+        document.body.appendChild(modelDialog);
+        [productDialog, letterDialog, modelDialog].forEach((dlg) => {
           dlg.addEventListener("click", (e) => {
             if (e.target === dlg) closeDialog(dlg);
+          });
+        });
+        all(".cf-doc-model-card").forEach((card) => {
+          const title = card.querySelector("h3");
+          if (!title) return;
+          card.classList.add("cf-model-card-interactive");
+          const button = document.createElement("button");
+          button.className = "cf-model-learn-more";
+          button.type = "button";
+          button.textContent = "Learn more";
+          button.setAttribute("aria-label", `Learn more: ${title.textContent}`);
+          title.insertAdjacentElement("afterend", button);
+          button.addEventListener("click", () => {
+            const content = document.createElement("div");
+            content.className = "modal-content";
+            const image = card.querySelector(".cf-model-photo")?.cloneNode();
+            if (image instanceof HTMLImageElement) {
+              image.className = "cf-model-detail-image";
+            }
+            const header = document.createElement("div");
+            header.className = "modal-header";
+            const headingGroup = document.createElement("div");
+            const kicker = document.createElement("div");
+            kicker.className = "modal-kicker";
+            kicker.textContent = `HOW THE MODEL WORKS · ${card.querySelector(".cf-eyebrow")?.textContent ?? ""}`;
+            const heading = document.createElement("h2");
+            heading.textContent = title.textContent;
+            headingGroup.append(kicker, heading);
+            const closeButton = document.createElement("button");
+            closeButton.type = "button";
+            closeButton.className = "modal-close";
+            closeButton.setAttribute("aria-label", "Close details");
+            closeButton.textContent = "×";
+            header.append(headingGroup, closeButton);
+            content.appendChild(header);
+            if (image instanceof HTMLImageElement) {
+              content.appendChild(image);
+            }
+            const detailCopy = document.createElement("div");
+            detailCopy.className = "cf-model-detail-copy";
+            card.querySelectorAll("h4, p").forEach((detail) => {
+              detailCopy.appendChild(detail.cloneNode(true));
+            });
+            content.appendChild(detailCopy);
+            modelDialog.replaceChildren(content);
+            closeButton.addEventListener("click", () =>
+              closeDialog(modelDialog),
+            );
+            showDialog(modelDialog);
           });
         });
         q("#openLetter")?.addEventListener("click", () =>
@@ -7772,35 +7607,9 @@
       })();
     </script>
     <script>
-      /* Poultry photo journal: scoped to the embedded page, independent of old gallery scripts */
       (() => {
         const page = document.getElementById("page-poultry");
         if (!page) return;
-        const slides = [
-          "img/9feff132dd9920744634f96324a36cb2284289e3.webp",
-          "img/8dbea2828663069bb3a58c96ff160e31ad499eb2.webp",
-          "img/143q4m143q4m143q.png",
-          "img/a95942ebf10538326d85bfec5e58840d5a44ed59.webp",
-          "img/1f8a5e452a08a67cbd0ee2e6ea9a5fcfc65c7eb6.webp",
-          "img/3cf69cde3fd3c0a2b161a00acf6e61eb3d30a887.webp",
-        ];
-        const image = page.querySelector("#cfGalleryMain");
-        const count = page.querySelector("#cfGalleryCounter");
-        let index = 0;
-        function show(n) {
-          index = (n + slides.length) % slides.length;
-          image.src = slides[index];
-          count.textContent =
-            String(index + 1).padStart(2, "0") +
-            " / " +
-            String(slides.length).padStart(2, "0");
-        }
-        page
-          .querySelector("#cfGalleryPrev")
-          .addEventListener("click", () => show(index - 1));
-        page
-          .querySelector("#cfGalleryNext")
-          .addEventListener("click", () => show(index + 1));
         page
           .querySelectorAll(
             '.cf-btn[href^="#cf-"],.cf-btn-text[href^="#cf-"],.cf-inline-link[href^="#cf-"]',
@@ -7814,6 +7623,56 @@
               }
             }),
           );
+        document.addEventListener("DOMContentLoaded", () => {
+          const gallery = page.querySelector(".cf-farm-swiper");
+          const counter = page.querySelector("#cfGalleryCounter");
+          if (!gallery || !counter) {
+            throw new Error("The poultry photo gallery markup is incomplete.");
+          }
+          if (typeof window.Swiper !== "function") {
+            throw new Error("Swiper could not be loaded for the poultry gallery.");
+          }
+          const totalSlides = gallery.querySelectorAll(".swiper-slide").length;
+          const reduceMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+          ).matches;
+          const updateCounter = (swiper) => {
+            counter.textContent =
+              String(swiper.realIndex + 1).padStart(2, "0") +
+              " / " +
+              String(totalSlides).padStart(2, "0");
+          };
+          const swiper = new window.Swiper(gallery, {
+            loop: true,
+            speed: reduceMotion ? 1 : 900,
+            grabCursor: true,
+            autoplay: {
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+            },
+            on: {
+              init: updateCounter,
+              slideChange: updateCounter,
+            },
+          });
+          page
+            .querySelector(".cf-gallery-main")
+            .addEventListener("keydown", (event) => {
+              if (event.key === "ArrowRight") {
+                event.preventDefault();
+                swiper.slideNext();
+              } else if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                swiper.slidePrev();
+              }
+            });
+          window.addEventListener("hashchange", () => {
+            if (location.hash !== "#/poultry") return;
+            swiper.update();
+            if (swiper.autoplay.paused) swiper.autoplay.resume();
+          });
+        });
       })();
     </script>
   </body>
