@@ -6016,6 +6016,574 @@
         }
       }
     </style>
+    <style>
+      /* AgriSolutions document update. All presentation rules are local to this page. */
+      #page-agrisolution.ax-page {
+        --ax-dark: #17352c;
+        --ax-muted: #637468;
+        --ax-line: #dce3d6;
+        --ax-lime: #c7dc84;
+        color: var(--ax-dark);
+      }
+      #page-agrisolution.ax-page :is(h1, h2, h3, h4, p, figure) {
+        margin-top: 0;
+      }
+      #page-agrisolution.ax-page :is(h1, h2, h3) {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: 400;
+        letter-spacing: -1px;
+      }
+      #page-agrisolution.ax-page h1 {
+        font-size: clamp(40px, 4.2vw, 66px);
+        line-height: 1.1;
+        margin: 25px 0;
+      }
+      #page-agrisolution.ax-page h2 {
+        font-size: clamp(35px, 3.8vw, 58px);
+        line-height: 1.13;
+        margin: 15px 0 24px;
+      }
+      #page-agrisolution.ax-page h3 {
+        font-size: 26px;
+        line-height: 1.2;
+        margin: 18px 0 12px;
+        letter-spacing: -0.5px;
+      }
+      #page-agrisolution.ax-page em {
+        color: #78936d;
+        font-weight: 400;
+      }
+      #page-agrisolution.ax-page p {
+        font-size: 14px;
+        line-height: 1.85;
+        color: var(--ax-muted);
+        margin-bottom: 16px;
+      }
+      #page-agrisolution.ax-page img {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      #page-agrisolution .ax-label {
+        display: block;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 2px;
+        line-height: 1.6;
+        color: #78906d;
+        text-transform: uppercase;
+      }
+      #page-agrisolution .ax-hero {
+        display: grid;
+        grid-template-columns: 1.04fr 1fr;
+        border: 1px solid var(--ax-line);
+        border-radius: 24px;
+        overflow: hidden;
+        background: #edf1e7;
+      }
+      #page-agrisolution .ax-hero-copy {
+        padding: 68px clamp(35px, 5vw, 74px) 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      #page-agrisolution .ax-hero-copy p {
+        max-width: 540px;
+      }
+      #page-agrisolution .ax-hero-photo {
+        position: relative;
+        margin: 0;
+        min-height: 610px;
+        background: #715039;
+      }
+      #page-agrisolution .ax-hero-photo img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      #page-agrisolution .ax-hero-photo:after {
+        content: "";
+        position: absolute;
+        inset: 35% 0 0;
+        background: linear-gradient(transparent, #172f24e8);
+      }
+      #page-agrisolution .ax-hero-photo figcaption {
+        position: absolute;
+        bottom: 40px;
+        left: 38px;
+        right: 25px;
+        z-index: 1;
+        color: white;
+      }
+      #page-agrisolution .ax-hero-photo figcaption span {
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+      #page-agrisolution .ax-hero-photo figcaption strong {
+        display: block;
+        font:
+          400 40px/1.15 Georgia,
+          serif;
+        margin-top: 16px;
+      }
+      #page-agrisolution .ax-actions {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        flex-wrap: wrap;
+        margin: 13px 0 28px;
+      }
+      #page-agrisolution .ax-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        padding: 16px 21px;
+        background: #193d2e;
+        color: #fff;
+        border-radius: 11px;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.5;
+      }
+      #page-agrisolution .ax-button:hover {
+        background: #315b42;
+      }
+      #page-agrisolution .ax-text-link {
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.7;
+        border-bottom: 1px solid #a8bc90;
+        padding-bottom: 3px;
+      }
+      #page-agrisolution .ax-hero-footer {
+        margin-top: auto;
+        padding-top: 25px;
+        font-size: 9px;
+        letter-spacing: 2px;
+        color: #78906d;
+        font-weight: 800;
+      }
+      #page-agrisolution .ax-jump {
+        display: flex;
+        gap: 28px;
+        flex-wrap: wrap;
+        border-bottom: 1px solid var(--ax-line);
+        padding: 24px 0;
+        font-size: 11px;
+        font-weight: 700;
+        color: #637468;
+      }
+      #page-agrisolution .ax-jump a:hover {
+        color: #17352c;
+      }
+      #page-agrisolution
+        :is(.ax-section, .ax-field-section, .ax-equipment-section) {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        scroll-margin-top: 120px;
+      }
+      #page-agrisolution #ax-formats {
+        padding-bottom: 36px;
+      }
+      #page-agrisolution [id] {
+        scroll-margin-top: 130px;
+      }
+      #page-agrisolution .ax-product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "panel copy";
+        gap: 9%;
+        align-items: center;
+        padding-top: 105px;
+        padding-bottom: 105px;
+      }
+      #page-agrisolution .ax-product-copy {
+        grid-area: copy;
+      }
+      #page-agrisolution .ax-product-panel {
+        grid-area: panel;
+      }
+      #page-agrisolution .ax-partner {
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        color: #708765;
+        margin: -6px 0 24px;
+      }
+      #page-agrisolution .ax-product-panel {
+        background: #17352c;
+        border-radius: 22px;
+        padding: 36px;
+        color: white;
+        overflow: hidden;
+      }
+      #page-agrisolution .ax-product-panel .ax-label {
+        color: #bed69a;
+      }
+      #page-agrisolution .ax-npk {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+        padding: 24px 0 25px;
+      }
+      #page-agrisolution .ax-npk > div + div {
+        border-left: 1px solid #4b6550;
+        padding-left: 20px;
+      }
+      #page-agrisolution .ax-npk strong {
+        display: block;
+        font:
+          400 clamp(50px, 5vw, 76px)/1.1 Georgia,
+          serif;
+        color: #e3eccd;
+      }
+      #page-agrisolution .ax-npk strong span {
+        font-size: 24px;
+      }
+      #page-agrisolution .ax-npk small {
+        font-size: 9px;
+        letter-spacing: 0.6px;
+        color: #b9c9b8;
+        display: block;
+        margin-top: 8px;
+      }
+      #page-agrisolution .ax-product-panel p {
+        color: #c8d8c9;
+        font-size: 13px;
+      }
+      #page-agrisolution .ax-fly {
+        width: 100%;
+        height: 170px;
+        border-radius: 12px;
+        margin-top: 24px;
+      }
+      #page-agrisolution .ax-origin {
+        display: block;
+        color: #c7dc84;
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        margin-top: 17px;
+        line-height: 1.6;
+      }
+      #page-agrisolution .ax-features {
+        padding-bottom: 90px;
+      }
+      #page-agrisolution .ax-heading {
+        max-width: 800px;
+        margin-bottom: 35px;
+      }
+      #page-agrisolution :is(.ax-grid-4, .ax-grid-3, .ax-grid-2) {
+        display: grid;
+        gap: 18px;
+      }
+      #page-agrisolution .ax-grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      #page-agrisolution .ax-grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      #page-agrisolution .ax-grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      #page-agrisolution .ax-card {
+        border: 1px solid var(--ax-line);
+        border-radius: 17px;
+        background: #fffefa;
+        padding: 28px;
+        min-width: 0;
+      }
+      #page-agrisolution .ax-card p:last-child {
+        margin-bottom: 0;
+      }
+      #page-agrisolution .ax-tint {
+        background: #edf1e7;
+      }
+      #page-agrisolution .ax-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9%;
+        align-items: center;
+        margin-bottom: 36px;
+      }
+      #page-agrisolution .ax-format-photo {
+        position: relative;
+        margin: 0;
+        border-radius: 18px;
+        overflow: hidden;
+      }
+      #page-agrisolution .ax-format-photo img {
+        width: 100%;
+        height: 270px;
+      }
+      #page-agrisolution .ax-format-photo figcaption {
+        background: #17352c;
+        color: #d4dfc9;
+        font-size: 9px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+        padding: 16px 20px;
+      }
+      #page-agrisolution .ax-note {
+        font-size: 12px;
+        line-height: 1.8;
+        margin: 25px 0 0;
+        color: #73816e;
+      }
+      #page-agrisolution .ax-trial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        margin-top: 32px;
+      }
+      #page-agrisolution .ax-trial {
+        position: relative;
+        min-height: 430px;
+        border: 1px solid var(--ax-line);
+        border-radius: 18px;
+        overflow: hidden;
+        background: #17352c;
+      }
+      #page-agrisolution .ax-trial > img {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #page-agrisolution .ax-trial::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(180deg, #102d2510 15%, #102d25e8 100%);
+      }
+      #page-agrisolution .ax-trial > div {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: grid;
+        grid-template-rows: minmax(0, auto) 63px auto;
+        align-content: end;
+        row-gap: 8px;
+        padding: 28px;
+        color: #fff;
+      }
+      #page-agrisolution .ax-trial strong {
+        display: block;
+        font:
+          400 clamp(35px, 3.5vw, 52px)/1.2 Georgia,
+          serif;
+        margin: 0;
+        color: #fff;
+      }
+      #page-agrisolution .ax-trial h3 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #fff;
+      }
+      #page-agrisolution .ax-trial p {
+        font-size: 13px;
+        margin: 0;
+        padding-top: 20px;
+        color: #f0f3eb;
+      }
+      #page-agrisolution .ax-soil-result {
+        padding: 27px 0;
+        border-bottom: 1px solid var(--ax-line);
+        margin-top: 20px;
+      }
+      #page-agrisolution .ax-soil-result p {
+        margin: 12px 0 0;
+      }
+      #page-agrisolution .ax-field-section {
+        background: #17352c;
+      }
+      #page-agrisolution .ax-field-layout {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 7%;
+        align-items: stretch;
+      }
+      #page-agrisolution .ax-field-layout > figure {
+        margin: 0;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+      #page-agrisolution .ax-field-layout > figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #page-agrisolution .ax-field-layout > figure figcaption {
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+        right: 24px;
+        background: #17352cd9;
+        color: #e0eacb;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        padding: 18px;
+        border-radius: 10px;
+      }
+      #page-agrisolution .ax-field-layout h2 {
+        color: white;
+      }
+      #page-agrisolution .ax-field-layout em {
+        color: #c7dc84;
+      }
+      #page-agrisolution .ax-field-layout p {
+        color: #becfbd;
+      }
+      #page-agrisolution .ax-field-layout .ax-label {
+        color: #c7dc84;
+      }
+      #page-agrisolution .ax-plans article {
+        display: grid;
+        grid-template-columns: 30px 1fr;
+        gap: 18px;
+        border-top: 1px solid #48624b;
+        padding: 20px 0;
+      }
+      #page-agrisolution .ax-plans h3 {
+        font-size: 24px;
+        color: #edf2e6;
+        margin-top: 0;
+      }
+      #page-agrisolution .ax-plans p {
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+      #page-agrisolution .ax-contact {
+        margin-top: 45px;
+        border: 1px solid #d6decc;
+        background: #eaf0e2;
+        padding: 34px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+      }
+      #page-agrisolution .ax-contact > div {
+        max-width: 780px;
+      }
+      #page-agrisolution .ax-contact h3 {
+        font-size: 30px;
+        margin-top: 10px;
+      }
+      #page-agrisolution .ax-contact p {
+        margin-bottom: 0;
+      }
+      #page-agrisolution .ax-contact .ax-button {
+        flex-shrink: 0;
+      }
+      #page-agrisolution .ax-equipment-section {
+        background: #e9ede4;
+      }
+      #page-agrisolution .ax-equipment-intro {
+        max-width: 800px;
+        margin-bottom: 35px;
+      }
+      #page-agrisolution .ax-equipment-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8%;
+        margin-top: 45px;
+      }
+      #page-agrisolution .ax-contact-light {
+        background: #fffefa;
+      }
+      @media (max-width: 1100px) {
+        #page-agrisolution .ax-grid-4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        #page-agrisolution .ax-contact {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 760px) {
+        #page-agrisolution .ax-hero,
+        #page-agrisolution .ax-product,
+        #page-agrisolution .ax-split,
+        #page-agrisolution .ax-field-layout,
+        #page-agrisolution .ax-equipment-bottom {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+        #page-agrisolution .ax-product {
+          grid-template-areas:
+            "panel"
+            "copy";
+        }
+        #page-agrisolution .ax-hero-copy {
+          padding: 35px 25px;
+        }
+        #page-agrisolution .ax-hero-photo {
+          min-height: 350px;
+        }
+        #page-agrisolution .ax-hero-photo figcaption {
+          bottom: 25px;
+          left: 25px;
+        }
+        #page-agrisolution .ax-hero-photo figcaption strong {
+          font-size: 34px;
+        }
+        #page-agrisolution
+          :is(.ax-section, .ax-field-section, .ax-equipment-section) {
+          padding-top: 55px;
+          padding-bottom: 55px;
+        }
+        #page-agrisolution .ax-features {
+          padding-bottom: 55px;
+        }
+        #page-agrisolution .ax-trial-grid,
+        #page-agrisolution .ax-grid-3 {
+          grid-template-columns: 1fr;
+        }
+        #page-agrisolution .ax-field-layout > figure img {
+          height: 340px;
+        }
+        #page-agrisolution .ax-jump {
+          gap: 16px;
+          font-size: 10px;
+        }
+        #page-agrisolution .ax-trial {
+          min-height: 380px;
+        }
+        #page-agrisolution .ax-product-panel {
+          padding: 25px;
+        }
+        #page-agrisolution .ax-contact {
+          padding: 25px;
+        }
+        #page-agrisolution .ax-npk > div + div {
+          padding-left: 12px;
+        }
+      }
+      @media (max-width: 510px) {
+        #page-agrisolution .ax-grid-4,
+        #page-agrisolution .ax-grid-2 {
+          grid-template-columns: 1fr;
+        }
+        #page-agrisolution .ax-card {
+          padding: 24px;
+        }
+        #page-agrisolution .ax-npk small {
+          font-size: 8px;
+        }
+        #page-agrisolution .ax-npk strong {
+          font-size: 50px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="topline">
@@ -6164,7 +6732,7 @@
             <div>
               <span class="eyebrow">A connected agricultural vision</span>
               <h1 class="home-title">
-                Rooted in nature.<br /><em>Growing with purpose.</em>
+                Rooted in nature<br /><em>Growing with purpose</em>
               </h1>
               <p class="home-sub">
                 From natural essentials to highland coffee and agricultural
@@ -6247,7 +6815,7 @@
           <div class="coffee-copy">
             <span class="eyebrow">CENTROFARMS™ SPECIALTY COFFEE</span>
             <h1 class="display-heading">
-              From highland soil<br />to <em>exceptional coffee.</em>
+              From highland soil<br />to <em>exceptional coffee</em>
             </h1>
             <div class="copy-title">Green Arabica · Selected at origin</div>
             <p class="desc">
@@ -6403,7 +6971,7 @@
         <div class="shell cf-hero">
           <div class="cf-hero-copy">
             <span class="cf-eyebrow"><i></i> CENTROFARMS™ POULTRY</span>
-            <h1>American farmland.<br /><em>Long-term ownership.</em></h1>
+            <h1>American farmland<br /><em>Long-term ownership</em></h1>
             <p class="cf-hero-lead">
               Building long-term wealth through American farmland.
             </p>
@@ -6450,7 +7018,7 @@
               <div class="cf-img-tag">THE INVESTMENT THESIS <span>↗</span></div>
             </div>
             <div class="cf-thesis-copy">
-              <span class="cf-eyebrow">01 / THE INVESTMENT THESIS</span>
+              <span class="cf-eyebrow">THE INVESTMENT THESIS</span>
               <h2>
                 Building Long-Term Wealth<br /><em
                   >Through American Farmland</em
@@ -6482,8 +7050,8 @@
         <section class="shell cf-highlights" id="cf-highlights">
           <div class="cf-section-head">
             <div>
-              <span class="cf-eyebrow">02 / KEY INVESTMENT HIGHLIGHTS</span>
-              <h2>A foundation for<br /><em>long-term growth.</em></h2>
+              <span class="cf-eyebrow">KEY INVESTMENT HIGHLIGHTS</span>
+              <h2>A foundation for<br /><em>long-term growth</em></h2>
             </div>
           </div>
           <div class="cf-highlight-grid">
@@ -6543,9 +7111,9 @@
           <div class="shell">
             <div class="cf-section-head cf-section-head-light">
               <div>
-                <span class="cf-eyebrow">03 / HOW THE MODEL WORKS</span>
+                <span class="cf-eyebrow">HOW THE MODEL WORKS</span>
                 <h2>
-                  Operate with purpose.<br /><em>Build equity over time.</em>
+                  Operate with purpose<br /><em>Build equity over time</em>
                 </h2>
               </div>
             </div>
@@ -6747,7 +7315,7 @@
           <div class="cf-section-head">
             <div>
               <span class="cf-eyebrow">A LOOK AT THE LAND</span>
-              <h2>See the working<br /><em>farm environment.</em></h2>
+              <h2>See the working<br /><em>farm environment</em></h2>
             </div>
           </div>
           <div class="cf-gallery-layout">
@@ -6824,9 +7392,9 @@
           <div class="shell cf-jv-layout">
             <div class="cf-jv-copy">
               <span class="cf-eyebrow"
-                >04 / THE BUILD TOGETHER JOINT VENTURE MODEL</span
+                >THE BUILD TOGETHER JOINT VENTURE MODEL</span
               >
-              <h2>Co-investment.<br /><em>Shared responsibility.</em></h2>
+              <h2>Co-investment<br /><em>Shared responsibility</em></h2>
               <p>
                 CentroFarms™ works alongside investors as a co-investment and
                 operating partner. We help identify suitable properties,
@@ -6876,7 +7444,7 @@
         <section class="shell cf-close">
           <div>
             <span class="cf-eyebrow">LET’S BUILD WHAT LASTS</span>
-            <h2>The next chapter<br /><em>starts together.</em></h2>
+            <h2>The next chapter<br /><em>starts together</em></h2>
             <p>
               Whether you are an agribusiness investor, a farming family or an
               international entrepreneur, we welcome conversations about
@@ -6888,729 +7456,503 @@
           >
         </section>
       </section>
-      <section class="page" id="page-agrisolution">
+      <section class="page ax-page" id="page-agrisolution">
         <div class="shell intro-header">
           <div class="bread">
             <a href="#/home">CentroFarms™</a><span>›</span><b>AgriSolutions</b>
           </div>
-          <div class="intro-tag">
-            BIOLOGICALLY ACTIVE SOIL AMENDMENT · BLACK SOLDIER FLY FRASS
-          </div>
+          <div class="intro-tag">PLANT NUTRITION · COMMERCIAL AGRICULTURE</div>
         </div>
-        <div class="shell agrisolution-hero">
-          <div class="agrisolution-copy">
-            <span class="eyebrow">CENTROFARMS™ AgriSolutions</span>
-            <h1 class="display-heading"><em>Organic Fertilizer</em></h1>
-            <div class="copy-title">
-              Increased Yields ● Pest and Disease Suppression ● Control of
-              Nematodes &amp; Broad-Spectrum Pathogens
-            </div>
-            <p class="desc">
-              EnviroPro is more than a fertilizer – it's a biologically active
-              soil amendment rich in nutrients, chitin, and beneficial microbial
-              communities. The naturally occurring chitin in BSFL frass confers
-              <em>functional properties</em> that stimulate chitosan production,
-              supporting plant defenses against
-              <em>disease-causing pathogens</em> and
-              <em>plant-parasitic nematodes</em>. These biological interactions
-              help optimize soil health, nutrient cycling, root quality, and
-              overall turf vigor.
+        <div class="shell ax-hero">
+          <div class="ax-hero-copy">
+            <span class="ax-label">CENTROFARMS™ AGRISOLUTIONS</span>
+            <h1>
+              Restoring soil health<br /><em>Supporting crop growth</em>
+            </h1>
+            <p class="">
+              Healthy soil is essential to long-term agricultural productivity.
+              However, intensive cropping and certain fertilizer management
+              practices can reduce soil organic matter and affect the biological
+              activity that supports plant growth.
             </p>
-            <div class="agri-hero-points">
-              <span>Nourish soil biology</span><span>Support plant defense</span
-              ><span>Improve root quality</span>
+            <p>
+              CentroFarms™ Plant Nutrition focuses on black soldier fly larvae
+              (BSFL) frass, an insect-derived biological input for circular,
+              resource-efficient agriculture.
+            </p>
+            <div class="ax-actions">
+              <a class="ax-button" href="#agrisolution-details"
+                >Explore EPro 3-2-1 <span>↗</span></a
+              ><a class="ax-text-link" href="#ax-equipment"
+                >Equipment systems ↓</a
+              >
             </div>
-            <a class="dark-btn" href="#agrisolution-details"
-              >Explore product details <span>↓</span></a
+            <div class="ax-hero-footer">
+              SOIL · NUTRIENTS · RESOURCE RECOVERY
+            </div>
+          </div>
+          <figure class="ax-hero-photo">
+            <img
+              class=""
+              src="img/agrisolution-frass-macro-sharp.jpg"
+              alt="Close-up texture of black soldier fly larvae frass"
+              loading="lazy"
+            />
+            <figcaption>
+              <span>INSECT-DERIVED SOIL AMENDMENT</span
+              ><strong>A circular input.<br />A practical purpose.</strong>
+            </figcaption>
+          </figure>
+        </div>
+        <section class="shell ax-section ax-product" id="agrisolution-details">
+          <div class="ax-product-copy">
+            <span class="ax-label">FEATURED PRODUCT</span>
+            <h2>EPro <em>3-2-1</em><br />Organic Frass</h2>
+            <div class="ax-partner">EnviroFlight | Darling Ingredients</div>
+            <p class="">
+              EPro 3-2-1 is our featured frass-based soil amendment, designed
+              for commercial growers seeking an additional source of nutrients
+              and organic material for their soil management programs.
+            </p>
+            <p class="">
+              By turning insect-rearing byproducts into agricultural inputs, we
+              aim to connect waste recovery with practical solutions for
+              commercial farming.
+            </p>
+            <a class="ax-text-link" href="#ax-product-contact"
+              >Request product specifications ↗</a
             >
           </div>
-          <div
-            class="agrisolution-visual"
-            aria-label="EnviroPro 3-2-1 organic fertilizer product analysis"
-          >
-            <img
-              class="agri-visual-image"
-              src="img/agrisolution-frass-macro-sharp.jpg"
-              alt=""
-            />
-            <div class="agri-visual-content">
-              <div class="agri-visual-kicker">BLACK SOLDIER FLY FRASS</div>
-              <div class="agri-product-mark">
-                <span class="agri-product-name">EnviroPro</span
-                >3<span>·</span>2<span>·</span>1
-              </div>
-              <div class="agri-npk">
-                <span><b>3%</b><small>TOTAL N</small></span
-                ><span><b>2%</b><small>P₂O₅</small></span
-                ><span><b>1%</b><small>K₂O</small></span>
-              </div>
-              <div class="agri-visual-foot">
-                NOURISH THE SOIL · SUPPORT THE CROP
-              </div>
-            </div>
-          </div>
-        </div>
-        <section
-          class="shell"
-          id="agrisolution-details"
-          aria-labelledby="agri-product-title"
-        >
-          <div class="spec-overview">
-            <span class="spec-kicker">Product Specifications</span>
-            <h2 id="agri-product-title"><em>Natural Organic Amendment</em></h2>
-            <p>
-              EnviroPro is the residual product from growing
-              <strong>EnviroFlight Black Soldier Fly</strong> (<i
-                >Hermetia illucens</i
-              >) larvae and does not contain added bone meal.
-            </p>
-            <div class="spec-ingredients">
-              <strong>Guaranteed Ingredients</strong>
-              <div class="spec-pills">
-                <span class="spec-pill">Exoskeletons</span
-                ><span class="spec-pill">Nutritional Remnants</span
-                ><span class="spec-pill">Excrements</span
-                ><span class="spec-pill">Ground Larvae</span>
-              </div>
-            </div>
-          </div>
-          <div class="spec-grid">
-            <article class="spec-panel spec-panel-dark">
-              <span class="spec-label">Analysis &amp; Key Metrics</span>
-              <h3>Product Characteristics</h3>
-              <div class="spec-stats">
-                <div class="spec-stat">
-                  <span>pH Balance</span><b>6.2</b
-                  ><small>Slightly acidic</small>
-                </div>
-                <div class="spec-stat">
-                  <span>% Organic Matter</span><b>90%</b
-                  ><small>High organic matter</small>
-                </div>
-                <div class="spec-stat">
-                  <span>C:N Ratio</span><b>12:1</b
-                  ><small>Carbon to nitrogen</small>
-                </div>
-                <div class="spec-stat">
-                  <span>Density</span><b>38 <small>lb</small></b
-                  ><small>Crumbles · 32 lb DFG</small>
-                </div>
-              </div>
-            </article>
-            <article class="spec-panel spec-panel-light">
-              <span class="spec-label">Rich Formulations</span>
-              <h3>Additional Contents</h3>
-              <p>
-                Contains naturally occurring biological enhancers that may
-                support soil microflora, natural defenses and plant resiliency.
-              </p>
-              <div class="spec-bio-grid">
-                <div class="spec-bio-card">
-                  <b>Chitin / Chitosan</b
-                  ><span>Studied for its role in plant defense responses.</span>
-                </div>
-                <div class="spec-bio-card">
-                  <b>Antimicrobial Peptides</b
-                  ><span
-                    >Biological compounds associated with pathogen
-                    activity.</span
-                  >
-                </div>
-                <div class="spec-bio-card">
-                  <b>Lauric Acid</b
-                  ><span>A naturally occurring fatty acid.</span>
-                </div>
-                <div class="spec-bio-card">
-                  <b>Amino Acids</b
-                  ><span>Organic compounds that support plant growth.</span>
-                </div>
-              </div>
-              <div class="spec-verified">
-                <span>Organic &amp; sustainably sourced</span
-                ><span>Product information</span>
-              </div>
-            </article>
-          </div>
-          <section class="spec-practice" aria-labelledby="spec-practice-title">
-            <div class="spec-practice-heading">
+          <div class="ax-product-panel">
+            <span class="ax-label">STATED NUTRIENT ANALYSIS</span>
+            <div class="ax-npk">
               <div>
-                <span class="spec-label">Best Practices</span>
-                <h3 id="spec-practice-title">Greens Application</h3>
+                <strong>3<span>%</span></strong
+                ><small>NITROGEN / N</small>
               </div>
+              <div>
+                <strong>2<span>%</span></strong
+                ><small>PHOSPHORUS / P</small>
+              </div>
+              <div>
+                <strong>1<span>%</span></strong
+                ><small>POTASSIUM / K</small>
+              </div>
+            </div>
+            <p>
+              A frass-based soil amendment for commercial soil management
+              programs.
+            </p>
+            <img
+              class="ax-fly"
+              src="img/agrisolution-soldier-fly-sharp.jpg"
+              alt="Black soldier fly on a green leaf"
+              loading="lazy"
+            /><span class="ax-origin"
+              >FROM INSECT REARING TO AGRICULTURAL INPUTS</span
+            >
+          </div>
+        </section>
+        <section class="shell ax-features">
+          <div class="ax-heading">
+            <span class="ax-label">PRODUCT FEATURES</span>
+            <h2>Supporting the soil<br /><em>Making resources count</em></h2>
+          </div>
+          <div class="ax-grid-4">
+            <article class="ax-card">
+              <span class="ax-label">01</span>
+              <h3>Balanced Nutrient Profile</h3>
               <p>
-                Follow the product label for application rates and protocol, and
-                adapt use to plant type, growing environment and soil.
+                A stated 3-2-1 nitrogen-phosphorus-potassium (N-P-K) analysis,
+                complemented by organic matter and naturally occurring
+                micronutrients. Final nutrient availability depends on the
+                product formulation and soil conditions.
               </p>
-            </div>
-            <div class="spec-steps">
-              <article class="spec-step">
-                <i>1</i>
-                <h4>Layered Application</h4>
-                <p>
-                  Apply in layers to establish uniform soil coverage and gradual
-                  nutrient uptake.
-                </p>
-                <small>Phase 1: Calibrated spreading</small>
-              </article>
-              <article class="spec-step">
-                <i>2</i>
-                <h4>Intermittent Watering</h4>
-                <p>
-                  Water briefly at intervals to moisten granules before full
-                  irrigation.
-                </p>
-                <small>Phase 2: Pre-moistening</small>
-              </article>
-              <article class="spec-step">
-                <i>3</i>
-                <h4>Adjusted Dosage</h4>
-                <p>
-                  Adjust rates for plant type, growing environment and soil
-                  conditions.
-                </p>
-                <small>Phase 3: Soil adaptation</small>
-              </article>
-            </div>
-            <div class="spec-dose">
-              <div class="spec-dose-head">
-                <div>
-                  <span class="spec-label">Specific Applications</span>
-                  <h4>Home Garden &amp; Specialty Crops</h4>
-                  <p>
-                    Choose the unit system to view the recommended application
-                    rate.
+            </article>
+            <article class="ax-card">
+              <span class="ax-label">02</span>
+              <h3>Naturally Occurring Chitin</h3>
+              <p>
+                Contains chitin derived from insect material, which may support
+                beneficial soil interactions and plant defense responses under
+                suitable conditions.
+              </p>
+            </article>
+            <article class="ax-card">
+              <span class="ax-label">03</span>
+              <h3>Support for Soil Biology</h3>
+              <p>
+                Adds organic material that may help support soil microbial
+                activity, nutrient cycling, and soil structure.
+              </p>
+            </article>
+            <article class="ax-card">
+              <span class="ax-label">04</span>
+              <h3>Circular Agricultural Inputs</h3>
+              <p>
+                Makes productive use of insect-rearing byproducts, supporting
+                more resource-efficient agricultural systems.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section class="ax-section ax-tint" id="ax-formats">
+          <div class="shell">
+            <div class="ax-split">
+              <div>
+                <div class="ax-heading">
+                  <span class="ax-label">AVAILABLE COMMERCIAL FORMATS</span>
+                  <h2>A format for<br /><em>your operation</em></h2>
+                  <p class="">
+                    CentroFarms offers multiple physical formats to accommodate
+                    diverse field application methods, custom blending
+                    requirements, and commercial handling systems:
                   </p>
                 </div>
-                <div
-                  class="spec-unit-toggle"
-                  role="group"
-                  aria-label="Application rate units"
-                >
-                  <button
-                    type="button"
-                    data-spec-unit="imperial"
-                    aria-pressed="true"
-                  >
-                    Imperial (lb / 100 sq ft)</button
-                  ><button
-                    type="button"
-                    data-spec-unit="metric"
-                    aria-pressed="false"
-                  >
-                    Metric (kg / m²)
-                  </button>
-                </div>
               </div>
-              <div class="spec-rates">
-                <div class="spec-rate">
-                  <div>
-                    <small>Pre-plant stage</small><b>Soil Preparation</b>
-                  </div>
-                  <output data-spec-rate
-                    >2.5–5.0 <span>lb / 100 sq ft</span></output
-                  >
-                </div>
-                <div class="spec-rate">
-                  <div><small>Maintenance stage</small><b>Top-Dress</b></div>
-                  <output data-spec-rate
-                    >2.5–5.0 <span>lb / 100 sq ft</span></output
-                  >
-                </div>
-              </div>
-              <p class="spec-disclosure">
-                Top-dress at the same rate every 30 days. Follow current label
-                directions; application needs and results vary by crop, soil and
-                growing conditions.
-              </p>
+              <figure class="ax-format-photo">
+                <img
+                  class=""
+                  src="img/agrisolution-frass-granules-sharp.jpg"
+                  alt="Detail of frass material texture"
+                  loading="lazy"
+                />
+                <figcaption>
+                  FRASS MATERIAL DETAIL · FORMAT SPECIFICATIONS AVAILABLE ON
+                  REQUEST
+                </figcaption>
+              </figure>
             </div>
-          </section>
-        </section>
-        <script>
-          (() => {
-            const section = document.querySelector("#agrisolution-details");
-            if (!section) return;
-            document
-              .querySelector(
-                '#page-agrisolution a[href="#agrisolution-details"]',
-              )
-              ?.addEventListener("click", (event) => {
-                event.preventDefault();
-                const page = section.closest(".page"),
-                  scroll = () =>
-                    section.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                if (
-                  page
-                    ?.getAnimations()
-                    .some((animation) => animation.playState === "running")
-                ) {
-                  const onAnimationEnd = (endEvent) => {
-                    if (endEvent.target !== page) return;
-                    page.removeEventListener("animationend", onAnimationEnd);
-                    scroll();
-                  };
-                  page.addEventListener("animationend", onAnimationEnd);
-                } else scroll();
-              });
-            const buttons = [...section.querySelectorAll("[data-spec-unit]")],
-              rates = [...section.querySelectorAll("[data-spec-rate]")];
-            buttons.forEach((button) =>
-              button.addEventListener("click", () => {
-                const metric = button.dataset.specUnit === "metric";
-                buttons.forEach((item) =>
-                  item.setAttribute("aria-pressed", String(item === button)),
-                );
-                rates.forEach((rate) => {
-                  rate.innerHTML = metric
-                    ? "0.12–0.24 <span>kg / m²</span>"
-                    : "2.5–5.0 <span>lb / 100 sq ft</span>";
-                });
-              }),
-            );
-          })();
-        </script>
-        <section class="shell agri-impact" aria-labelledby="impact-title">
-          <header class="impact-banner">
-            <span class="spec-kicker">Soil Science &amp; Nutrition</span>
-            <h2 id="impact-title">
-              Impact on Soil Health<br /><em>&amp; Nutrient Enrichment</em>
-            </h2>
-            <p>
-              Explore how organic macronutrients and chitin-rich frass may
-              support soil structure, nutrient cycling and beneficial
-              plant–microbe interactions.
+            <div class="ax-grid-2">
+              <article class="ax-card">
+                <span class="ax-label">01</span>
+                <h3>Dried Fly Granules (DFG)</h3>
+                <p>
+                  Natural, unground material suited for bulk soil pre-plant
+                  incorporation, raw compost amendment blending, and base
+                  broadcast applications where particle variability is
+                  acceptable.
+                </p>
+              </article>
+              <article class="ax-card">
+                <span class="ax-label">02</span>
+                <h3>Crumbles</h3>
+                <p>
+                  Sized, fractured granules engineered for consistent volumetric
+                  distribution and rapid breakdown upon contact with soil
+                  moisture, making them ideal for top-dressing, bed preparation,
+                  and nursery container media.
+                </p>
+              </article>
+              <article class="ax-card">
+                <span class="ax-label">03</span>
+                <h3>Cylindrical Pellets</h3>
+                <p>
+                  Dense, extruded cylindrical pellets engineered for low-dust
+                  handling and uniform flow through standard mechanical hoppers,
+                  gravity drops, and banded placement equipment, dissolving
+                  gradually for steady nutrient release.
+                </p>
+              </article>
+              <article class="ax-card">
+                <span class="ax-label">04</span>
+                <h3>Spherical Granules</h3>
+                <p>
+                  Precision-calibrated, free-flowing spherical granules
+                  specifically designed for seamless calibration through
+                  commercial spin spreaders, pneumatic air-boom applicators, and
+                  automated bulk blending lines.
+                </p>
+              </article>
+            </div>
+            <p class="ax-note" style="padding-top: 24px">
+              Particle size distribution (SGN), bulk density, moisture levels,
+              and spreader calibration guidelines are available upon request and
+              confirmed on each lot's Certificate of Analysis (CoA).
             </p>
-          </header>
-          <section class="impact-panel" aria-labelledby="impact-nutrient-title">
-            <div class="impact-heading">
-              <div>
-                <span class="impact-kicker">Macronutrient Matrix</span>
-                <h3 id="impact-nutrient-title">Nutrient Profile</h3>
-              </div>
-              <p>
-                Approximate values describe the general frass profile. Refer to
-                the EnviroPro product analysis above for its guaranteed 3-2-1
-                values.
-              </p>
-            </div>
-            <div class="impact-nutrients">
-              <article class="impact-nutrient">
-                <div class="impact-nutrient-head">
-                  <span>Total Nitrogen</span><b>N</b>
-                </div>
-                <div class="impact-nutrient-value">~3.6%</div>
-                <p>
-                  Nitrogen in organic forms can become available over time as
-                  organic matter decomposes.
-                </p>
-                <div class="impact-nutrient-foot">
-                  <span>General frass profile</span
-                  ><strong>Organic forms</strong>
-                </div>
-              </article>
-              <article class="impact-nutrient">
-                <div class="impact-nutrient-head">
-                  <span>Available Phosphate</span><b>P</b>
-                </div>
-                <div class="impact-nutrient-value">~2.0%</div>
-                <p>
-                  Phosphorus is an essential plant nutrient involved in root
-                  development and energy transfer.
-                </p>
-                <div class="impact-nutrient-foot">
-                  <span>Phosphate P₂O₅</span><strong>General profile</strong>
-                </div>
-              </article>
-              <article class="impact-nutrient">
-                <div class="impact-nutrient-head">
-                  <span>Soluble Potash</span><b>K</b>
-                </div>
-                <div class="impact-nutrient-value">~1.0%</div>
-                <p>
-                  Potassium supports water regulation, enzyme activity and plant
-                  responses to environmental stress.
-                </p>
-                <div class="impact-nutrient-foot">
-                  <span>Potash K₂O</span><strong>General profile</strong>
-                </div>
-              </article>
-            </div>
-            <aside class="impact-efficiency">
-              <div>
-                <h4>Nutrients released through organic matter</h4>
-                <p>
-                  Organic nitrogen may be released gradually through soil
-                  biological processes. The rate and availability depend on the
-                  product, soil, moisture, temperature and microbial activity.
-                </p>
-              </div>
-              <div class="impact-efficiency-tags">
-                <span>Gradual nutrient cycling</span
-                ><span>Availability varies</span>
-              </div>
-            </aside>
-          </section>
-          <section class="impact-panel" aria-labelledby="impact-microbe-title">
-            <div class="impact-heading">
-              <div>
-                <span class="impact-kicker">Biological Soil Interactions</span>
-                <h3 id="impact-microbe-title">
-                  Supporting Beneficial Soil Microbes
-                </h3>
-              </div>
-              <p>
-                Chitin and other organic matter in frass are studied for their
-                interactions with soil organisms and plant–microbe
-                relationships.
-              </p>
-            </div>
-            <div class="impact-microbe-hero">
-              <div>
-                <span class="impact-kicker">A biological component</span>
-                <h4>Chitin from shed exoskeletons</h4>
-                <p>
-                  Chitin is a structural component of insect exoskeletons. In
-                  soil, chitin-rich amendments can interact with microbial
-                  communities and plant defense signaling. Responses vary with
-                  the amendment, soil and growing conditions; this does not mean
-                  a specific microorganism is present in every product.
-                </p>
-              </div>
-              <div
-                class="impact-organisms"
-                aria-label="Examples of soil organisms studied"
-              >
-                <div class="impact-organism">
-                  <b>PGPR</b
-                  ><span
-                    ><strong>Plant-associated bacteria</strong
-                    ><i>Bacillus</i> and <i>Streptomyces</i> are examples
-                    studied in soil contexts.</span
-                  >
-                </div>
-                <div class="impact-organism">
-                  <b>FUNGI</b
-                  ><span
-                    ><strong>Beneficial fungi</strong><i>Trichoderma</i> species
-                    are studied for plant–soil interactions.</span
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="impact-mechanisms"
-              aria-label="Potential soil biology interactions"
-            >
-              <article class="impact-mechanism">
-                <span>01</span>
-                <h4>Nutrient Cycling</h4>
-                <p>
-                  Soil organisms help decompose organic matter and cycle
-                  nutrients. The rate depends on local soil conditions.
-                </p>
-              </article>
-              <article class="impact-mechanism">
-                <span>02</span>
-                <h4>Nitrogen Transformations</h4>
-                <p>
-                  Soil microbes transform nitrogen into different forms; this
-                  section does not imply biological nitrogen fixation by the
-                  product.
-                </p>
-              </article>
-              <article class="impact-mechanism">
-                <span>03</span>
-                <h4>Phosphorus Availability</h4>
-                <p>
-                  Some soil organisms can affect phosphorus availability through
-                  biological and chemical processes.
-                </p>
-              </article>
-              <article class="impact-mechanism">
-                <span>04</span>
-                <h4>Plant Resilience</h4>
-                <p>
-                  Organic matter and soil biology may contribute to soil
-                  structure and plant responses to environmental stress.
-                </p>
-              </article>
-            </div>
-            <p class="impact-disclaimer">
-              These are general research areas, not guaranteed outcomes or
-              product-specific efficacy claims. Use the current product label
-              and appropriate crop and soil management practices.
-            </p>
-          </section>
-          <div class="impact-footer">
-            <span>CentroFarms™ · Soil science &amp; plant nutrition</span
-            ><span
-              >Naturally sourced · Bio-active · Product label directions
-              apply</span
-            >
           </div>
         </section>
-        <section
-          class="shell agri-resilience"
-          aria-labelledby="resilience-title"
-        >
-          <header class="resilience-panel resilience-header">
-            <span class="resilience-eyebrow"
-              >Agronomic Performance &amp; Plant Health</span
+        <section class="shell ax-section" id="ax-trials">
+          <div class="ax-heading">
+            <span class="ax-label"
+              >COMMERCIAL APPLICATIONS &amp; AGRONOMIC TRIALS</span
             >
-            <h2 id="resilience-title">Plant Health, Yield &amp; Resilience</h2>
-            <p>
-              Research on black soldier fly larvae frass explores potential
-              effects on crop yields, soil biology and plant responses. Results
-              vary by product, crop and conditions and are not guaranteed for
-              EnviroPro.
-            </p>
-          </header>
-          <section
-            class="resilience-panel"
-            aria-labelledby="resilience-yields-title"
-          >
-            <h3 class="resilience-title" id="resilience-yields-title">
-              Yield results reported in the supplied material
-            </h3>
-            <div class="resilience-yields">
-              <article class="resilience-yield resilience-yield-corn">
-                <div>
-                  <span class="resilience-crop">Field crops · Corn</span
-                  ><strong>+7%–27%</strong>
-                </div>
-                <p>
-                  Higher grain yields were reported compared with urea or other
-                  organic fertilizers in the described studies.
-                </p>
-              </article>
-              <article class="resilience-yield resilience-yield-lettuce">
-                <div>
-                  <span class="resilience-crop">Leafy greens · Lettuce</span
-                  ><strong>~50%</strong>
-                </div>
-                <p>
-                  A yield increase was reported compared with conventional
-                  fertilizer in the described study.
-                </p>
-              </article>
-              <article class="resilience-yield resilience-yield-tomato">
-                <div>
-                  <span class="resilience-crop">Tomato · Combined inputs</span
-                  ><strong>Up to +135%</strong>
-                </div>
-                <p>
-                  A yield increase was reported when frass was combined with
-                  reduced synthetic fertilizer rates.
-                </p>
-              </article>
-            </div>
-          </section>
-          <section
-            class="resilience-panel"
-            aria-labelledby="resilience-defense-title"
-          >
-            <h3 class="resilience-title" id="resilience-defense-title">
-              Plant Defense &amp; Disease Research
-            </h3>
-            <div class="resilience-suppression">
-              <article class="resilience-card resilience-card-hero">
-                <span class="resilience-card-label"
-                  >Biological response · Research area</span
-                >
-                <h4>Plant defense signaling</h4>
-                <p>
-                  Chitin and chitosan are studied for their interactions with
-                  plant defense signaling and soil microbial communities. These
-                  findings do not establish that a particular product prevents
-                  disease or induces a specific level of resistance.
-                </p>
-                <div class="resilience-tags">
-                  <span>Chitin-rich materials</span
-                  ><span>Plant–microbe interactions</span
-                  ><span>Defense signaling research</span>
-                </div>
-              </article>
-              <article class="resilience-card">
-                <span class="resilience-card-label">Research area</span>
-                <h4>Nematodes</h4>
-                <p>
-                  The supplied material describes potato studies reporting lower
-                  cyst nematode populations following frass use. It does not
-                  include study citations or sufficient details to verify the
-                  comparison; this is not a pest-control guarantee.
-                </p>
-                <div class="resilience-tags">
-                  <span>Study context: potato</span
-                  ><span>Verify original research</span>
-                </div>
-              </article>
-              <article class="resilience-card">
-                <span class="resilience-card-label"
-                  >Reported research areas</span
-                >
-                <h4>Plant pathogens</h4>
-                <p>
-                  The supplied material lists studies on several crop diseases.
-                  Evidence and results may differ by organism, crop, frass and
-                  experimental conditions.
-                </p>
-                <div class="resilience-pathogens">
-                  <div>
-                    <strong>Fusarium wilt</strong><span>Fusarium spp.</span>
-                  </div>
-                  <div>
-                    <strong>Damping-off</strong
-                    ><span>Rhizoctonia · Pythium</span>
-                  </div>
-                  <div>
-                    <strong>Grey mold</strong><span>Botrytis cinerea</span>
-                  </div>
-                  <div>
-                    <strong>Early blight</strong><span>Alternaria solani</span>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
-        </section>
-        <section
-          class="shell agri-gallery"
-          aria-label="Black soldier fly frass and source"
-        >
-          <div class="agri-gallery-heading">
-            <span class="section-overline">FROM LARVAE TO SOIL</span>
+            <h2>From crop research<br /><em>to field evaluation</em></h2>
           </div>
-          <div class="agri-gallery-grid">
-            <figure class="agri-gallery-card">
+          <p class="">
+            EPro 3-2-1 delivers proven bio-fertility, soil conditioning, and
+            root-zone stimulation across intensive horticulture and perennial
+            systems. Combining balanced macronutrients (~3.6% N, ~2% P, ~1% K)
+            with natural chitin, organic carbon, and beneficial microbes, it
+            drives measurable yield and disease resilience.
+          </p>
+          <div class="ax-trial-grid">
+            <article class="ax-trial">
               <img
-                src="img/agrisolution-frass-bed-sharp.jpg"
-                alt="Fine black soldier fly frass spread across a surface"
+                class=""
+                src="img/tomatoes.jpg"
+                alt="Tomatoes on the vine"
                 loading="lazy"
               />
-              <figcaption>
-                <span>01 / SOIL AMENDMENT</span>Fine frass texture
-              </figcaption>
-            </figure>
-            <figure class="agri-gallery-card">
-              <img
-                src="img/agrisolution-frass-granules-sharp.jpg"
-                alt="Close-up of black soldier fly frass granules"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>02 / PRODUCT DETAIL</span>Organic matter
-              </figcaption>
-            </figure>
-            <figure class="agri-gallery-card">
-              <img
-                src="img/agrisolution-soldier-fly-sharp.jpg"
-                alt="Black soldier fly resting on a green leaf"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>03 / NATURAL SOURCE</span>Black soldier fly
-              </figcaption>
-            </figure>
-          </div>
-        </section>
-        <section class="shell agri-takeaways" aria-labelledby="takeaways-title">
-          <div class="takeaways-panel">
-            <span class="takeaways-eyebrow"
-              >A circular approach to agriculture</span
-            >
-            <h2 class="takeaways-title" id="takeaways-title">Core Takeaways</h2>
-            <div class="takeaways-hero">
-              <p>
-                Black soldier fly larvae frass is a
-                <strong>recycled soil amendment</strong> that can return organic
-                matter and nutrients to agricultural soils. Depending on the
-                product and conditions, it may support soil structure, nutrient
-                cycling and plant–soil interactions as part of a broader
-                sustainable farming approach.
-              </p>
-              <div class="takeaways-tags">
-                <span>Circular agriculture</span><span>Soil health</span
-                ><span>Resource recovery</span>
+              <div>
+                <h3>Tomatoes</h3>
+                <strong>Up to +135%</strong>
+                <p>
+                  Documented studies show yield increases of up to 135% when
+                  frass is combined with reduced rates of synthetic fertilizer,
+                  delivering strong synergistic nutrient uptake and root
+                  development.
+                </p>
               </div>
-            </div>
-            <div class="takeaways-grid">
-              <article class="takeaway-card">
-                <div class="takeaway-number">01</div>
-                <h3>Organic Matter for Soil</h3>
+            </article>
+            <article class="ax-trial">
+              <img
+                class=""
+                src="img/Ears-corn.webp"
+                alt="Corn crop"
+                loading="lazy"
+              />
+              <div>
+                <h3>Corn</h3>
+                <strong>+7–27%</strong>
                 <p>
-                  Frass adds organic material to soil. Its effects on soil
-                  structure, water retention and nutrient availability depend on
-                  the product, soil and application.
+                  Consistently outperforms conventional inputs, generating 7% to
+                  27% higher grain yields compared to urea and standard organic
+                  fertilizers.
                 </p>
-              </article>
-              <article class="takeaway-card">
-                <div class="takeaway-number">02</div>
-                <h3>Nutrients &amp; Bioactive Components</h3>
+              </div>
+            </article>
+            <article class="ax-trial">
+              <img
+                class=""
+                src="img/Lettuce.jpg"
+                alt="Fresh lettuce crop"
+                loading="lazy"
+              />
+              <div>
+                <h3>Vegetables &amp; Leafy Greens (Lettuce)</h3>
+                <strong>About +50%</strong>
                 <p>
-                  Provides nutrients alongside naturally occurring components
-                  such as chitin. Use the product-specific guaranteed analysis
-                  and current label for application decisions.
+                  Boosted commercial yields by approximately 50% over
+                  conventional fertilizer regimens.
                 </p>
-              </article>
-              <article class="takeaway-card">
-                <div class="takeaway-number">03</div>
-                <h3>Part of Integrated Crop Care</h3>
-                <p>
-                  Frass and its components are being studied for interactions
-                  with soil biology and plant defenses. It is not a substitute
-                  for crop-specific fertility or pest management.
-                </p>
-              </article>
-            </div>
-            <div class="takeaways-footer">
-              <p>
-                Explore how EnviroPro may fit your soil and crop program.
-                Outcomes vary with growing conditions and use.
-              </p>
-              <a href="#/contact"
-                >Contact CentroFarms™ <span aria-hidden="true">↗</span></a
-              >
-            </div>
+              </div>
+            </article>
           </div>
         </section>
-        <section
-          class="shell agri-logo-strip"
-          aria-label="Product and quality marks shown on the product sheet"
-        >
-          <div class="agri-logo-heading">
+        <section class="ax-field-section">
+          <div class="shell ax-field-layout">
+            <figure>
+              <img
+                class=""
+                src="img/a95942ebf10538326d85bfec5e58840d5a44ed59.webp"
+                alt="Coffee trees growing in a highland plantation"
+                loading="lazy"
+              />
+              <figcaption>PLANNED FIELD TRIAL INITIATIVES</figcaption>
+            </figure>
             <div>
-              <span class="section-overline">PRODUCT &amp; QUALITY MARKS</span>
-              <h2>Standards &amp; origin</h2>
-            </div>
-            <p>Marks shown on the supplied product label.</p>
-          </div>
-          <div class="agri-logo-window">
-            <div class="agri-logo-track">
-              <div class="agri-logo-set">
-                <div class="agri-logo-card">
-                  <img
-                    src="img/cdfa-organic-input.png"
-                    alt="CDFA Registered Organic Input Material mark"
-                  />
-                </div>
-                <div class="agri-logo-card">
-                  <img src="img/made-in-usa.svg" alt="Made in U.S.A. mark" />
-                </div>
-                <div class="agri-logo-card">
-                  <img
-                    src="img/omri-listed.png"
-                    alt="OMRI Listed mark for organic use"
-                  />
-                </div>
-                <div class="agri-logo-card">
-                  <img
-                    src="img/enviroflight-farms.png"
-                    alt="Enviroflight Farms logo"
-                  />
-                </div>
+              <div class="ax-heading">
+                <span class="ax-label">IN DEVELOPMENT</span>
+                <h2>Planning the<br /><em>next field trials</em></h2>
+                <p class="">
+                  CentroFarms is currently planning multi-hectare split-block
+                  evaluation programs to validate EPro 3-2-1 performance across
+                  high-value perennial and plantation crops:
+                </p>
               </div>
+              <div class="ax-plans">
+                <article>
+                  <span class="ax-label">01</span>
+                  <div>
+                    <h3>Highland Arabica / Robusta Coffee &amp; Rubber</h3>
+                    <p>
+                      Planned trial protocols focused on replenishing depleted
+                      topsoil organic matter and improving nutrient-use
+                      efficiency across highland terrains.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <span class="ax-label">02</span>
+                  <div>
+                    <h3>
+                      Commercial Orchards (Durian, Avocado, Cacao &amp; Dragon
+                      Fruit)
+                    </h3>
+                    <p>
+                      Formulating application models to strengthen root-collar
+                      defense against soil pathogens, support steady uptake, and
+                      optimize fruit sizing.
+                    </p>
+                  </div>
+                </article>
+                <article>
+                  <span class="ax-label">03</span>
+                  <div>
+                    <h3>Bananas &amp; High-Density Row Crops</h3>
+                    <p>
+                      Designing protocols for mechanical banding and targeted
+                      root-zone placement of pellets and granules to suppress
+                      plant-parasitic nematodes.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="shell ax-section" id="ax-logistics">
+          <div class="ax-heading">
+            <span class="ax-label">PACKAGING &amp; LOGISTICS</span>
+            <h2>Commercial scale<br /><em>Flexible handling</em></h2>
+            <p class="">
+              Commercial packaging and shipping configurations can be tailored
+              to order volume, destination, and handling requirements.
+            </p>
+          </div>
+          <div class="ax-grid-3">
+            <article class="ax-card">
+              <span class="ax-label">01</span>
+              <h3>40 lb bags</h3>
+              <p>
+                Suitable for smaller commercial orders and routine handling.
+              </p>
+            </article>
+            <article class="ax-card">
+              <span class="ax-label">02</span>
+              <h3>1-ton bulk super sacks</h3>
+              <p>
+                Designed for larger farms, distributors, and bulk agricultural
+                applications.
+              </p>
+            </article>
+            <article class="ax-card">
+              <span class="ax-label">03</span>
+              <h3>Full Truckload (FTL) and Full Container Load (FCL)</h3>
+              <p>
+                Options for commercial distribution and export shipments,
+                subject to order volume and destination requirements.
+              </p>
+            </article>
+          </div>
+          <p class="ax-note">
+            Product specifications, minimum order quantities, lead times, and
+            export documentation can be confirmed during the purchasing process.
+          </p>
+          <div class="ax-contact" id="ax-product-contact">
+            <div>
+              <span class="ax-label">PRODUCT ENQUIRIES</span>
+              <h3>
+                Request the EPro 3-2-1 Product Specification Sheet &amp; Field
+                Trial Guidelines
+              </h3>
+              <p class="">
+                Contact CentroFarms to discuss product specifications,
+                application requirements, bulk orders, and potential field
+                trials for your operation.
+              </p>
+            </div>
+            <a
+              class="ax-button"
+              href="mailto:info@centrofarms.com?subject=EPro%203-2-1%20Specifications%20and%20Field%20Trials"
+              >Request information <span>↗</span></a
+            >
+          </div>
+        </section>
+        <section class="ax-equipment-section" id="ax-equipment">
+          <div class="shell">
+            <div class="ax-equipment-intro">
+              <span class="ax-label">EQUIPMENT SYSTEMS</span>
+              <h2>Modular Polypropylene Flooring Slats</h2>
+              <p class="">
+                Engineered for elevated pit and breeder layouts, replacing
+                rotting wood and fragile wire with high-density, virgin
+                polypropylene.
+              </p>
+            </div>
+            <div class="ax-grid-4">
+              <article class="ax-card">
+                <span class="ax-label">01</span>
+                <h3>Durable Polymer Construction</h3>
+                <p>
+                  High-impact polypropylene options designed for demanding
+                  agricultural use, with material specifications determining
+                  resistance to UV exposure and cleaning chemicals.
+                </p>
+              </article>
+              <article class="ax-card">
+                <span class="ax-label">02</span>
+                <h3>Easy-to-Clean Surfaces</h3>
+                <p>
+                  Non-porous surfaces designed to facilitate routine washing and
+                  sanitation when used with appropriate cleaning procedures.
+                </p>
+              </article>
+              <article class="ax-card">
+                <span class="ax-label">03</span>
+                <h3>Load-Bearing Design</h3>
+                <p>
+                  Ribbed structural geometry intended to provide support under
+                  specified operating loads and reduce excessive deflection.
+                </p>
+              </article>
+              <article class="ax-card">
+                <span class="ax-label">04</span>
+                <h3>Modular Installation</h3>
+                <p>
+                  Interlocking layouts that can simplify assembly, replacement,
+                  and maintenance where compatible with the facility design.
+                </p>
+              </article>
+            </div>
+            <div class="ax-equipment-bottom">
+              <div>
+                <h3>Designed for Commercial Poultry Operations</h3>
+                <p class="">
+                  CentroFarms Equipment Systems is intended for farm owners,
+                  poultry operators, agricultural contractors, and facility
+                  developers looking for practical infrastructure solutions.
+                </p>
+                <p class="">
+                  Product selection should be based on facility dimensions,
+                  animal requirements, expected loads, sanitation procedures,
+                  and compatibility with existing equipment.
+                </p>
+              </div>
+              <div>
+                <h3>Our Approach</h3>
+                <p class="">
+                  We focus on practical engineering, material selection, and
+                  system compatibility. Rather than treating each component as a
+                  standalone product, we consider how flooring, framing,
+                  connections, and facility operations work together.
+                </p>
+                <p class="">
+                  The objective is to help commercial operators build facilities
+                  that are easier to maintain, suited to their operating
+                  conditions, and designed for long-term use.
+                </p>
+              </div>
+            </div>
+            <div class="ax-contact ax-contact-light">
+              <div>
+                <span class="ax-label">EQUIPMENT ENQUIRIES</span>
+                <h3>
+                  Request the Equipment Systems Catalog &amp; Technical
+                  Specifications
+                </h3>
+                <p class="">
+                  Contact CentroFarms to discuss available components, material
+                  specifications, installation requirements, and potential
+                  applications for your facility.
+                </p>
+              </div>
+              <a
+                class="ax-button"
+                href="mailto:info@centrofarms.com?subject=Equipment%20Systems%20Catalog%20and%20Specifications"
+                >Request the catalog <span>↗</span></a
+              >
             </div>
           </div>
         </section>
@@ -7683,7 +8025,7 @@
         // Home story. A portfolio of products and people, not a land sale listing.
         setHTML(
           ".home-left",
-          `<div><span class="eyebrow">Agriculture connects us</span><h1 class="home-title">Growing with purpose.<br><em>Building together.</em></h1><p class="home-sub">From natural essentials and specialty green coffee to new opportunities in American agriculture. CentroFarms™ connects people, places and practical experience for long-term growth.</p><div class="home-actions"><a class="solid-btn" href="#/coffee">Explore Specialty Coffee <span>↗</span></a><a class="line-btn" href="#/poultry">Build with us <span>→</span></a></div></div><div class="home-left-foot">NATURALS &nbsp; • &nbsp; SPECIALTY COFFEE &nbsp; • &nbsp; POULTRY</div>`,
+          `<div><span class="eyebrow">Agriculture connects us</span><h1 class="home-title">Growing with purpose<br><em>Building together</em></h1><p class="home-sub">From natural essentials and specialty green coffee to new opportunities in American agriculture. CentroFarms™ connects people, places and practical experience for long-term growth.</p><div class="home-actions"><a class="solid-btn" href="#/coffee">Explore Specialty Coffee <span>↗</span></a><a class="line-btn" href="#/poultry">Build with us <span>→</span></a></div></div><div class="home-left-foot">NATURALS &nbsp; • &nbsp; SPECIALTY COFFEE &nbsp; • &nbsp; POULTRY</div>`,
         );
         setHTML(
           ".vision-card",
@@ -7714,7 +8056,7 @@
           coffeeEyebrow.textContent = "CENTROFARMS™ SPECIALTY COFFEE";
         setHTML(
           ".coffee-copy",
-          `<span class="eyebrow">CENTROFARMS™ SPECIALTY COFFEE</span><h1 class="display-heading">A sense of place.<br><em>A standard of quality.</em></h1><div class="copy-title">Green Arabica · Selected at origin</div><p class="desc">Three distinct profiles, selected through considered harvesting, processing and grading. From dependable washed coffees to small, carefully separated high-elevation lots.</p><button type="button" class="dark-btn" id="coffeeProcess">Explore our process <span>↓</span></button>`,
+          `<span class="eyebrow">CENTROFARMS™ SPECIALTY COFFEE</span><h1 class="display-heading">A sense of place<br><em>A standard of quality</em></h1><div class="copy-title">Green Arabica · Selected at origin</div><p class="desc">Three distinct profiles, selected through considered harvesting, processing and grading. From dependable washed coffees to small, carefully separated high-elevation lots.</p><button type="button" class="dark-btn" id="coffeeProcess">Explore our process <span>↓</span></button>`,
         );
         setHTML(
           "#page-coffee .info-ribbon",
@@ -7826,7 +8168,7 @@
         const contact = document.createElement("section");
         contact.className = "page contact-page";
         contact.id = "page-contact";
-        contact.innerHTML = `<div class="shell intro-header"><div class="bread"><a href="#/home">CentroFarms™</a><span>›</span><b>Contact</b></div><div class="intro-tag">LET’S CONNECT</div></div><div class="shell contact-hero"><span class="eyebrow">CONTACT CENTROFARMS™</span><h1>Good things grow<br><em>through connection.</em></h1><p>Whether you are exploring our specialty coffee, agricultural partnerships or the wider CentroFarms™ portfolio, we welcome a conversation.</p></div><div class="shell contact-grid"><section class="contact-panel"><span class="section-overline">REACH OUR TEAM</span><h2>Let’s start a conversation.</h2><div class="contact-detail"><small>OFFICE ADDRESS</small><p>133 G.W. Smith Road<br>Silver Creek, Mississippi, USA</p></div><div class="contact-detail"><small>GENERAL ENQUIRIES</small><a href="mailto:info@centrofarms.com">info@centrofarms.com</a></div></section><aside class="contact-panel contact-side"><span class="section-overline">PARTNERSHIP ENQUIRIES</span><h2>Explore what we can build together.</h2><p class="panel-desc">Tell us a little about your interests, experience and the kind of cooperation you have in mind. Our team will be glad to connect.</p><a class="mail-cta" href="mailto:info@centrofarms.com?subject=CentroFarms™%20Partnership%20Enquiry">Start a conversation <span aria-hidden="true">↗</span></a><div class="steps-mini">Specialty green coffee · Farming partnerships<br>Long-term agricultural collaboration</div></aside></div>`;
+        contact.innerHTML = `<div class="shell intro-header"><div class="bread"><a href="#/home">CentroFarms™</a><span>›</span><b>Contact</b></div><div class="intro-tag">LET’S CONNECT</div></div><div class="shell contact-hero"><span class="eyebrow">CONTACT CENTROFARMS™</span><h1>Good things grow<br><em>through connection</em></h1><p>Whether you are exploring our specialty coffee, agricultural partnerships or the wider CentroFarms™ portfolio, we welcome a conversation.</p></div><div class="shell contact-grid"><section class="contact-panel"><span class="section-overline">REACH OUR TEAM</span><h2>Let’s start a conversation</h2><div class="contact-detail"><small>OFFICE ADDRESS</small><p>133 G.W. Smith Road<br>Silver Creek, Mississippi, USA</p></div><div class="contact-detail"><small>GENERAL ENQUIRIES</small><a href="mailto:info@centrofarms.com">info@centrofarms.com</a></div></section><aside class="contact-panel contact-side"><span class="section-overline">PARTNERSHIP ENQUIRIES</span><h2>Explore what we can build together</h2><p class="panel-desc">Tell us a little about your interests, experience and the kind of cooperation you have in mind. Our team will be glad to connect.</p><a class="mail-cta" href="mailto:info@centrofarms.com?subject=CentroFarms™%20Partnership%20Enquiry">Start a conversation <span aria-hidden="true">↗</span></a><div class="steps-mini">Specialty green coffee · Farming partnerships<br>Long-term agricultural collaboration</div></aside></div>`;
         q("main")?.appendChild(contact);
 
         // Footer and site-wide names.
@@ -7851,7 +8193,7 @@
           "aria-label",
           "An invitation to partner with CentroFarms™",
         );
-        letterDialog.innerHTML = `<div class="modal-content"><div class="modal-header"><div><div class="modal-kicker">A LETTER FROM CENTROFARMS™</div><h2>Let us build the American dream together.</h2></div><button type="button" class="modal-close" aria-label="Close invitation">×</button></div><p class="letter-salutation">Dear prospective partner,</p><h3>The challenge</h3><p>For many individuals and families, the American dream is not simply about arriving somewhere new. It is about building a foundation: meaningful work, strong relationships and something of value that can endure across generations.</p><h3>Why this matters</h3><p>Turning that ambition into reality takes more than enthusiasm. Agriculture requires a real operating foundation, local knowledge, discipline, thoughtful investment and people willing to work together for the long term.</p><h3>A place to begin</h3><p>CentroFarms™ believes the land can bring people together. Our agricultural direction in Mississippi offers a starting point for exploring cooperation: combining different strengths, practical experience and a shared commitment to responsible growth.</p><h3>Built on substance</h3><p>The farm includes established poultry and egg-production infrastructure, supporting utilities and land. It is a tangible basis for discussion, not a promise of financial performance. Every proposed arrangement will require appropriate review and agreement.</p><h3>Our invitation</h3><p>We welcome conversations with entrepreneurs, agricultural professionals and potential partners who want to develop enduring opportunities in the United States. Where relevant, prospective participants may separately seek qualified immigration advice on E-2, EB-5 or L-1 eligibility. No immigration or investment outcome is guaranteed.</p><p>We would value the opportunity to hear your story and explore what we might build together.</p><div class="letter-bottom">With respect and optimism,<br><strong>CentroFarms™</strong></div><a href="#/contact" class="modal-cta" id="letterContact">Discuss a partnership ↗</a></div>`;
+        letterDialog.innerHTML = `<div class="modal-content"><div class="modal-header"><div><div class="modal-kicker">A LETTER FROM CENTROFARMS™</div><h2>Let us build the American dream together</h2></div><button type="button" class="modal-close" aria-label="Close invitation">×</button></div><p class="letter-salutation">Dear prospective partner,</p><h3>The challenge</h3><p>For many individuals and families, the American dream is not simply about arriving somewhere new. It is about building a foundation: meaningful work, strong relationships and something of value that can endure across generations.</p><h3>Why this matters</h3><p>Turning that ambition into reality takes more than enthusiasm. Agriculture requires a real operating foundation, local knowledge, discipline, thoughtful investment and people willing to work together for the long term.</p><h3>A place to begin</h3><p>CentroFarms™ believes the land can bring people together. Our agricultural direction in Mississippi offers a starting point for exploring cooperation: combining different strengths, practical experience and a shared commitment to responsible growth.</p><h3>Built on substance</h3><p>The farm includes established poultry and egg-production infrastructure, supporting utilities and land. It is a tangible basis for discussion, not a promise of financial performance. Every proposed arrangement will require appropriate review and agreement.</p><h3>Our invitation</h3><p>We welcome conversations with entrepreneurs, agricultural professionals and potential partners who want to develop enduring opportunities in the United States. Where relevant, prospective participants may separately seek qualified immigration advice on E-2, EB-5 or L-1 eligibility. No immigration or investment outcome is guaranteed.</p><p>We would value the opportunity to hear your story and explore what we might build together.</p><div class="letter-bottom">With respect and optimism,<br><strong>CentroFarms™</strong></div><a href="#/contact" class="modal-cta" id="letterContact">Discuss a partnership ↗</a></div>`;
         document.body.appendChild(letterDialog);
         const closeDialog = (dlg) => {
           if (dlg.open) dlg.close();
@@ -7998,7 +8340,7 @@
           const left = document.createElement("div");
           left.className = "home-v4-left";
           left.innerHTML =
-            '<span class="home-v4-eyebrow">EXPLORE CENTROFARMS™</span><h1 class="home-v4-heading">Four fields. One shared purpose.</h1><p class="home-v4-sub">Explore our natural products, specialty green coffee, poultry, and soil solutions.</p>';
+            '<span class="home-v4-eyebrow">EXPLORE CENTROFARMS™</span><h1 class="home-v4-heading">Four fields One shared purpose</h1><p class="home-v4-sub">Explore our natural products, specialty green coffee, poultry, and soil solutions.</p>';
           portals.insertAdjacentHTML(
             "beforeend",
             '<a class="portal" data-division="agrisolution" href="#/agrisolution"><span class="count">04</span><div><b>CentroFarms™ AgriSolutions</b><p>Black soldier fly frass · Soil amendment</p></div><span class="trailing">→</span></a>',
@@ -8097,7 +8439,7 @@
           section.className = "shell coffee-gallery-v4";
           section.id = "coffee-gallery";
           section.innerHTML =
-            '<div class="gallery-v4-heading"><div><span class="section-overline">PHOTO JOURNAL</span><h2>From the highlands.</h2><p>A selected look at coffee cultivation, harvest, and processing.</p></div><span class="gallery-v4-counter" id="coffeeGalleryCounter"></span></div><div class="gallery-v4-display" aria-label="Coffee gallery"><div class="gallery-v4-blur" aria-hidden="true"></div><img class="gallery-v4-image" alt=""><div class="gallery-v4-caption"><b></b><span></span></div><div class="gallery-v4-actions"><button type="button" class="gallery-v4-arrow" id="coffeePrev" aria-label="Previous coffee photo">←</button><button type="button" class="gallery-v4-arrow" id="coffeeNext" aria-label="Next coffee photo">→</button></div></div><div class="gallery-v4-thumbs" aria-label="Choose coffee photo"></div>';
+            '<div class="gallery-v4-heading"><div><span class="section-overline">PHOTO JOURNAL</span><h2>From the highlands</h2><p>A selected look at coffee cultivation, harvest, and processing.</p></div><span class="gallery-v4-counter" id="coffeeGalleryCounter"></span></div><div class="gallery-v4-display" aria-label="Coffee gallery"><div class="gallery-v4-blur" aria-hidden="true"></div><img class="gallery-v4-image" alt=""><div class="gallery-v4-caption"><b></b><span></span></div><div class="gallery-v4-actions"><button type="button" class="gallery-v4-arrow" id="coffeePrev" aria-label="Previous coffee photo">←</button><button type="button" class="gallery-v4-arrow" id="coffeeNext" aria-label="Next coffee photo">→</button></div></div><div class="gallery-v4-thumbs" aria-label="Choose coffee photo"></div>';
           collection.after(section);
           const main = section.querySelector(".gallery-v4-image"),
             blur = section.querySelector(".gallery-v4-blur"),
@@ -8218,6 +8560,26 @@
             if (location.hash !== "#/poultry") return;
             swiper.update();
             if (swiper.autoplay.paused) swiper.autoplay.resume();
+          });
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const page = document.getElementById("page-agrisolution");
+        page.querySelectorAll('a[href^="#"]').forEach((a) => {
+          if (a.getAttribute("href").startsWith("#/")) return;
+          a.addEventListener("click", (e) => {
+            const target = page.querySelector(a.getAttribute("href"));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({
+                behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+                  ? "instant"
+                  : "smooth",
+                block: "start",
+              });
+            }
           });
         });
       })();
