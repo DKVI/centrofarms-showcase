@@ -6282,6 +6282,75 @@
       #page-agrisolution .ax-grid-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
       }
+      #page-agrisolution .ax-feature-grid {
+        gap: 20px;
+      }
+      #page-agrisolution .ax-feature-button {
+        display: flex;
+        min-width: 0;
+        min-height: 220px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 26px 18px;
+        border: 1px solid var(--ax-line);
+        border-radius: 17px;
+        background: #fffefa;
+        color: #17352c;
+        text-align: center;
+        cursor: pointer;
+        transition:
+          transform 180ms ease,
+          border-color 180ms ease,
+          box-shadow 180ms ease;
+      }
+      #page-agrisolution .ax-feature-button:hover {
+        transform: translateY(-4px);
+        border-color: #9baa83;
+        box-shadow: 0 14px 30px #17352c12;
+      }
+      #page-agrisolution .ax-feature-button:focus-visible {
+        outline: 3px solid #78906d;
+        outline-offset: 3px;
+      }
+      #page-agrisolution .ax-feature-icon {
+        display: grid;
+        width: 82px;
+        height: 82px;
+        place-items: center;
+        border-radius: 50%;
+        background: #edf1e7;
+        color: #315b42;
+      }
+      #page-agrisolution .ax-feature-icon svg {
+        width: 42px;
+        height: 42px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7;
+      }
+      #page-agrisolution .ax-feature-number {
+        color: #78906d;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.6px;
+      }
+      #page-agrisolution .ax-feature-button strong {
+        max-width: 190px;
+        font:
+          normal 20px/1.25 Georgia,
+          serif;
+      }
+      #page-agrisolution .ax-feature-action {
+        color: #71846b;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
       #page-agrisolution .ax-grid-3 {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
@@ -6311,26 +6380,277 @@
       #page-agrisolution .ax-format-photo {
         position: relative;
         margin: 0;
-        border-radius: 18px;
         overflow: hidden;
       }
       #page-agrisolution .ax-format-photo img {
+        display: block;
         width: 100%;
-        height: 270px;
+        height: 100%;
+        min-height: 360px;
+        object-fit: cover;
+        object-position: center;
       }
       #page-agrisolution .ax-format-photo figcaption {
-        background: #17352c;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 15px 20px;
+        background: #17352cf2;
         color: #d4dfc9;
-        font-size: 9px;
+        font-size: 10px;
         line-height: 1.6;
-        letter-spacing: 1px;
-        padding: 16px 20px;
+        letter-spacing: 1.4px;
+      }
+      #page-agrisolution .ax-formats-section {
+        padding: 55px 0 42px;
+        background: #fbfaf6;
+        scroll-margin-top: 120px;
+      }
+      #page-agrisolution .ax-formats-heading {
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 48px;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      #page-agrisolution .ax-formats-heading .ax-heading {
+        max-width: none;
+        margin: 0;
+      }
+      #page-agrisolution .ax-formats-heading .ax-heading h2 {
+        margin: 8px 0 0;
+        font-size: clamp(38px, 4vw, 54px);
+        line-height: 1.03;
+      }
+      #page-agrisolution .ax-formats-heading > p {
+        margin: 0;
+        border-left: 1px solid #87966c;
+        padding: 7px 0 7px 27px;
+        color: #354139;
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      #page-agrisolution .ax-formats-layout {
+        display: grid;
+        grid-template-columns: 0.78fr 1.22fr;
+        gap: 30px;
+        align-items: stretch;
+      }
+      #page-agrisolution .ax-format-photo {
+        min-height: 100%;
+        border-radius: 14px;
+      }
+      #page-agrisolution .ax-formats-list {
+        display: flex;
+        flex-direction: column;
+      }
+      #page-agrisolution .ax-format-item {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr) 126px;
+        gap: 13px;
+        align-items: center;
+        flex: 1;
+        min-width: 0;
+        padding: 12px 0;
+        border-bottom: 1px solid #d9dece;
+      }
+      #page-agrisolution .ax-format-item:first-child {
+        padding-top: 0;
+      }
+      #page-agrisolution .ax-format-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+      #page-agrisolution .ax-format-item > .ax-label {
+        align-self: start;
+        padding-top: 3px;
+        color: #657832;
+        font-size: 12px;
+      }
+      #page-agrisolution .ax-format-item h3 {
+        margin: 0 0 5px;
+        font-size: clamp(19px, 2vw, 25px);
+        line-height: 1.15;
+      }
+      #page-agrisolution .ax-format-item p {
+        margin: 0;
+        color: #414a42;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+      #page-agrisolution .ax-format-sample {
+        width: 126px;
+        height: 86px;
+        border-radius: 11px;
+        overflow: hidden;
+        background: #ead9c3;
+      }
+      #page-agrisolution .ax-format-sample svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #page-agrisolution .ax-formats-note {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: 25px;
+        padding: 13px 18px;
+        border-radius: 11px;
+        background: #e8eddc;
+        color: #3b4c3e;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      #page-agrisolution .ax-formats-note svg {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 auto;
+        fill: none;
+        stroke: #657832;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7;
+      }
+      #page-agrisolution .ax-formats-note span {
+        border-left: 1px solid #93a078;
+        padding-left: 16px;
       }
       #page-agrisolution .ax-note {
         font-size: 12px;
         line-height: 1.8;
         margin: 25px 0 0;
         color: #73816e;
+      }
+      #page-agrisolution .ax-logistics-section {
+        padding-top: 62px;
+        padding-bottom: 70px;
+        background: #fbfaf6;
+      }
+      #page-agrisolution .ax-logistics-heading {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        margin-bottom: 27px;
+      }
+      #page-agrisolution .ax-logistics-heading .ax-heading {
+        margin: 0;
+      }
+      #page-agrisolution .ax-logistics-heading .ax-heading h2 {
+        margin: 8px 0 0;
+        font-size: clamp(36px, 4vw, 52px);
+        line-height: 1.04;
+      }
+      #page-agrisolution .ax-logistics-heading > p {
+        margin: 0;
+        border-left: 1px solid #87966c;
+        padding: 8px 0 8px 27px;
+        color: #354139;
+        font-size: 14px;
+        line-height: 1.65;
+      }
+      #page-agrisolution .ax-logistics-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+      #page-agrisolution .ax-logistics-card {
+        min-width: 0;
+      }
+      #page-agrisolution .ax-logistics-visual {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1.58;
+        background: #e9e6db;
+      }
+      #page-agrisolution .ax-logistics-visual svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      #page-agrisolution .ax-logistics-card-copy {
+        padding-top: 12px;
+      }
+      #page-agrisolution .ax-logistics-card + .ax-logistics-card .ax-logistics-card-copy {
+        border-left: 1px solid #dedccf;
+        padding-left: 18px;
+      }
+      #page-agrisolution .ax-logistics-card .ax-label {
+        margin-bottom: 5px;
+        color: #657832;
+      }
+      #page-agrisolution .ax-logistics-card h3 {
+        margin: 0 0 8px;
+        font-size: clamp(21px, 2.2vw, 27px);
+        line-height: 1.15;
+      }
+      #page-agrisolution .ax-logistics-card p {
+        margin: 0;
+        color: #414a42;
+        font-size: 12px;
+        line-height: 1.65;
+      }
+      #page-agrisolution .ax-logistics-note {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        margin: 23px -8px 0;
+        padding: 12px 19px;
+        background: #e8eddc;
+        color: #3b4c3e;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      #page-agrisolution .ax-logistics-note svg {
+        width: 23px;
+        height: 23px;
+        flex: 0 0 auto;
+        fill: none;
+        stroke: #657832;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7;
+      }
+      #page-agrisolution .ax-logistics-note::before {
+        width: 1px;
+        height: 24px;
+        flex: 0 0 auto;
+        background: #93a078;
+        content: "";
+        order: 1;
+      }
+      #page-agrisolution .ax-logistics-note span {
+        order: 2;
+      }
+      #page-agrisolution .ax-contact.ax-logistics-contact {
+        margin-top: 23px;
+        border-radius: 0;
+        background: #174b35;
+        color: #fff;
+      }
+      #page-agrisolution .ax-contact.ax-logistics-contact .ax-label {
+        color: #c7dc84;
+      }
+      #page-agrisolution .ax-contact.ax-logistics-contact h3 {
+        margin: 6px 0 7px;
+        color: #fff;
+        font-size: clamp(24px, 3vw, 34px);
+        line-height: 1.12;
+      }
+      #page-agrisolution .ax-contact.ax-logistics-contact p {
+        max-width: 850px;
+        color: #e0e9dd;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      #page-agrisolution .ax-contact.ax-logistics-contact .ax-button {
+        background: #f5f2e8;
+        color: #17352c;
+      }
+      #page-agrisolution .ax-contact.ax-logistics-contact .ax-button:hover {
+        background: #e5e9d8;
       }
       #page-agrisolution .ax-trial-grid {
         display: grid;
@@ -6485,17 +6805,198 @@
         flex-shrink: 0;
       }
       #page-agrisolution .ax-equipment-section {
-        background: #e9ede4;
+        padding: 0;
+        background: #f7f7f1;
       }
-      #page-agrisolution .ax-equipment-intro {
-        max-width: 800px;
-        margin-bottom: 35px;
+      #page-agrisolution .ax-equipment-hero {
+        display: grid;
+        grid-template-columns: 0.92fr 1.08fr;
+        min-height: 232px;
+        background: #f1f1e9;
+      }
+      #page-agrisolution .ax-equipment-hero-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 30px clamp(25px, 5vw, 72px);
+      }
+      #page-agrisolution .ax-equipment-hero-copy h2 {
+        margin: 11px 0 12px;
+        font-size: clamp(32px, 3.2vw, 48px);
+        line-height: 1.07;
+      }
+      #page-agrisolution .ax-equipment-hero-copy p {
+        max-width: 510px;
+        margin: 0 0 14px;
+        font-size: 13px;
+        line-height: 1.65;
+      }
+      #page-agrisolution .ax-equipment-built-for {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        color: #35533d;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.8px;
+      }
+      #page-agrisolution .ax-equipment-built-for::before {
+        width: 42px;
+        height: 1px;
+        background: #78906d;
+        content: "";
+      }
+      #page-agrisolution .ax-equipment-hero-photo {
+        position: relative;
+        min-height: 232px;
+        margin: 0;
+        overflow: hidden;
+        background: #46513a;
+      }
+      #page-agrisolution .ax-equipment-hero-photo img {
+        width: 100%;
+        height: 100%;
+        min-height: 232px;
+        object-fit: cover;
+        object-position: center 57%;
+      }
+      #page-agrisolution .ax-equipment-hero-photo figcaption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 25px 20px 11px;
+        background: linear-gradient(transparent, #15261dd9);
+        color: white;
+        font-size: 10px;
+        font-style: italic;
+      }
+      #page-agrisolution .ax-equipment-content {
+        padding-top: 26px;
+        padding-bottom: 34px;
+      }
+      #page-agrisolution .ax-equipment-details {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 30px;
+        align-items: center;
+      }
+      #page-agrisolution .ax-equipment-product-visual {
+        margin: 0;
+        padding: 14px;
+        background: #f0efe8;
+      }
+      #page-agrisolution .ax-equipment-product-visual .ax-label {
+        margin: 0 0 7px 4px;
+      }
+      #page-agrisolution .ax-equipment-product-visual svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      #page-agrisolution .ax-equipment-features {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px 22px;
+      }
+      #page-agrisolution .ax-equipment-feature {
+        display: grid;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 13px;
+        align-items: start;
+        min-width: 0;
+      }
+      #page-agrisolution .ax-equipment-feature-icon {
+        width: 42px;
+        height: 42px;
+        color: #596c20;
+      }
+      #page-agrisolution .ax-equipment-feature-icon svg {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5;
+      }
+      #page-agrisolution .ax-equipment-feature-copy {
+        border-left: 1px solid #aeb9a3;
+        padding-left: 13px;
+      }
+      #page-agrisolution .ax-equipment-feature-copy .ax-label {
+        margin-bottom: 4px;
+        font-size: 9px;
+      }
+      #page-agrisolution .ax-equipment-feature-copy h3 {
+        margin: 0 0 5px;
+        font-size: 19px;
+        line-height: 1.1;
+      }
+      #page-agrisolution .ax-equipment-feature-copy p {
+        margin: 0;
+        font-size: 11px;
+        line-height: 1.55;
       }
       #page-agrisolution .ax-equipment-bottom {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 8%;
-        margin-top: 45px;
+        gap: 40px;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid #d5dccf;
+      }
+      #page-agrisolution .ax-equipment-bottom > div + div {
+        border-left: 1px solid #d5dccf;
+        padding-left: 40px;
+      }
+      #page-agrisolution .ax-equipment-bottom h3 {
+        margin: 0 0 8px;
+        font-size: 22px;
+      }
+      #page-agrisolution .ax-equipment-bottom p {
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+      #page-agrisolution .ax-equipment-bottom p:last-child {
+        margin-bottom: 0;
+      }
+      #page-agrisolution .ax-equipment-cta {
+        background: #174b35;
+        color: #fff;
+      }
+      #page-agrisolution .ax-equipment-cta-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+      #page-agrisolution .ax-equipment-cta .ax-label {
+        color: #c7dc84;
+      }
+      #page-agrisolution .ax-equipment-cta h3 {
+        margin: 6px 0 7px;
+        color: #fff;
+        font-size: clamp(20px, 2.4vw, 28px);
+      }
+      #page-agrisolution .ax-equipment-cta p {
+        max-width: 800px;
+        margin: 0;
+        color: #e0e9dd;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+      #page-agrisolution .ax-equipment-cta .ax-button {
+        flex-shrink: 0;
+        background: #f5f2e8;
+        color: #17352c;
+      }
+      #page-agrisolution .ax-equipment-cta .ax-button:hover {
+        background: #e5e9d8;
       }
       #page-agrisolution .ax-contact-light {
         background: #fffefa;
@@ -6514,9 +7015,86 @@
         #page-agrisolution .ax-product,
         #page-agrisolution .ax-split,
         #page-agrisolution .ax-field-layout,
+        #page-agrisolution .ax-equipment-hero,
+        #page-agrisolution .ax-equipment-details,
         #page-agrisolution .ax-equipment-bottom {
           grid-template-columns: 1fr;
           gap: 30px;
+        }
+        #page-agrisolution .ax-equipment-hero-copy {
+          padding: 35px 25px;
+        }
+        #page-agrisolution .ax-equipment-hero-photo,
+        #page-agrisolution .ax-equipment-hero-photo img {
+          min-height: 260px;
+        }
+        #page-agrisolution .ax-equipment-product-visual {
+          max-width: 560px;
+          margin: 0 auto;
+        }
+        #page-agrisolution .ax-equipment-bottom > div + div {
+          border-top: 1px solid #d5dccf;
+          border-left: 0;
+          padding: 22px 0 0;
+        }
+        #page-agrisolution .ax-equipment-cta-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        #page-agrisolution .ax-logistics-heading {
+          grid-template-columns: 1fr;
+          gap: 17px;
+        }
+        #page-agrisolution .ax-logistics-heading > p {
+          margin-left: 2px;
+        }
+        #page-agrisolution .ax-formats-heading {
+          grid-template-columns: 1fr;
+          gap: 17px;
+        }
+        #page-agrisolution .ax-formats-heading > p {
+          margin-left: 2px;
+        }
+        #page-agrisolution .ax-formats-layout {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+        #page-agrisolution .ax-format-photo img {
+          height: 300px;
+          min-height: 0;
+        }
+        #page-agrisolution .ax-format-item {
+          grid-template-columns: 32px minmax(0, 1fr) 112px;
+          gap: 12px;
+          padding: 16px 0;
+        }
+        #page-agrisolution .ax-format-item:first-child {
+          padding-top: 0;
+        }
+        #page-agrisolution .ax-format-item:last-child {
+          padding-bottom: 0;
+        }
+        #page-agrisolution .ax-format-sample {
+          width: 112px;
+          height: 78px;
+        }
+        #page-agrisolution .ax-logistics-grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        #page-agrisolution .ax-logistics-visual {
+          aspect-ratio: 1.9;
+        }
+        #page-agrisolution .ax-logistics-card + .ax-logistics-card .ax-logistics-card-copy {
+          border-left: 0;
+          padding-left: 0;
+        }
+        #page-agrisolution .ax-logistics-card + .ax-logistics-card {
+          border-top: 1px solid #dedccf;
+          padding-top: 22px;
+        }
+        #page-agrisolution .ax-contact.ax-logistics-contact {
+          margin-top: 18px;
         }
         #page-agrisolution .ax-product {
           grid-template-areas:
@@ -6540,6 +7118,9 @@
           :is(.ax-section, .ax-field-section, .ax-equipment-section) {
           padding-top: 55px;
           padding-bottom: 55px;
+        }
+        #page-agrisolution .ax-equipment-section {
+          padding: 0;
         }
         #page-agrisolution .ax-features {
           padding-bottom: 55px;
@@ -6572,6 +7153,78 @@
         #page-agrisolution .ax-grid-4,
         #page-agrisolution .ax-grid-2 {
           grid-template-columns: 1fr;
+        }
+        #page-agrisolution .ax-feature-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 12px;
+        }
+        #page-agrisolution .ax-feature-button {
+          min-height: 190px;
+          gap: 12px;
+          padding: 18px 10px;
+        }
+        #page-agrisolution .ax-feature-icon {
+          width: 66px;
+          height: 66px;
+        }
+        #page-agrisolution .ax-feature-icon svg {
+          width: 34px;
+          height: 34px;
+        }
+        #page-agrisolution .ax-feature-button strong {
+          font-size: 17px;
+        }
+        #page-agrisolution .ax-equipment-features {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        #page-agrisolution .ax-equipment-bottom {
+          gap: 20px;
+        }
+        #page-agrisolution .ax-equipment-cta-inner {
+          padding-top: 24px;
+          padding-bottom: 24px;
+        }
+        #page-agrisolution .ax-formats-section {
+          padding-top: 48px;
+          padding-bottom: 38px;
+        }
+        #page-agrisolution .ax-format-photo img {
+          height: 245px;
+        }
+        #page-agrisolution .ax-format-item {
+          grid-template-columns: 26px minmax(0, 1fr) 74px;
+          gap: 9px;
+        }
+        #page-agrisolution .ax-format-item h3 {
+          font-size: 18px;
+        }
+        #page-agrisolution .ax-format-item p {
+          font-size: 11px;
+        }
+        #page-agrisolution .ax-format-sample {
+          width: 74px;
+          height: 70px;
+          border-radius: 8px;
+        }
+        #page-agrisolution .ax-formats-note {
+          align-items: flex-start;
+          gap: 11px;
+          padding: 12px;
+        }
+        #page-agrisolution .ax-formats-note span {
+          padding-left: 11px;
+        }
+        #page-agrisolution .ax-logistics-section {
+          padding-top: 48px;
+          padding-bottom: 52px;
+        }
+        #page-agrisolution .ax-logistics-note {
+          align-items: flex-start;
+          gap: 11px;
+          margin-right: 0;
+          margin-left: 0;
+          padding: 12px;
         }
         #page-agrisolution .ax-card {
           padding: 24px;
@@ -7558,63 +8211,63 @@
             <span class="ax-label">PRODUCT FEATURES</span>
             <h2>Supporting the soil<br /><em>Making resources count</em></h2>
           </div>
-          <div class="ax-grid-4">
-            <article class="ax-card">
-              <span class="ax-label">01</span>
-              <h3>Balanced Nutrient Profile</h3>
-              <p>
-                A stated 3-2-1 nitrogen-phosphorus-potassium (N-P-K) analysis,
-                complemented by organic matter and naturally occurring
-                micronutrients. Final nutrient availability depends on the
-                product formulation and soil conditions.
-              </p>
-            </article>
-            <article class="ax-card">
-              <span class="ax-label">02</span>
-              <h3>Naturally Occurring Chitin</h3>
-              <p>
-                Contains chitin derived from insect material, which may support
-                beneficial soil interactions and plant defense responses under
-                suitable conditions.
-              </p>
-            </article>
-            <article class="ax-card">
-              <span class="ax-label">03</span>
-              <h3>Support for Soil Biology</h3>
-              <p>
-                Adds organic material that may help support soil microbial
-                activity, nutrient cycling, and soil structure.
-              </p>
-            </article>
-            <article class="ax-card">
-              <span class="ax-label">04</span>
-              <h3>Circular Agricultural Inputs</h3>
-              <p>
-                Makes productive use of insect-rearing byproducts, supporting
-                more resource-efficient agricultural systems.
-              </p>
-            </article>
+          <div class="ax-grid-4 ax-feature-grid">
+            <button class="ax-feature-button" type="button" aria-label="View details: Balanced Nutrient Profile">
+              <span class="ax-feature-number">01</span>
+              <span class="ax-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M24 7v34M10 15l14 9 14-9M10 33l14-9 14 9"/><circle cx="10" cy="15" r="4"/><circle cx="38" cy="15" r="4"/><circle cx="10" cy="33" r="4"/><circle cx="38" cy="33" r="4"/><circle cx="24" cy="24" r="5"/></svg>
+              </span>
+              <strong>Balanced Nutrient Profile</strong>
+              <span class="ax-feature-action">View details ↗</span>
+              <span class="ax-feature-detail" hidden>A stated 3-2-1 nitrogen-phosphorus-potassium (N-P-K) analysis, complemented by organic matter and naturally occurring micronutrients. Final nutrient availability depends on the product formulation and soil conditions.</span>
+            </button>
+            <button class="ax-feature-button" type="button" aria-label="View details: Naturally Occurring Chitin">
+              <span class="ax-feature-number">02</span>
+              <span class="ax-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M24 5 39 11v11c0 10-6 16-15 21C15 38 9 32 9 22V11l15-6Z"/><path d="M17 29c1-8 7-13 16-14-1 9-6 15-15 16M17 31c3-4 7-8 12-11"/></svg>
+              </span>
+              <strong>Naturally Occurring Chitin</strong>
+              <span class="ax-feature-action">View details ↗</span>
+              <span class="ax-feature-detail" hidden>Contains chitin derived from insect material, which may support beneficial soil interactions and plant defense responses under suitable conditions.</span>
+            </button>
+            <button class="ax-feature-button" type="button" aria-label="View details: Support for Soil Biology">
+              <span class="ax-feature-number">03</span>
+              <span class="ax-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M24 8v9M24 31v9M8 24h9M31 24h9M12.7 12.7l6.4 6.4M28.9 28.9l6.4 6.4M35.3 12.7l-6.4 6.4M19.1 28.9l-6.4 6.4"/><circle cx="24" cy="24" r="8"/><circle cx="24" cy="24" r="2"/></svg>
+              </span>
+              <strong>Support for Soil Biology</strong>
+              <span class="ax-feature-action">View details ↗</span>
+              <span class="ax-feature-detail" hidden>Adds organic material that may help support soil microbial activity, nutrient cycling, and soil structure.</span>
+            </button>
+            <button class="ax-feature-button" type="button" aria-label="View details: Circular Agricultural Inputs">
+              <span class="ax-feature-number">04</span>
+              <span class="ax-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M37 18a14 14 0 0 0-24-6L9 16M9 10v6h6M11 30a14 14 0 0 0 24 6l4-4m0 6v-6h-6"/><path d="M18 27c4-1 8-5 9-10-5 1-9 5-10 10M17 30c2-3 5-6 9-9"/></svg>
+              </span>
+              <strong>Circular Agricultural Inputs</strong>
+              <span class="ax-feature-action">View details ↗</span>
+              <span class="ax-feature-detail" hidden>Makes productive use of insect-rearing byproducts, supporting more resource-efficient agricultural systems.</span>
+            </button>
           </div>
         </section>
-        <section class="ax-section ax-tint" id="ax-formats">
+        <section class="ax-formats-section" id="ax-formats">
           <div class="shell">
-            <div class="ax-split">
-              <div>
-                <div class="ax-heading">
-                  <span class="ax-label">AVAILABLE COMMERCIAL FORMATS</span>
-                  <h2>A format for<br /><em>your operation</em></h2>
-                  <p class="">
-                    CentroFarms offers multiple physical formats to accommodate
-                    diverse field application methods, custom blending
-                    requirements, and commercial handling systems:
-                  </p>
-                </div>
+            <div class="ax-formats-heading">
+              <div class="ax-heading">
+                <span class="ax-label">AVAILABLE COMMERCIAL FORMATS</span>
+                <h2>A format for<br /><em>your operation</em></h2>
               </div>
+              <p>
+                CentroFarms offers multiple physical formats to accommodate
+                diverse field application methods, custom blending requirements,
+                and commercial handling systems:
+              </p>
+            </div>
+            <div class="ax-formats-layout">
               <figure class="ax-format-photo">
                 <img
-                  class=""
                   src="img/agrisolution-frass-granules-sharp.jpg"
-                  alt="Detail of frass material texture"
+                  alt="Close detail of dried insect frass material"
                   loading="lazy"
                 />
                 <figcaption>
@@ -7622,54 +8275,166 @@
                   REQUEST
                 </figcaption>
               </figure>
+              <div class="ax-formats-list">
+                <article class="ax-format-item">
+                  <span class="ax-label">01</span>
+                  <div>
+                    <h3>Dried Fly Granules (DFG)</h3>
+                    <p>
+                      Natural, unground material suited for bulk soil pre-plant
+                      incorporation, raw compost amendment blending, and base
+                      broadcast applications where particle variability is
+                      acceptable.
+                    </p>
+                  </div>
+                  <span
+                    class="ax-format-sample"
+                    role="img"
+                    aria-label="Illustration of dried fly granules"
+                  >
+                    <svg viewBox="0 0 160 110" aria-hidden="true">
+                      <rect width="160" height="110" fill="#ead9c3" />
+                      <ellipse cx="80" cy="91" rx="56" ry="9" fill="#d2b999" />
+                      <g fill="#80502f" stroke="#704329" stroke-width="1">
+                        <path d="m22 72 8-17 10-8 10 5 5 13-13 12-13 1Z" />
+                        <path d="m47 83 4-13 13-8 12 4 5 12-10 9-16 2Z" />
+                        <path d="m72 70 7-18 13-8 11 6 3 12-12 13-16 2Z" />
+                        <path d="m100 82 2-14 12-10 12 2 7 11-9 14-15 3Z" />
+                        <path d="m121 59 6-16 10-5 8 8-4 15-12 7Z" />
+                        <path d="m35 49 1-13 10-9 12 2 6 10-8 11-13 3Z" />
+                        <path d="m63 47 7-17 12-4 9 7-1 13-13 8-10-2Z" />
+                        <path d="m94 44 3-13 12-7 10 5 3 11-10 10-13 1Z" />
+                        <path d="m123 35 6-11 12-2 6 9-5 12-12 2Z" />
+                      </g>
+                      <g fill="none" stroke="#b37c4d" stroke-linecap="round" stroke-width="2">
+                        <path d="m30 64 8-9 7-2m10 22 8-10 8-3m17-5 7-9 7-2m8 26 9-11 8-3M39 43l6-8 7-1m20 6 7-8 7-2m18 8 6-7 7-1m12-5 5-5" />
+                      </g>
+                      <g fill="#c49162">
+                        <circle cx="27" cy="43" r="2" /><circle cx="56" cy="60" r="2" /><circle cx="87" cy="82" r="2" /><circle cx="117" cy="70" r="2" /><circle cx="149" cy="67" r="2" />
+                        <circle cx="25" cy="84" r="1.5" /><circle cx="72" cy="26" r="1.5" /><circle cx="106" cy="56" r="1.5" /><circle cx="137" cy="87" r="1.5" />
+                      </g>
+                    </svg>
+                  </span>
+                </article>
+                <article class="ax-format-item">
+                  <span class="ax-label">02</span>
+                  <div>
+                    <h3>Crumbles</h3>
+                    <p>
+                      Sized, fractured granules engineered for consistent
+                      volumetric distribution and rapid breakdown upon contact
+                      with soil moisture, making them ideal for top-dressing,
+                      bed preparation, and nursery container media.
+                    </p>
+                  </div>
+                  <span
+                    class="ax-format-sample"
+                    role="img"
+                    aria-label="Illustration of crumbled frass pieces"
+                  >
+                    <svg viewBox="0 0 160 110" aria-hidden="true">
+                      <rect width="160" height="110" fill="#ead9c3" />
+                      <ellipse cx="80" cy="92" rx="57" ry="8" fill="#d2b999" />
+                      <g fill="#98623a" stroke="#81512e" stroke-width="1.5">
+                        <path d="m22 75 4-14 13-8 14 4 5 12-8 12-18 4Z" />
+                        <path d="m54 82 2-13 12-8 13 3 6 11-7 12-17 2Z" />
+                        <path d="m87 75 4-16 15-6 14 7 3 13-11 10-17-1Z" />
+                        <path d="m117 82 2-12 12-8 12 5 3 12-9 10-14 1Z" />
+                        <path d="m34 47 4-12 12-7 13 5 3 11-8 10-15 1Z" />
+                        <path d="m67 47 5-13 13-5 12 6 2 11-9 9-15-1Z" />
+                        <path d="m101 48 6-13 13-3 11 8-1 12-11 7-14-2Z" />
+                      </g>
+                      <g fill="none" stroke="#c28c5c" stroke-linecap="round" stroke-width="2">
+                        <path d="m29 69 9-9 10-3m15 19 8-9 10-3m16 2 8-9 10-2m15 17 7-8 8-2M40 43l8-8 9-2m19 7 8-7 8-1m22 7 7-7 7 1" />
+                      </g>
+                      <g fill="#d0a071">
+                        <circle cx="25" cy="54" r="2" /><circle cx="48" cy="84" r="2" /><circle cx="78" cy="58" r="2" /><circle cx="108" cy="82" r="2" /><circle cx="141" cy="57" r="2" />
+                      </g>
+                    </svg>
+                  </span>
+                </article>
+                <article class="ax-format-item">
+                  <span class="ax-label">03</span>
+                  <div>
+                    <h3>Cylindrical Pellets</h3>
+                    <p>
+                      Dense, extruded cylindrical pellets engineered for low-dust
+                      handling and uniform flow through standard mechanical
+                      hoppers, gravity drops, and banded placement equipment,
+                      dissolving gradually for steady nutrient release.
+                    </p>
+                  </div>
+                  <span
+                    class="ax-format-sample"
+                    role="img"
+                    aria-label="Illustration of cylindrical frass pellets"
+                  >
+                    <svg viewBox="0 0 160 110" aria-hidden="true">
+                      <rect width="160" height="110" fill="#ead9c3" />
+                      <ellipse cx="80" cy="91" rx="56" ry="8" fill="#d2b999" />
+                      <g stroke="#704725" stroke-width="2">
+                        <g transform="rotate(-18 55 68)">
+                          <rect x="28" y="58" width="54" height="17" rx="8" fill="#9a693e" />
+                          <ellipse cx="28" cy="66.5" rx="7" ry="8.5" fill="#c18a57" />
+                          <path d="M37 60v13m8-14v15m8-15v15" stroke="#b37c4d" />
+                        </g>
+                        <g transform="rotate(13 108 75)">
+                          <rect x="81" y="67" width="54" height="17" rx="8" fill="#88572f" />
+                          <ellipse cx="81" cy="75.5" rx="7" ry="8.5" fill="#b47a48" />
+                          <path d="M91 69v13m8-14v15m8-15v15" stroke="#a36d41" />
+                        </g>
+                        <g transform="rotate(20 91 43)">
+                          <rect x="63" y="34" width="53" height="17" rx="8" fill="#a16b3a" />
+                          <ellipse cx="63" cy="42.5" rx="7" ry="8.5" fill="#c18a57" />
+                          <path d="M73 36v13m8-14v15m8-15v15" stroke="#b37c4d" />
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
+                </article>
+                <article class="ax-format-item">
+                  <span class="ax-label">04</span>
+                  <div>
+                    <h3>Spherical Granules</h3>
+                    <p>
+                      Precision-calibrated, free-flowing spherical granules
+                      specifically designed for seamless calibration through
+                      commercial spin spreaders, pneumatic air-boom applicators,
+                      and automated bulk blending lines.
+                    </p>
+                  </div>
+                  <span
+                    class="ax-format-sample"
+                    role="img"
+                    aria-label="Illustration of spherical frass granules"
+                  >
+                    <svg viewBox="0 0 160 110" aria-hidden="true">
+                      <rect width="160" height="110" fill="#ead9c3" />
+                      <ellipse cx="80" cy="92" rx="56" ry="8" fill="#d2b999" />
+                      <g fill="#986137">
+                        <circle cx="41" cy="71" r="10" /><circle cx="66" cy="78" r="11" /><circle cx="93" cy="72" r="10" /><circle cx="119" cy="77" r="9" />
+                        <circle cx="53" cy="51" r="11" /><circle cx="80" cy="53" r="12" /><circle cx="108" cy="52" r="11" />
+                        <circle cx="69" cy="31" r="9" /><circle cx="95" cy="32" r="10" /><circle cx="128" cy="56" r="7" /><circle cx="33" cy="55" r="7" />
+                      </g>
+                      <g fill="#c08a57">
+                        <circle cx="38" cy="68" r="3" /><circle cx="50" cy="47" r="4" /><circle cx="76" cy="49" r="4" /><circle cx="104" cy="48" r="4" /><circle cx="66" cy="28" r="3" /><circle cx="92" cy="29" r="3" /><circle cx="63" cy="74" r="4" /><circle cx="90" cy="68" r="3" /><circle cx="116" cy="74" r="3" />
+                      </g>
+                    </svg>
+                  </span>
+                </article>
+              </div>
             </div>
-            <div class="ax-grid-2">
-              <article class="ax-card">
-                <span class="ax-label">01</span>
-                <h3>Dried Fly Granules (DFG)</h3>
-                <p>
-                  Natural, unground material suited for bulk soil pre-plant
-                  incorporation, raw compost amendment blending, and base
-                  broadcast applications where particle variability is
-                  acceptable.
-                </p>
-              </article>
-              <article class="ax-card">
-                <span class="ax-label">02</span>
-                <h3>Crumbles</h3>
-                <p>
-                  Sized, fractured granules engineered for consistent volumetric
-                  distribution and rapid breakdown upon contact with soil
-                  moisture, making them ideal for top-dressing, bed preparation,
-                  and nursery container media.
-                </p>
-              </article>
-              <article class="ax-card">
-                <span class="ax-label">03</span>
-                <h3>Cylindrical Pellets</h3>
-                <p>
-                  Dense, extruded cylindrical pellets engineered for low-dust
-                  handling and uniform flow through standard mechanical hoppers,
-                  gravity drops, and banded placement equipment, dissolving
-                  gradually for steady nutrient release.
-                </p>
-              </article>
-              <article class="ax-card">
-                <span class="ax-label">04</span>
-                <h3>Spherical Granules</h3>
-                <p>
-                  Precision-calibrated, free-flowing spherical granules
-                  specifically designed for seamless calibration through
-                  commercial spin spreaders, pneumatic air-boom applicators, and
-                  automated bulk blending lines.
-                </p>
-              </article>
+            <div class="ax-formats-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 11v5m0-8h.01" />
+              </svg>
+              <span>
+                Particle size distribution (SGN), bulk density, moisture levels,
+                and spreader calibration guidelines are available upon request
+                and confirmed on each lot's Certificate of Analysis (CoA).
+              </span>
             </div>
-            <p class="ax-note" style="padding-top: 24px">
-              Particle size distribution (SGN), bulk density, moisture levels,
-              and spreader calibration guidelines are available upon request and
-              confirmed on each lot's Certificate of Analysis (CoA).
-            </p>
           </div>
         </section>
         <section class="shell ax-section" id="ax-trials">
@@ -7802,119 +8567,351 @@
             </div>
           </div>
         </section>
-        <section class="shell ax-section" id="ax-logistics">
-          <div class="ax-heading">
-            <span class="ax-label">PACKAGING &amp; LOGISTICS</span>
-            <h2>Commercial scale<br /><em>Flexible handling</em></h2>
-            <p class="">
-              Commercial packaging and shipping configurations can be tailored
-              to order volume, destination, and handling requirements.
-            </p>
-          </div>
-          <div class="ax-grid-3">
-            <article class="ax-card">
-              <span class="ax-label">01</span>
-              <h3>40 lb bags</h3>
+        <section class="ax-logistics-section" id="ax-logistics">
+          <div class="shell">
+            <div class="ax-logistics-heading">
+              <div class="ax-heading">
+                <span class="ax-label">PACKAGING &amp; LOGISTICS</span>
+                <h2>Commercial scale<br /><em>Flexible handling</em></h2>
+              </div>
               <p>
-                Suitable for smaller commercial orders and routine handling.
-              </p>
-            </article>
-            <article class="ax-card">
-              <span class="ax-label">02</span>
-              <h3>1-ton bulk super sacks</h3>
-              <p>
-                Designed for larger farms, distributors, and bulk agricultural
-                applications.
-              </p>
-            </article>
-            <article class="ax-card">
-              <span class="ax-label">03</span>
-              <h3>Full Truckload (FTL) and Full Container Load (FCL)</h3>
-              <p>
-                Options for commercial distribution and export shipments,
-                subject to order volume and destination requirements.
-              </p>
-            </article>
-          </div>
-          <p class="ax-note">
-            Product specifications, minimum order quantities, lead times, and
-            export documentation can be confirmed during the purchasing process.
-          </p>
-          <div class="ax-contact" id="ax-product-contact">
-            <div>
-              <span class="ax-label">PRODUCT ENQUIRIES</span>
-              <h3>
-                Request the EPro 3-2-1 Product Specification Sheet &amp; Field
-                Trial Guidelines
-              </h3>
-              <p class="">
-                Contact CentroFarms to discuss product specifications,
-                application requirements, bulk orders, and potential field
-                trials for your operation.
+                Commercial packaging and shipping configurations can be
+                tailored to order volume, destination, and handling
+                requirements.
               </p>
             </div>
-            <a
-              class="ax-button"
-              href="mailto:info@centrofarms.com?subject=EPro%203-2-1%20Specifications%20and%20Field%20Trials"
-              >Request information <span>↗</span></a
-            >
+            <div class="ax-logistics-grid">
+              <article class="ax-logistics-card">
+                <div
+                  class="ax-logistics-visual"
+                  role="img"
+                  aria-label="Illustration of 40 pound product bags stacked on a warehouse pallet"
+                >
+                  <svg viewBox="0 0 600 340" aria-hidden="true">
+                    <rect width="600" height="340" fill="#d9d4c8" />
+                    <path d="M0 0h600v229H0z" fill="#77766e" />
+                    <path d="M0 20h600M0 78h600M0 136h600M0 194h600" stroke="#a9a396" stroke-width="5" />
+                    <path d="M30 0v229m90-229v229m90-229v229m90-229v229m90-229v229m90-229v229m90-229v229" stroke="#615f59" stroke-width="5" />
+                    <path d="M0 228h600v112H0z" fill="#b9b1a0" />
+                    <path d="m101 265 403-12 24 30-422 14-25-14Z" fill="#8d6540" />
+                    <path d="m106 296 422-13-5 24-416 15Z" fill="#755235" />
+                    <path d="m123 305 16 31m80-34 7 30m81-33 2 31m83-34-4 31m86-34-9 31" stroke="#593d2a" stroke-width="8" />
+                    <g stroke="#997a55" stroke-width="2">
+                      <path d="m131 242 14-34 143-4 19 29-8 26-152 3Z" fill="#c6a579" />
+                      <path d="m290 238 17-34 146-3 19 28-8 27-153 5Z" fill="#d3b88f" />
+                      <path d="m119 204 15-35 145-4 17 30-8 27-153 4Z" fill="#d5bb94" />
+                      <path d="m288 200 17-35 146-3 17 30-8 27-153 3Z" fill="#c8aa7f" />
+                      <path d="m132 166 14-34 143-4 19 29-8 26-152 4Z" fill="#c9ad84" />
+                      <path d="m291 162 17-34 146-3 19 29-8 27-153 3Z" fill="#d7be98" />
+                      <path d="m120 128 15-35 145-4 17 30-8 27-153 4Z" fill="#ddc8a8" />
+                      <path d="m289 124 17-35 146-3 17 30-8 27-153 3Z" fill="#cfb28a" />
+                    </g>
+                    <path d="m147 133 119-3m50-7 121-3m-312 49 116-3m54-7 120-3m-309 46 122-3m47-7 124-3m-306 45 119-3m51-7 121-3" stroke="#a18765" stroke-width="2" opacity=".8" />
+                  </svg>
+                </div>
+                <div class="ax-logistics-card-copy">
+                  <span class="ax-label">01</span>
+                  <h3>40 lb bags</h3>
+                  <p>
+                    Suitable for smaller commercial orders and routine handling.
+                  </p>
+                </div>
+              </article>
+              <article class="ax-logistics-card">
+                <div
+                  class="ax-logistics-visual"
+                  role="img"
+                  aria-label="Illustration of a one-ton bulk super sack on a warehouse pallet"
+                >
+                  <svg viewBox="0 0 600 340" aria-hidden="true">
+                    <rect width="600" height="340" fill="#dcd8ce" />
+                    <path d="M0 0h600v237H0z" fill="#817e73" />
+                    <path d="M20 24h560M20 80h560M20 136h560M20 192h560" stroke="#aaa599" stroke-width="5" />
+                    <path d="M52 0v236m124-236v236m124-236v236m124-236v236m124-236v236" stroke="#66645d" stroke-width="6" />
+                    <path d="M0 237h600v103H0z" fill="#c4bdad" />
+                    <path d="m135 278 337-8 24 27-359 11-22-15Z" fill="#916c48" />
+                    <path d="m137 304 359-11-7 24-351 12Z" fill="#77573a" />
+                    <path d="m165 315 13 25m90-28 4 26m90-29-4 27m92-30-10 29" stroke="#64472f" stroke-width="9" />
+                    <path d="M222 87c-1-30-28-39-29-4l-3 22 17 7m174-25c1-30 28-39 29-4l3 22-17 7" fill="none" stroke="#e4e0d6" stroke-width="13" />
+                    <path d="m205 101 17-16h158l17 16-9 143-17 27H231l-17-27Z" fill="#eeeae0" stroke="#c7c2b6" stroke-width="4" />
+                    <path d="m205 101 22 17h148l22-17m-192 142 30-13h132l30 13m-182-125 2 101m26-101-2 104m120-104 2 104m26-104-2 101" fill="none" stroke="#d1cdc2" stroke-width="4" />
+                    <path d="M234 85h134l-14 19H248Z" fill="#ddd9cd" />
+                    <path d="m274 85 9-45h34l9 45" fill="#e8e4da" stroke="#ccc7bb" stroke-width="4" />
+                    <path d="m253 267 8 11m87-12 6 11m-65-192 3-26m15 26 1-27" stroke="#c0bbaf" stroke-width="4" />
+                  </svg>
+                </div>
+                <div class="ax-logistics-card-copy">
+                  <span class="ax-label">02</span>
+                  <h3>1-ton bulk super sacks</h3>
+                  <p>
+                    Designed for larger farms, distributors, and bulk
+                    agricultural applications.
+                  </p>
+                </div>
+              </article>
+              <article class="ax-logistics-card">
+                <div
+                  class="ax-logistics-visual"
+                  role="img"
+                  aria-label="Illustration of a freight truck and shipping container at a warehouse"
+                >
+                  <svg viewBox="0 0 600 340" aria-hidden="true">
+                    <rect width="600" height="340" fill="#cfd9d8" />
+                    <path d="M0 0h600v235H0z" fill="#dfe4df" />
+                    <path d="M23 51h303v184H23z" fill="#eeeae0" />
+                    <path d="M0 33h353v18H0z" fill="#c7c4b8" />
+                    <path d="M43 69h82v129H43zm109 0h82v129h-82zm108 0h82v129h-82z" fill="#c9c7bd" />
+                    <path d="M50 78h68v109H50zm109 0h68v109h-68zm109 0h68v109h-68z" fill="#555e59" />
+                    <path d="M0 235h600v105H0z" fill="#b9b5a8" />
+                    <path d="M108 214h330v20H108z" fill="#7e3028" />
+                    <path d="M112 98h316v117H112z" fill="#8b382e" stroke="#6b2d26" stroke-width="4" />
+                    <path d="M132 100v113m36-113v113m36-113v113m36-113v113m36-113v113m36-113v113m36-113v113m36-113v113" stroke="#a95648" stroke-width="3" />
+                    <path d="M438 172h60l48 30 25 43v50H420V193c0-12 7-21 18-21Z" fill="#e5e5dd" stroke="#9e9d92" stroke-width="4" />
+                    <path d="M482 182h15l38 25h-53z" fill="#9eb2b4" />
+                    <path d="m507 229 40-1 16 25h-56z" fill="#a5a399" />
+                    <path d="M416 230h20v48h-20zm183-8h-18v38h18z" fill="#e8c85b" />
+                    <path d="M81 264h444v20H81z" fill="#77736a" />
+                    <circle cx="185" cy="279" r="31" fill="#333633" />
+                    <circle cx="185" cy="279" r="14" fill="#c2c2b9" />
+                    <circle cx="390" cy="279" r="31" fill="#333633" />
+                    <circle cx="390" cy="279" r="14" fill="#c2c2b9" />
+                    <circle cx="485" cy="279" r="31" fill="#333633" />
+                    <circle cx="485" cy="279" r="14" fill="#c2c2b9" />
+                    <path d="M0 318h600" stroke="#918c80" stroke-width="5" />
+                  </svg>
+                </div>
+                <div class="ax-logistics-card-copy">
+                  <span class="ax-label">03</span>
+                  <h3>Full Truckload (FTL) and Full Container Load (FCL)</h3>
+                  <p>
+                    Options for commercial distribution and export shipments,
+                    subject to order volume and destination requirements.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="ax-logistics-note">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 3h7l5 5v13H7z" />
+                <path d="M14 3v6h5M10 13h6m-6 4h6" />
+              </svg>
+              <span>
+                Product specifications, minimum order quantities, lead times,
+                and export documentation can be confirmed during the purchasing
+                process.
+              </span>
+            </div>
+            <div class="ax-contact ax-logistics-contact" id="ax-product-contact">
+              <div>
+                <span class="ax-label">PRODUCT ENQUIRIES</span>
+                <h3>
+                  Request the EPro 3-2-1 Product Specification Sheet &amp; Field
+                  Trial Guidelines
+                </h3>
+                <p>
+                  Contact CentroFarms to discuss product specifications,
+                  application requirements, bulk orders, and potential field
+                  trials for your operation.
+                </p>
+              </div>
+              <a
+                class="ax-button"
+                href="mailto:info@centrofarms.com?subject=EPro%203-2-1%20Specifications%20and%20Field%20Trials"
+                >Request information <span>↗</span></a
+              >
+            </div>
           </div>
         </section>
         <section class="ax-equipment-section" id="ax-equipment">
-          <div class="shell">
-            <div class="ax-equipment-intro">
+          <div class="ax-equipment-hero">
+            <div class="ax-equipment-hero-copy">
               <span class="ax-label">EQUIPMENT SYSTEMS</span>
-              <h2>Modular Polypropylene Flooring Slats</h2>
-              <p class="">
+              <h2>Modular Polypropylene<br /><em>Flooring Slats</em></h2>
+              <p>
                 Engineered for elevated pit and breeder layouts, replacing
                 rotting wood and fragile wire with high-density, virgin
                 polypropylene.
               </p>
+              <span class="ax-equipment-built-for"
+                >BUILT FOR COMMERCIAL POULTRY</span
+              >
             </div>
-            <div class="ax-grid-4">
-              <article class="ax-card">
-                <span class="ax-label">01</span>
-                <h3>Durable Polymer Construction</h3>
-                <p>
-                  High-impact polypropylene options designed for demanding
-                  agricultural use, with material specifications determining
-                  resistance to UV exposure and cleaning chemicals.
-                </p>
-              </article>
-              <article class="ax-card">
-                <span class="ax-label">02</span>
-                <h3>Easy-to-Clean Surfaces</h3>
-                <p>
-                  Non-porous surfaces designed to facilitate routine washing and
-                  sanitation when used with appropriate cleaning procedures.
-                </p>
-              </article>
-              <article class="ax-card">
-                <span class="ax-label">03</span>
-                <h3>Load-Bearing Design</h3>
-                <p>
-                  Ribbed structural geometry intended to provide support under
-                  specified operating loads and reduce excessive deflection.
-                </p>
-              </article>
-              <article class="ax-card">
-                <span class="ax-label">04</span>
-                <h3>Modular Installation</h3>
-                <p>
-                  Interlocking layouts that can simplify assembly, replacement,
-                  and maintenance where compatible with the facility design.
-                </p>
-              </article>
+            <figure class="ax-equipment-hero-photo">
+              <img
+                src="img/880428e31cb24a00a972c24dcfab593d.webp"
+                alt="Chicken in a commercial poultry facility"
+                loading="lazy"
+              />
+              <figcaption>
+                Equipment systems for commercial poultry facilities
+              </figcaption>
+            </figure>
+          </div>
+          <div class="shell ax-equipment-content">
+            <div class="ax-equipment-details">
+              <figure class="ax-equipment-product-visual">
+                <span class="ax-label">MATERIAL &amp; SYSTEM DETAILS</span>
+                <svg
+                  viewBox="0 0 520 310"
+                  role="img"
+                  aria-label="Illustration of modular polypropylene flooring slats"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="slatTop" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0" stop-color="#f8f8f5" />
+                      <stop offset="1" stop-color="#b9b9b2" />
+                    </linearGradient>
+                    <linearGradient id="slatSide" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0" stop-color="#a8a8a2" />
+                      <stop offset="1" stop-color="#777871" />
+                    </linearGradient>
+                    <pattern
+                      id="slatSlots"
+                      width="42"
+                      height="28"
+                      patternTransform="skewX(-25)"
+                      patternUnits="userSpaceOnUse"
+                    >
+                      <rect
+                        x="8"
+                        y="5"
+                        width="10"
+                        height="19"
+                        rx="2"
+                        fill="#767770"
+                      />
+                    </pattern>
+                    <clipPath id="slatClip">
+                      <polygon points="105,65 420,35 478,191 160,229" />
+                    </clipPath>
+                  </defs>
+                  <ellipse
+                    cx="280"
+                    cy="246"
+                    rx="190"
+                    ry="29"
+                    fill="#d8d7d0"
+                  />
+                  <path
+                    d="M105 65 420 35 478 191 160 229 144 246 88 224 91 199 105 193Z"
+                    fill="url(#slatSide)"
+                  />
+                  <path
+                    d="m105 65 315-30 58 156-318 38-55-27Z"
+                    fill="url(#slatTop)"
+                    stroke="#8b8c85"
+                    stroke-width="2"
+                  />
+                  <g clip-path="url(#slatClip)">
+                    <rect
+                      x="70"
+                      y="30"
+                      width="440"
+                      height="220"
+                      fill="url(#slatSlots)"
+                    />
+                    <path
+                      d="m105 65 55 164m46-174 54 164m46-174 54 164m46-174 54 164M90 105l360-34M105 146l360-34m-343 76 360-34"
+                      fill="none"
+                      stroke="#a2a39b"
+                      stroke-width="5"
+                    />
+                  </g>
+                  <path
+                    d="m160 229-1 24 24 9 2-31m83-10 1 32 23 8 1-43m80-10 1 33 23 8 2-45"
+                    fill="#8a8b84"
+                    stroke="#696a64"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="m144 246 315-39 19 9-313 42Z"
+                    fill="#d2d2cb"
+                    stroke="#85867f"
+                    stroke-width="2"
+                  />
+                </svg>
+              </figure>
+              <div class="ax-equipment-features">
+                <article class="ax-equipment-feature">
+                  <span class="ax-equipment-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="m24 5 19 10-19 10L5 15 24 5Z" />
+                      <path d="m5 23 19 10 19-10M5 31l19 10 19-10" />
+                    </svg>
+                  </span>
+                  <div class="ax-equipment-feature-copy">
+                    <span class="ax-label">01</span>
+                    <h3>Durable Polymer Construction</h3>
+                    <p>
+                      High-impact polypropylene options designed for demanding
+                      agricultural use, with material specifications determining
+                      resistance to UV exposure and cleaning chemicals.
+                    </p>
+                  </div>
+                </article>
+                <article class="ax-equipment-feature">
+                  <span class="ax-equipment-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M18 7c-5 8-11 14-11 22a11 11 0 0 0 22 0c0-8-6-14-11-22Z" />
+                      <path d="m35 12 2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5Zm-5 20 1 3 3 1-3 1-1 3-1-3-3-1 3-1 1-3Z" />
+                    </svg>
+                  </span>
+                  <div class="ax-equipment-feature-copy">
+                    <span class="ax-label">02</span>
+                    <h3>Easy-to-Clean Surfaces</h3>
+                    <p>
+                      Non-porous surfaces designed to facilitate routine washing
+                      and sanitation when used with appropriate cleaning
+                      procedures.
+                    </p>
+                  </div>
+                </article>
+                <article class="ax-equipment-feature">
+                  <span class="ax-equipment-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M7 11h34v8H29v10h12v8H7v-8h12V19H7v-8Z" />
+                      <path d="M13 15h4m14 0h4m-22 18h4m14 0h4" />
+                    </svg>
+                  </span>
+                  <div class="ax-equipment-feature-copy">
+                    <span class="ax-label">03</span>
+                    <h3>Load-Bearing Design</h3>
+                    <p>
+                      Ribbed structural geometry intended to provide support
+                      under specified operating loads and reduce excessive
+                      deflection.
+                    </p>
+                  </div>
+                </article>
+                <article class="ax-equipment-feature">
+                  <span class="ax-equipment-feature-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path d="M5 13h16v8h6v-5h16v16H27v-5h-6v8H5V13Z" />
+                      <path d="M21 21v6m6-11v16" />
+                    </svg>
+                  </span>
+                  <div class="ax-equipment-feature-copy">
+                    <span class="ax-label">04</span>
+                    <h3>Modular Installation</h3>
+                    <p>
+                      Interlocking layouts that can simplify assembly,
+                      replacement, and maintenance where compatible with the
+                      facility design.
+                    </p>
+                  </div>
+                </article>
+              </div>
             </div>
             <div class="ax-equipment-bottom">
               <div>
                 <h3>Designed for Commercial Poultry Operations</h3>
-                <p class="">
+                <p>
                   CentroFarms Equipment Systems is intended for farm owners,
                   poultry operators, agricultural contractors, and facility
                   developers looking for practical infrastructure solutions.
                 </p>
-                <p class="">
+                <p>
                   Product selection should be based on facility dimensions,
                   animal requirements, expected loads, sanitation procedures,
                   and compatibility with existing equipment.
@@ -7922,27 +8919,29 @@
               </div>
               <div>
                 <h3>Our Approach</h3>
-                <p class="">
+                <p>
                   We focus on practical engineering, material selection, and
                   system compatibility. Rather than treating each component as a
                   standalone product, we consider how flooring, framing,
                   connections, and facility operations work together.
                 </p>
-                <p class="">
+                <p>
                   The objective is to help commercial operators build facilities
                   that are easier to maintain, suited to their operating
                   conditions, and designed for long-term use.
                 </p>
               </div>
             </div>
-            <div class="ax-contact ax-contact-light">
+          </div>
+          <div class="ax-equipment-cta">
+            <div class="shell ax-equipment-cta-inner">
               <div>
                 <span class="ax-label">EQUIPMENT ENQUIRIES</span>
                 <h3>
                   Request the Equipment Systems Catalog &amp; Technical
                   Specifications
                 </h3>
-                <p class="">
+                <p>
                   Contact CentroFarms to discuss available components, material
                   specifications, installation requirements, and potential
                   applications for your facility.
@@ -8206,9 +9205,51 @@
         modelDialog.id = "modelDialog";
         modelDialog.setAttribute("aria-label", "Investment model details");
         document.body.appendChild(modelDialog);
-        [productDialog, letterDialog, modelDialog].forEach((dlg) => {
+        const featureDialog = document.createElement("dialog");
+        featureDialog.className = "editorial-modal";
+        featureDialog.id = "featureDialog";
+        featureDialog.setAttribute("aria-label", "Product feature details");
+        document.body.appendChild(featureDialog);
+        [productDialog, letterDialog, modelDialog, featureDialog].forEach((dlg) => {
           dlg.addEventListener("click", (e) => {
             if (e.target === dlg) closeDialog(dlg);
+          });
+        });
+        all(".ax-feature-button").forEach((button) => {
+          const title = button.querySelector("strong");
+          const detail = button.querySelector(".ax-feature-detail");
+          const number = button.querySelector(".ax-feature-number");
+          if (!title || !detail || !number) {
+            throw new Error("An AgriSolutions feature is missing its details.");
+          }
+          button.addEventListener("click", () => {
+            const content = document.createElement("div");
+            content.className = "modal-content";
+            const header = document.createElement("div");
+            header.className = "modal-header";
+            const headingGroup = document.createElement("div");
+            const kicker = document.createElement("div");
+            kicker.className = "modal-kicker";
+            kicker.textContent = `PRODUCT FEATURE · ${number.textContent}`;
+            const heading = document.createElement("h2");
+            heading.id = "featureDialogTitle";
+            heading.textContent = title.textContent;
+            headingGroup.append(kicker, heading);
+            const closeButton = document.createElement("button");
+            closeButton.type = "button";
+            closeButton.className = "modal-close";
+            closeButton.setAttribute("aria-label", "Close feature details");
+            closeButton.textContent = "×";
+            header.append(headingGroup, closeButton);
+            const description = document.createElement("p");
+            description.textContent = detail.textContent.trim();
+            content.append(header, description);
+            featureDialog.setAttribute("aria-labelledby", heading.id);
+            featureDialog.replaceChildren(content);
+            closeButton.addEventListener("click", () =>
+              closeDialog(featureDialog),
+            );
+            showDialog(featureDialog);
           });
         });
         all(".cf-doc-model-card").forEach((card) => {
