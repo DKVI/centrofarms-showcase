@@ -22,7 +22,7 @@
       defer
       src="https://cdn.jsdelivr.net/npm/swiper@14.4.0/swiper-bundle.min.js"
     ></script>
-    <title>CentroFarms™ — Three divisions. One vision.</title>
+    <title>CentroFarms™</title>
     <style>
       #page-agrisolution .agri-analysis-feature {
         grid-column: 1/-1;
@@ -1166,9 +1166,16 @@
       }
       .foot-inner .right {
         display: flex;
-        gap: 24px;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 22px;
+        margin-left: auto;
         font-size: 11px;
         color: #6b806f;
+      }
+      .foot-inner .right a {
+        white-space: nowrap;
+        text-align: center;
       }
       .foot-inner a:hover {
         color: #24563b;
@@ -2771,10 +2778,10 @@
       .home-v4 .portal b {
         font-size: 15px;
         line-height: 1.3;
+        margin-bottom: 0;
       }
       .home-v4 .portal p {
-        font-size: 11px;
-        line-height: 1.5;
+        display: none;
       }
       .home-v4 .portal .trailing {
         margin-left: auto;
@@ -8960,24 +8967,18 @@
     <footer class="site-footer">
       <div class="shell foot-inner">
         <div class="left">
-          <b>CENTROFARMS™</b
-          ><span>Three divisions. One agricultural vision.</span>
+          <b>CENTROFARMS™</b>
         </div>
         <div class="right">
-          <a href="#/coffee">Specialty Coffee ↗</a
-          ><a href="#/agrisolution">AgriSolutions ↗</a
+          <a href="#/coffee">CentroFarms™ Coffee &amp; Herb Estates</a
+          ><a href="#/agrisolution">CentroFarms™ AgriSolutions</a
           ><a
             href="https://centrofarms.com/en/"
             target="_blank"
             rel="noopener noreferrer"
-            >Naturals ↗</a
-          ><a href="#/poultry">Poultry ↗</a
-          ><a
-            href="https://centrofarms.com/lien-he/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Contact ↗</a
-          >
+            >CentroFarms™ Naturals ↗</a
+          ><a href="#/poultry">CentroFarms™ Poultry Farms</a
+          ><a href="#/contact">Contact</a>
         </div>
       </div>
     </footer>
@@ -9177,7 +9178,7 @@
         );
         setHTML(
           ".site-footer .right",
-          `<a href="#/coffee">Specialty Coffee ↗</a><a href="#/agrisolution">AgriSolutions ↗</a><a href="https://centrofarms.com/en/" target="_blank" rel="noopener noreferrer">Naturals ↗</a><a href="#/poultry">Poultry ↗</a><a href="#/contact">Contact ↗</a>`,
+          `<a href="#/coffee">CentroFarms™ Coffee &amp; Herb Estates</a><a href="#/agrisolution">CentroFarms™ AgriSolutions</a><a href="https://centrofarms.com/en/" target="_blank" rel="noopener noreferrer">CentroFarms™ Naturals ↗</a><a href="#/poultry">CentroFarms™ Poultry Farms</a><a href="#/contact">Contact</a>`,
         );
 
         const productDialog = document.createElement("dialog");
@@ -9381,7 +9382,7 @@
           const left = document.createElement("div");
           left.className = "home-v4-left";
           left.innerHTML =
-            '<span class="home-v4-eyebrow">EXPLORE CENTROFARMS™</span><h1 class="home-v4-heading">Four fields One shared purpose</h1><p class="home-v4-sub">Explore our natural products, specialty green coffee, poultry, and soil solutions.</p>';
+            '<span class="home-v4-eyebrow">EXPLORE CENTROFARMS™</span><h1 class="home-v4-heading">One shared purpose.</h1><p class="home-v4-sub">Explore our natural products, specialty green coffee, poultry, and soil solutions.</p>';
           portals.insertAdjacentHTML(
             "beforeend",
             '<a class="portal" data-division="agrisolution" href="#/agrisolution"><span class="count">04</span><div><b>CentroFarms™ AgriSolutions</b><p>Black soldier fly frass · Soil amendment</p></div><span class="trailing">→</span></a>',
