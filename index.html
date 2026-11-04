@@ -1046,6 +1046,7 @@
         gap: 12px;
       }
       .stat {
+        min-width: 0;
         background: #fff;
         border: 1px solid var(--edge);
         border-radius: 16px;
@@ -1064,6 +1065,7 @@
         margin-top: 8px;
         line-height: 1.55;
         font-weight: 700;
+        overflow-wrap: anywhere;
       }
       .poultry-bottom {
         margin: 17px 0 28px;
@@ -1179,6 +1181,13 @@
       }
       .foot-inner a:hover {
         color: #24563b;
+      }
+      @media (max-width: 1050px) {
+        .foot-inner .right {
+          min-width: 0;
+          flex-wrap: wrap;
+          gap: 14px 22px;
+        }
       }
       @media (max-width: 1200px) {
         .head-inner {
@@ -1806,6 +1815,9 @@
         }
         .poultry-first-stage .poultry-stats {
           grid-template-columns: repeat(2, 1fr);
+        }
+        .poultry-first-stage .poultry-stats .stat b {
+          white-space: normal;
         }
       }
       @media (max-width: 650px) {
@@ -3651,7 +3663,7 @@
       }
       #page-agrisolution .agri-npk small {
         color: #f1e6c8;
-        font-size: 15px;
+        font-size: 18px;
       }
       #page-agrisolution .agri-npk b {
         font-size: 40px;
@@ -3798,7 +3810,7 @@
           font-size: 34px;
         }
         #page-agrisolution .agri-npk small {
-          font-size: 14px;
+          font-size: 16px;
         }
         #page-agrisolution .agri-source-note {
           padding: 10px 12px;
@@ -6251,7 +6263,7 @@
         font-size: 24px;
       }
       #page-agrisolution .ax-npk small {
-        font-size: 9px;
+        font-size: 16px;
         letter-spacing: 0.6px;
         color: #b9c9b8;
         display: block;
@@ -7237,7 +7249,7 @@
           padding: 24px;
         }
         #page-agrisolution .ax-npk small {
-          font-size: 8px;
+          font-size: 14px;
         }
         #page-agrisolution .ax-npk strong {
           font-size: 50px;
@@ -9623,6 +9635,98 @@
               });
             }
           });
+        });
+      })();
+    </script>
+    <script>
+      (() => {
+        const contentSelector =
+          "p, li, td, th, blockquote, figcaption, dd, dt, .desc, .panel-desc, .steps-mini, .agri-trace-elements, .agri-disclaimer, .contact-detail, .note, .stat span";
+        const adjusted = new Map();
+
+        function restore(element, property, original) {
+          if (original.value) {
+            element.style.setProperty(property, original.value, original.priority);
+          } else {
+            element.style.removeProperty(property);
+          }
+        }
+
+        function enforceMinimum(element) {
+          if (!(element instanceof HTMLElement)) return;
+
+          const previous = adjusted.get(element);
+          if (previous) {
+            restore(element, "font-size", previous.fontSize);
+            restore(element, "line-height", previous.lineHeight);
+            adjusted.delete(element);
+          }
+
+          if (!element.textContent.trim() && !element.matches("input, select, textarea")) {
+            return;
+          }
+
+          const minimum = element.closest(contentSelector) ? 14 : 12;
+          const styles = getComputedStyle(element);
+          const fontSize = parseFloat(styles.fontSize);
+          if (fontSize >= minimum) return;
+
+          const original = {
+            fontSize: {
+              value: element.style.getPropertyValue("font-size"),
+              priority: element.style.getPropertyPriority("font-size"),
+            },
+            lineHeight: {
+              value: element.style.getPropertyValue("line-height"),
+              priority: element.style.getPropertyPriority("line-height"),
+            },
+          };
+          adjusted.set(element, original);
+          const lineHeight = parseFloat(styles.lineHeight);
+          element.style.setProperty("font-size", `${minimum}px`, "important");
+          if (Number.isFinite(lineHeight) && lineHeight < minimum) {
+            element.style.setProperty("line-height", "1.4", "important");
+          }
+        }
+
+        function enforceTree(root) {
+          if (root instanceof HTMLElement) enforceMinimum(root);
+          root.querySelectorAll?.("*").forEach((element) => {
+            if (element instanceof HTMLElement) enforceMinimum(element);
+          });
+        }
+
+        function refreshMinimums() {
+          for (const element of adjusted.keys()) {
+            if (!element.isConnected) {
+              adjusted.delete(element);
+              continue;
+            }
+            restore(element, "font-size", adjusted.get(element).fontSize);
+            restore(element, "line-height", adjusted.get(element).lineHeight);
+            adjusted.delete(element);
+          }
+          enforceTree(document.body);
+        }
+
+        refreshMinimums();
+        window.addEventListener("resize", refreshMinimums);
+        new MutationObserver((records) => {
+          for (const record of records) {
+            if (record.type === "attributes") {
+              enforceTree(record.target);
+            } else if (record.type === "characterData") {
+              if (record.target.parentElement) enforceTree(record.target.parentElement);
+            } else {
+              record.addedNodes.forEach(enforceTree);
+            }
+          }
+        }).observe(document.body, {
+          subtree: true,
+          childList: true,
+          characterData: true,
+          attributes: true,
+          attributeFilter: ["class"],
         });
       })();
     </script>
