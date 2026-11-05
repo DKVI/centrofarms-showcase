@@ -2226,7 +2226,7 @@
         border-radius: 0;
         background: #e8eddc;
         color: #314b38 !important;
-        font-size: 11px !important;
+        font-size: 12px !important;
       }
       #page-coffee .coffee-editorial-note svg {
         width: 21px;
@@ -2377,10 +2377,6 @@
         stroke-linecap: round;
         stroke-linejoin: round;
         stroke-width: 1.7;
-      }
-      #page-coffee .coffee-sourcing-note span {
-        border-left: 1px solid #93a078;
-        padding-left: 16px;
       }
       #page-coffee #coffee-terroir {
         padding: 32px 0 42px;
@@ -2542,10 +2538,6 @@
         stroke-linejoin: round;
         stroke-width: 1.7;
       }
-      #page-coffee .coffee-origin-note span {
-        border-left: 1px solid #93a078;
-        padding-left: 16px;
-      }
       #page-coffee .coffee-editorial-note {
         padding: 12px 16px;
         border-left: 3px solid #aebf9e;
@@ -2678,12 +2670,15 @@
         display: flex;
         align-items: center;
         gap: 12px;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
         margin: 18px 0 0;
         padding: 13px 17px;
         border-radius: 8px;
         background: #e8eddc;
         color: #34443a;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.6;
       }
       #page-coffee .coffee-logistics-note svg {
@@ -2906,9 +2901,6 @@
           margin-top: 22px;
           padding: 16px;
         }
-        #page-coffee .coffee-sourcing-note span {
-          padding-left: 11px;
-        }
         #page-coffee #coffee-terroir {
           padding: 26px 0 36px;
         }
@@ -2956,9 +2948,6 @@
         #page-coffee .coffee-origin-note {
           gap: 11px;
           padding: 16px;
-        }
-        #page-coffee .coffee-origin-note span {
-          padding-left: 11px;
         }
         #page-coffee .coffee-origin-note svg {
           width: 20px;
@@ -4828,7 +4817,7 @@
         border-radius: 8px;
         background: #e8eddc;
         color: #34443a;
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.6;
       }
       #page-coffee .copy-soft-note svg {
@@ -6870,6 +6859,20 @@
           background 0.2s,
           transform 0.2s;
       }
+      #page-poultry .cf-btn-arrow {
+        display: inline-flex;
+        width: 12px;
+        height: 12px;
+      }
+      #page-poultry .cf-btn-arrow svg {
+        width: 100%;
+        height: 100%;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.8;
+      }
       #page-poultry .cf-btn:hover {
         transform: translateY(-2px);
       }
@@ -8431,6 +8434,12 @@
         gap: 7%;
         align-items: stretch;
       }
+      #page-agrisolution .ax-field-layout > .ax-note {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+      }
       #page-agrisolution .ax-field-layout > figure {
         margin: 0;
         position: relative;
@@ -8592,7 +8601,7 @@
       #page-agrisolution .ax-equipment-product-visual .ax-label {
         margin: 0 0 7px 4px;
       }
-      #page-agrisolution .ax-equipment-product-visual svg {
+      #page-agrisolution .ax-equipment-product-visual img {
         display: block;
         width: 100%;
         height: auto;
@@ -8939,12 +8948,59 @@
         }
       }
     </style>
+    <style>
+      .note-block {
+        display: flex !important;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        gap: 0 !important;
+        margin: 18px 0 0 !important;
+        padding: 13px 17px !important;
+        border: 0 !important;
+        border-radius: 8px !important;
+        background: #e8eddc !important;
+        color: #34443a !important;
+        font-size: 12px !important;
+        line-height: 1.6 !important;
+        text-align: left !important;
+        backdrop-filter: none !important;
+      }
+      .note-block::before {
+        content: none !important;
+      }
+      .note-block > svg,
+      .note-block > .note-icon,
+      .note-block > .agri-source-icon {
+        display: block;
+        width: 21px;
+        height: 21px;
+        flex: 0 0 21px;
+        margin: 0 12px 0 0;
+        fill: none;
+        stroke: #657832;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.7;
+      }
+      .note-block > .note-content {
+        min-width: 0;
+        flex: 1 1 auto;
+        padding-left: 16px;
+        border-left: 1px solid #93a078;
+      }
+      @media (max-width: 650px) {
+        .note-block {
+          align-items: flex-start;
+          padding: 13px 14px !important;
+        }
+        .note-block > .note-content {
+          padding-left: 12px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="topline">
-      CENTROFARMS™ &nbsp; / &nbsp; AGRISOLUTIONS · SPECIALTY COFFEE · NATURALS ·
-      POULTRY
-    </div>
     <header class="site-head">
       <div class="shell head-inner">
         <a class="brand" href="#/home" aria-label="CentroFarms™ Home"
@@ -9087,7 +9143,7 @@
             <div>
               <span class="eyebrow">A connected agricultural vision</span>
               <h1 class="home-title">
-                Rooted in nature<br /><em>Growing with purpose</em>
+                Rooted In Nature<br /><em>Growing With Purpose</em>
               </h1>
               <p class="home-sub">
                 From natural essentials to highland coffee and agricultural
@@ -9170,7 +9226,7 @@
           <div class="coffee-copy">
             <span class="eyebrow">CENTROFARMS™ COFFEE &amp; HERB ESTATES</span>
             <h1 class="display-heading">
-              From farm to cup<br />Vietnamese <em>highland coffee</em>
+              From Farm To Cup<br />Vietnamese <em>Highland Coffee</em>
             </h1>
             <div class="copy-title">
               Specialty Green Arabica · Selected at origin
@@ -9320,7 +9376,7 @@
               <div class="coffee-sourcing-copy">
                 <span class="section-overline">SECTION 1 · FROM FARM TO CUP</span>
                 <h2>
-                  Grown with Purpose:
+                  Grown With Purpose:
                   <em>The Farmers Behind Every Bean</em>
                 </h2>
                 <p>
@@ -9356,7 +9412,7 @@
               </figure>
             </div>
             <div class="coffee-pillars">
-              <h3>The Three Pillars of Our Sourcing</h3>
+              <h3>The Three Pillars Of Our Sourcing</h3>
               <div class="coffee-pillars-grid">
                 <article class="coffee-pillar">
                   <svg viewBox="0 0 64 52" fill="none" aria-hidden="true">
@@ -9365,7 +9421,7 @@
                     <path d="m24 24 11 8m-16-3 9 8m-13-7 7 8" />
                   </svg>
                   <span class="coffee-pillar-number">01</span>
-                  <h4>Direct Relationships at Origin</h4>
+                  <h4>Direct Relationships At Origin</h4>
                   <p>
                     We work to build long-term relationships with local
                     growers, family estates, and regional cooperatives. By
@@ -9398,7 +9454,7 @@
                     <circle cx="32" cy="5" r="2" />
                   </svg>
                   <span class="coffee-pillar-number">03</span>
-                  <h4>Generational Knowledge and Local Heritage</h4>
+                  <h4>Generational Knowledge And Local Heritage</h4>
                   <p>
                     Behind every harvest is the experience of farmers who
                     understand their land and its growing conditions. We value
@@ -9445,7 +9501,7 @@
               </figure>
               <div class="coffee-terroir-copy">
                 <h2>
-                  Single Origin: A Taste of Vietnam's
+                  Single Origin: A Taste Of Vietnam's
                   <em>Mountain Highlands</em>
                 </h2>
                 <p>
@@ -9504,7 +9560,7 @@
                     <circle cx="48" cy="34" r="10" />
                     <path d="m44 34 3 3 5-6" />
                   </svg>
-                  <h4>More Control over Quality</h4>
+                  <h4>More Control Over Quality</h4>
                   <p>
                     Separating lots allows roasters to evaluate each coffee on
                     its own merits and select beans that fit their menus,
@@ -9531,7 +9587,7 @@
             <span class="section-overline">SECTION 3 · HARVESTING &amp; QUALITY CONTROL</span>
             <div class="coffee-section-heading">
               <div>
-                <h2>Quality Begins with <em>Careful Selection</em></h2>
+                <h2>Quality Begins With <em>Careful Selection</em></h2>
                 <p>
                   The quality of a finished coffee depends on decisions made at
                   every stage, from picking the cherries to preparing the green
@@ -9573,7 +9629,7 @@
                 />
                 <div class="coffee-quality-copy">
                   <span>02</span>
-                  <h3>Density Sorting and Flotation</h3>
+                  <h3>Density Sorting And Flotation</h3>
                   <p>
                     Cherries may pass through water-based flotation systems to
                     separate lower-density fruit from denser cherries. Because
@@ -9590,7 +9646,7 @@
                 />
                 <div class="coffee-quality-copy">
                   <span>03</span>
-                  <h3>Optical Sorting and Defect Removal</h3>
+                  <h3>Optical Sorting And Defect Removal</h3>
                   <p>
                     Where optical sorting equipment is available, cameras and
                     automated rejection systems help identify cherries or beans
@@ -9608,7 +9664,7 @@
                 />
                 <div class="coffee-quality-copy">
                   <span>04</span>
-                  <h3>Controlled Drying and Final Inspection</h3>
+                  <h3>Controlled Drying And Final Inspection</h3>
                   <p>
                     Coffee is dried using the method appropriate to its
                     processing style, with raised, ventilated drying beds used
@@ -9648,7 +9704,7 @@
               <div>
                 <h2>
                   How Processing Shapes
-                  <em>the Flavor in Your Cup</em>
+                  <em>The Flavor In Your Cup</em>
                 </h2>
                 <p>
                   Processing is one of the most important factors influencing
@@ -9768,7 +9824,7 @@
         <div class="shell cf-hero">
           <div class="cf-hero-copy">
             <span class="cf-eyebrow"><i></i> CENTROFARMS™ POULTRY</span>
-            <h1>American farmland<br /><em>Long-term ownership</em></h1>
+            <h1>American Farmland<br /><em>Long-Term Ownership</em></h1>
             <p class="cf-hero-lead">
               Building long-term wealth through American farmland.
             </p>
@@ -9848,7 +9904,7 @@
           <div class="cf-section-head">
             <div>
               <span class="cf-eyebrow">KEY INVESTMENT HIGHLIGHTS</span>
-              <h2>A foundation for<br /><em>long-term growth</em></h2>
+              <h2>A Foundation For<br /><em>Long-Term Growth</em></h2>
             </div>
           </div>
           <div class="cf-highlight-grid">
@@ -9895,7 +9951,7 @@
             </article>
             <article class="cf-hi">
               <span class="cf-hi-no">05</span>
-              <h3>Opportunities for Expansion</h3>
+              <h3>Opportunities For Expansion</h3>
               <p>
                 Farm sites may support complementary businesses such as organic
                 fertilizer distribution, specialty coffee logistics, cattle, and
@@ -9910,7 +9966,7 @@
               <div>
                 <span class="cf-eyebrow">HOW THE MODEL WORKS</span>
                 <h2>
-                  Operate with purpose<br /><em>Build equity over time</em>
+                  Operate With Purpose<br /><em>Build Equity Over Time</em>
                 </h2>
               </div>
             </div>
@@ -9924,7 +9980,7 @@
                 /><span class="cf-eyebrow">01</span>
                 <h3>Operating Income Through Poultry Production</h3>
                 <h4>
-                  A production model designed to limit major cost exposure
+                  A Production Model Designed To Limit Major Cost Exposure
                 </h4>
                 <p>
                   Feed, chicks, and veterinary care are among the largest costs
@@ -9934,14 +9990,14 @@
                   ownership, maintenance, utilities, labor, and overall
                   operational performance.
                 </p>
-                <h4>Recurring production cycles</h4>
+                <h4>Recurring Production Cycles</h4>
                 <p>
                   Commercial poultry houses operate through repeated production
                   cycles. With suitable contracts and consistent performance,
                   these cycles can support recurring operating revenue and help
                   the business meet its financing obligations.
                 </p>
-                <h4>Demand for an essential product</h4>
+                <h4>Demand For An Essential Product</h4>
                 <p>
                   Poultry is a staple protein in the American food market. While
                   demand provides a strong foundation for the industry,
@@ -9957,8 +10013,8 @@
                   alt="Agricultural land and supporting buildings"
                   loading="lazy"
                 /><span class="cf-eyebrow">02</span>
-                <h3>Building Equity Through Land and Infrastructure</h3>
-                <h4>Ownership of tangible assets</h4>
+                <h3>Building Equity Through Land And Infrastructure</h3>
+                <h4>Ownership Of Tangible Assets</h4>
                 <p>
                   Investors participate in a business built around physical
                   assets, including agricultural land, commercial poultry
@@ -9966,7 +10022,7 @@
                   collateral arrangements depend on the project&#x27;s legal
                   structure and financing documents.
                 </p>
-                <h4>Using operating income to pay down debt</h4>
+                <h4>Using Operating Income To Pay Down Debt</h4>
                 <p>
                   Our model is designed to use farm operating income to cover
                   expenses, service debt, and gradually reduce outstanding loan
@@ -9979,7 +10035,7 @@
                   financing programs to determine which options are available
                   for each project.
                 </p>
-                <h4>A long-term asset for future generations</h4>
+                <h4>A Long-Term Asset For Future Generations</h4>
                 <p>
                   Agricultural real estate can provide a foundation for
                   long-term family wealth and future business expansion.
@@ -9996,8 +10052,8 @@
                   alt="Aerial property overview showing farm layout"
                   loading="lazy"
                 /><span class="cf-eyebrow">03</span>
-                <h3>Opportunities for International Investors</h3>
-                <h4>An active operating business</h4>
+                <h3>Opportunities For International Investors</h3>
+                <h4>An Active Operating Business</h4>
                 <p>
                   CentroFarms™ develops and operates commercial agricultural
                   businesses rather than relying solely on passive property
@@ -10005,7 +10061,7 @@
                   international investors exploring U.S. business and
                   immigration opportunities.
                 </p>
-                <h4>Evaluating L-1, E-2 and EB-5 pathways</h4>
+                <h4>Evaluating L-1, E-2 And EB-5 Pathways</h4>
                 <p>
                   Depending on the investor&#x27;s nationality, investment
                   amount, ownership structure, job creation, and other
@@ -10021,7 +10077,7 @@
                   must be evaluated with qualified immigration counsel before
                   any visa-related representations are made.
                 </p>
-                <h4>A transparent, asset-backed business</h4>
+                <h4>A Transparent, Asset-Backed Business</h4>
                 <p>
                   We aim to give investors a clear understanding of the
                   business, including its real estate, operating agreements,
@@ -10036,9 +10092,6 @@
         <section class="cf-expansion" id="cf-expansion">
           <div class="shell">
             <div class="cf-expansion-intro">
-              <span class="cf-eyebrow"
-                >COMPLEMENTARY AGRICULTURAL OPPORTUNITIES</span
-              >
               <h2>Expanding Beyond Poultry</h2>
               <p>
                 A typical CentroFarms™ site may offer opportunities to develop
@@ -10055,7 +10108,7 @@
                   src="img/9feff132dd9920744634f96324a36cb2284289e3.webp"
                   loading="lazy"
                   alt="Commercial poultry houses viewed from above"
-                /><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span>
+                />
                 <h3>Commercial Poultry</h3>
                 <p>
                   Four to eight automated, biosecure broiler poultry houses or
@@ -10069,7 +10122,7 @@
                   src="img/a95942ebf10538326d85bfec5e58840d5a44ed59.webp"
                   loading="lazy"
                   alt="CentroFarms™ green coffee packaging"
-                /><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span>
+                />
                 <h3>Specialty Coffee Logistics</h3>
                 <p>
                   Climate-controlled storage and staging for Vietnamese and
@@ -10083,7 +10136,7 @@
                   src="img/agrisolution-frass-granules-sharp.jpg"
                   loading="lazy"
                   alt="Black soldier fly frass fertilizer material"
-                /><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span>
+                />
                 <h3>Organic Fertilizer Distribution</h3>
                 <p>
                   Storage and distribution of fertilizer products, including
@@ -10098,7 +10151,7 @@
                   src="img/Ears-corn.webp"
                   loading="lazy"
                   alt="Corn growing in an agricultural field"
-                /><span class="cf-eyebrow">COMPLEMENTARY OPPORTUNITY</span>
+                />
                 <h3>Additional Agricultural Uses</h3>
                 <p>
                   Cattle pasture, pecan or fruit orchards, and equipment storage
@@ -10112,7 +10165,7 @@
           <div class="cf-section-head">
             <div>
               <span class="cf-eyebrow">A LOOK AT THE LAND</span>
-              <h2>See the working<br /><em>farm environment</em></h2>
+              <h2>See The Working<br /><em>Farm Environment</em></h2>
             </div>
           </div>
           <div class="cf-gallery-layout">
@@ -10191,7 +10244,7 @@
               <span class="cf-eyebrow"
                 >THE BUILD TOGETHER JOINT VENTURE MODEL</span
               >
-              <h2>Co-investment<br /><em>Shared responsibility</em></h2>
+              <h2>Co-Investment<br /><em>Shared Responsibility</em></h2>
               <p>
                 CentroFarms™ works alongside investors as a co-investment and
                 operating partner. We help identify suitable properties,
@@ -10218,9 +10271,7 @@
                 them efficiently, manage risk carefully, and build lasting value
                 over time.
               </p>
-              <a class="cf-btn cf-btn-primary" href="#/contact"
-                >Discuss a partnership <span>↗</span></a
-              >
+              <a class="cf-btn cf-btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=Build%20Together%20Partnership%20Discussion%20-%20CentroFarms&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20potential%20partnership%20through%20the%20Build%20Together%20model.%20Here%20is%20some%20information%20to%20help%20start%20the%20conversation%3A%0A%0AAbout%20me%20%2F%20my%20organization%3A%0A%0ARelevant%20agricultural%20or%20operating%20experience%3A%0A%0ALocation%20or%20property%20of%20interest%3A%0A%0AAreas%20of%20interest%20(investment%2C%20operations%2C%20modernization%2C%20or%20other)%3A%0A%0APotential%20role%20or%20contribution%3A%0A%0APreferred%20partnership%20structure%20or%20goals%3A%0A%0AExpected%20timing%3A%0A%0AQuestions%20or%20additional%20details%3A%0A%0A%0AName%3A%0AOrganization%3A%0APhone%20(optional)%3A%0A%0AThank%20you%2C%0A" target="_blank" rel="noopener noreferrer">Discuss a partnership <span class="cf-btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
             </div>
             <div class="cf-jv-image">
               <img
@@ -10241,7 +10292,7 @@
         <section class="shell cf-close">
           <div>
             <span class="cf-eyebrow">LET’S BUILD WHAT LASTS</span>
-            <h2>The next chapter<br /><em>starts together</em></h2>
+            <h2>The Next Chapter<br /><em>Starts Together</em></h2>
             <p>
               Whether you are an agribusiness investor, a farming family or an
               international entrepreneur, we welcome conversations about
@@ -10264,7 +10315,7 @@
           <div class="ax-hero-copy">
             <span class="ax-label">CENTROFARMS™ AGRISOLUTIONS</span>
             <h1>
-              Restoring soil health<br /><em>Supporting crop growth</em>
+              Restoring Soil Health<br /><em>Supporting Crop Growth</em>
             </h1>
             <p class="">
               Healthy soil is essential to long-term agricultural productivity.
@@ -10353,7 +10404,7 @@
         <section class="shell ax-features">
           <div class="ax-heading">
             <span class="ax-label">PRODUCT FEATURES</span>
-            <h2>Supporting the soil<br /><em>Making resources count</em></h2>
+            <h2>Supporting The Soil<br /><em>Making Resources Count</em></h2>
           </div>
           <div class="ax-grid-4 ax-feature-grid">
             <button class="ax-feature-button" type="button" aria-label="View details: Balanced Nutrient Profile">
@@ -10399,7 +10450,7 @@
             <div class="ax-formats-heading">
               <div class="ax-heading">
                 <span class="ax-label">AVAILABLE COMMERCIAL FORMATS</span>
-                <h2>A format for<br /><em>your operation</em></h2>
+                <h2>A Format For<br /><em>Your Operation</em></h2>
               </div>
               <p>
                 CentroFarms™ offers multiple physical formats to accommodate
@@ -10586,7 +10637,7 @@
             <span class="ax-label"
               >COMMERCIAL APPLICATIONS &amp; AGRONOMIC TRIALS</span
             >
-            <h2>From crop research<br /><em>to field evaluation</em></h2>
+            <h2>From Crop Research<br /><em>To Field Evaluation</em></h2>
           </div>
           <p class="">
             EPro 3-2-1 delivers proven bio-fertility, soil conditioning, and
@@ -10663,7 +10714,7 @@
             <div>
               <div class="ax-heading">
                 <span class="ax-label">IN DEVELOPMENT</span>
-                <h2>Planning the<br /><em>next field trials</em></h2>
+                <h2>Planning The<br /><em>Next Field Trials</em></h2>
                 <p class="">
                   CentroFarms™ is currently planning multi-hectare split-block
                   evaluation programs to validate EPro 3-2-1 performance across
@@ -10709,6 +10760,11 @@
                 </article>
               </div>
             </div>
+            <p class="ax-note">
+              Application rates vary by crop, soil chemistry, and target yield.
+              Proposed trial designs, dosing frameworks, and lot-specific
+              Certificates of Analysis (CoA) are available upon request.
+            </p>
           </div>
         </section>
         <section class="ax-logistics-section" id="ax-logistics">
@@ -10716,7 +10772,7 @@
             <div class="ax-logistics-heading">
               <div class="ax-heading">
                 <span class="ax-label">PACKAGING &amp; LOGISTICS</span>
-                <h2>Commercial scale<br /><em>Flexible handling</em></h2>
+                <h2>Commercial Scale<br /><em>Flexible Handling</em></h2>
               </div>
               <p>
                 Commercial packaging and shipping configurations can be
@@ -10755,7 +10811,7 @@
                 </div>
                 <div class="ax-logistics-card-copy">
                   <span class="ax-label">01</span>
-                  <h3>40 lb bags</h3>
+                  <h3>40 Lb Bags</h3>
                   <p>
                     Suitable for smaller commercial orders and routine handling.
                   </p>
@@ -10786,7 +10842,7 @@
                 </div>
                 <div class="ax-logistics-card-copy">
                   <span class="ax-label">02</span>
-                  <h3>1-ton bulk super sacks</h3>
+                  <h3>1-Ton Bulk Super Sacks</h3>
                   <p>
                     Designed for larger farms, distributors, and bulk
                     agricultural applications.
@@ -10826,7 +10882,7 @@
                 </div>
                 <div class="ax-logistics-card-copy">
                   <span class="ax-label">03</span>
-                  <h3>Full Truckload (FTL) and Full Container Load (FCL)</h3>
+                  <h3>Full Truckload (FTL) And Full Container Load (FCL)</h3>
                   <p>
                     Options for commercial distribution and export shipments,
                     subject to order volume and destination requirements.
@@ -10849,7 +10905,7 @@
               <div>
                 <span class="ax-label">PRODUCT ENQUIRIES</span>
                 <h3>
-                  Request the EPro 3-2-1 Product Specification Sheet &amp; Field
+                  Request The EPro 3-2-1 Product Specification Sheet &amp; Field
                   Trial Guidelines
                 </h3>
                 <p>
@@ -10858,10 +10914,7 @@
                   trials for your operation.
                 </p>
               </div>
-              <a
-                class="ax-button"
-                href="mailto:info@centrofarms.com?subject=EPro%203-2-1%20Specifications%20and%20Field%20Trials"
-                >Request information <span>↗</span></a
+              <a class="ax-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=EPro%203-2-1%20Product%20Specifications%20and%20Field%20Trial%20Guidelines%20Request%20-%20CentroFarms&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI%20would%20like%20to%20request%20the%20EPro%203-2-1%20Product%20Specification%20Sheet%20and%20Field%20Trial%20Guidelines.%20Please%20find%20a%20few%20details%20about%20my%20operation%20and%20enquiry%20below%3A%0A%0AFarm%20%2F%20business%20name%3A%0A%0ACrop(s)%20and%20operation%20type%3A%0A%0ALocation%20(country%20%2F%20state)%3A%0A%0AEstimated%20acreage%20or%20growing%20area%3A%0A%0ACurrent%20soil%20amendment%20%2F%20fertilizer%20program%3A%0A%0AApplication%20method%20or%20equipment%20available%3A%0A%0AProduct%20format%20of%20interest%20(granules%2C%20crumbles%2C%20pellets%2C%20or%20other)%3A%0A%0AEstimated%20quantity%20or%20timing%3A%0A%0AField%20trial%20interest%20and%20objectives%3A%0A%0AAdditional%20questions%20or%20requirements%3A%0A%0A%0AContact%20name%3A%0A%0AThank%20you%2C%0A" target="_blank" rel="noopener noreferrer">Request information <span>↗</span></a
               >
             </div>
           </div>
@@ -10895,86 +10948,11 @@
             <div class="ax-equipment-details">
               <figure class="ax-equipment-product-visual">
                 <span class="ax-label">MATERIAL &amp; SYSTEM DETAILS</span>
-                <svg
-                  viewBox="0 0 520 310"
-                  role="img"
-                  aria-label="Illustration of modular polypropylene flooring slats"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient id="slatTop" x1="0" x2="1" y1="0" y2="1">
-                      <stop offset="0" stop-color="#f8f8f5" />
-                      <stop offset="1" stop-color="#b9b9b2" />
-                    </linearGradient>
-                    <linearGradient id="slatSide" x1="0" x2="0" y1="0" y2="1">
-                      <stop offset="0" stop-color="#a8a8a2" />
-                      <stop offset="1" stop-color="#777871" />
-                    </linearGradient>
-                    <pattern
-                      id="slatSlots"
-                      width="42"
-                      height="28"
-                      patternTransform="skewX(-25)"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <rect
-                        x="8"
-                        y="5"
-                        width="10"
-                        height="19"
-                        rx="2"
-                        fill="#767770"
-                      />
-                    </pattern>
-                    <clipPath id="slatClip">
-                      <polygon points="105,65 420,35 478,191 160,229" />
-                    </clipPath>
-                  </defs>
-                  <ellipse
-                    cx="280"
-                    cy="246"
-                    rx="190"
-                    ry="29"
-                    fill="#d8d7d0"
-                  />
-                  <path
-                    d="M105 65 420 35 478 191 160 229 144 246 88 224 91 199 105 193Z"
-                    fill="url(#slatSide)"
-                  />
-                  <path
-                    d="m105 65 315-30 58 156-318 38-55-27Z"
-                    fill="url(#slatTop)"
-                    stroke="#8b8c85"
-                    stroke-width="2"
-                  />
-                  <g clip-path="url(#slatClip)">
-                    <rect
-                      x="70"
-                      y="30"
-                      width="440"
-                      height="220"
-                      fill="url(#slatSlots)"
-                    />
-                    <path
-                      d="m105 65 55 164m46-174 54 164m46-174 54 164m46-174 54 164M90 105l360-34M105 146l360-34m-343 76 360-34"
-                      fill="none"
-                      stroke="#a2a39b"
-                      stroke-width="5"
-                    />
-                  </g>
-                  <path
-                    d="m160 229-1 24 24 9 2-31m83-10 1 32 23 8 1-43m80-10 1 33 23 8 2-45"
-                    fill="#8a8b84"
-                    stroke="#696a64"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="m144 246 315-39 19 9-313 42Z"
-                    fill="#d2d2cb"
-                    stroke="#85867f"
-                    stroke-width="2"
-                  />
-                </svg>
+                <img
+                  src="img/modular-polypropylene-flooring-slat.png"
+                  alt="Modular polypropylene flooring slat panel"
+                  loading="lazy"
+                />
               </figure>
               <div class="ax-equipment-features">
                 <article class="ax-equipment-feature">
@@ -11003,7 +10981,7 @@
                   </span>
                   <div class="ax-equipment-feature-copy">
                     <span class="ax-label">02</span>
-                    <h3>Easy-to-Clean Surfaces</h3>
+                    <h3>Easy-To-Clean Surfaces</h3>
                     <p>
                       Non-porous surfaces designed to facilitate routine washing
                       and sanitation when used with appropriate cleaning
@@ -11049,7 +11027,7 @@
             </div>
             <div class="ax-equipment-bottom">
               <div>
-                <h3>Designed for Commercial Poultry Operations</h3>
+                <h3>Designed For Commercial Poultry Operations</h3>
                 <p>
                   CentroFarms™ Equipment Systems is intended for farm owners,
                   poultry operators, agricultural contractors, and facility
@@ -11082,7 +11060,7 @@
               <div>
                 <span class="ax-label">EQUIPMENT ENQUIRIES</span>
                 <h3>
-                  Request the Equipment Systems Catalog &amp; Technical
+                  Request The Equipment Systems Catalog &amp; Technical
                   Specifications
                 </h3>
                 <p>
@@ -11093,8 +11071,7 @@
               </div>
               <a
                 class="ax-button"
-                href="mailto:info@centrofarms.com?subject=Equipment%20Systems%20Catalog%20and%20Specifications"
-                >Request the catalog <span>↗</span></a
+                href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=Equipment%20Systems%20Catalog%20%26%20Technical%20Specifications%20Request&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI%20would%20like%20to%20request%20the%20Equipment%20Systems%20Catalog%20%26%20Technical%20Specifications.%0A%0AFacility%20Details%3A%0A-%20Facility%20Type%3A%20%0A-%20Estimated%20Area%2FRequirements%3A%20%0A%0APlease%20send%20me%20more%20details.%0A%0AThank%20you%21" target="_blank" rel="noopener noreferrer">Request the catalog <span>↗</span></a
               >
             </div>
           </div>
@@ -11134,10 +11111,6 @@
 
         // Brand voice, consistency and intentional navigation.
         document.documentElement.lang = "en";
-        const tagline = q(".topline");
-        if (tagline)
-          tagline.textContent =
-            "CENTROFARMS™  /  AGRISOLUTIONS · SPECIALTY COFFEE · NATURALS · POULTRY";
         const natural = q("#naturalGroup > a");
         if (natural) {
           natural.href = "https://centrofarms.com/en/";
@@ -11162,7 +11135,7 @@
         // Home story. A portfolio of products and people, not a land sale listing.
         setHTML(
           ".home-left",
-          `<div><span class="eyebrow">Agriculture connects us</span><h1 class="home-title">Growing with purpose<br><em>Building together</em></h1><p class="home-sub">From natural essentials and specialty green coffee to new opportunities in American agriculture. CentroFarms™ connects people, places and practical experience for long-term growth.</p><div class="home-actions"><a class="solid-btn" href="#/coffee">Explore Specialty Coffee <span>↗</span></a><a class="line-btn" href="#/poultry">Build with us <span>→</span></a></div></div><div class="home-left-foot">NATURALS &nbsp; • &nbsp; SPECIALTY COFFEE &nbsp; • &nbsp; POULTRY</div>`,
+          `<div><span class="eyebrow">Agriculture connects us</span><h1 class="home-title">Growing With Purpose<br><em>Building Together</em></h1><p class="home-sub">From natural essentials and specialty green coffee to new opportunities in American agriculture. CentroFarms™ connects people, places and practical experience for long-term growth.</p><div class="home-actions"><a class="solid-btn" href="#/coffee">Explore Specialty Coffee <span>↗</span></a><a class="line-btn" href="#/poultry">Build with us <span>→</span></a></div></div><div class="home-left-foot">NATURALS &nbsp; • &nbsp; SPECIALTY COFFEE &nbsp; • &nbsp; POULTRY</div>`,
         );
         setHTML(
           ".vision-card",
@@ -11193,7 +11166,7 @@
           coffeeEyebrow.textContent = "CENTROFARMS™ COFFEE & HERB ESTATES";
         setHTML(
           ".coffee-copy",
-          `<span class="eyebrow">CENTROFARMS™ COFFEE &amp; HERB ESTATES</span><h1 class="display-heading">From farm to cup<br><em>Vietnamese highlands</em></h1><div class="copy-title">Specialty Green Arabica · Selected at origin</div><p class="desc">Traceable Vietnamese highland Arabica, shaped by local knowledge, careful handling, and lot-specific processing.</p><button type="button" class="dark-btn" id="coffeeProcess">Explore our sourcing <span>↓</span></button>`,
+          `<span class="eyebrow">CENTROFARMS™ COFFEE &amp; HERB ESTATES</span><h1 class="display-heading">From Farm To Cup<br><em>Vietnamese Highlands</em></h1><div class="copy-title">Specialty Green Arabica · Selected at origin</div><p class="desc">Traceable Vietnamese highland Arabica, shaped by local knowledge, careful handling, and lot-specific processing.</p><button type="button" class="dark-btn" id="coffeeProcess">Explore our sourcing <span>↓</span></button>`,
         );
         setHTML(
           "#page-coffee .info-ribbon",
@@ -11288,7 +11261,7 @@
         coffeeProducts.innerHTML = `
           <span class="section-overline">SECTION 5 · THE CENTROFARMS SPECIALTY GREEN COFFEE PORTFOLIO</span>
           <div class="collection-heading">
-            <h2>Vietnamese Specialty Green Coffee <em>for Commercial Roasters</em></h2>
+            <h2>Vietnamese Specialty Green Coffee <em>For Commercial Roasters</em></h2>
             <p>
               CentroFarms™ supplies Vietnamese specialty green coffee for
               roasters, distributors, cafés, and other commercial buyers. Our
@@ -11366,7 +11339,7 @@
                     <path d="M17 18c0-6 7-10 15-10s15 4 15 10v4l5 8v22c0 3-2 5-5 5H17c-3 0-5-2-5-5V30l5-8z" />
                     <path d="M17 22c8 5 22 5 30 0M12 30c11 4 29 4 40 0M21 13l4 9m18-9-4 9M18 53h28" />
                   </svg>
-                  <h3>Hermetic packaging</h3>
+                  <h3>Hermetic Packaging</h3>
                   <p>Green beans packed in <b>60 kg</b> barrier liners inside jute export bags, where available and appropriate for the lot.</p>
                 </article>
                 <article>
@@ -11382,7 +11355,7 @@
                     <path d="M10 45h44v8H10zM15 34h34v9H15zM12 23h40v8H12z" />
                     <path d="M13 20c0-5 8-8 19-8s19 3 19 8-8 8-19 8-19-3-19-8Zm2 11c0-5 7-8 17-8s17 3 17 8-7 8-17 8-17-3-17-8Zm0 11c0-5 7-8 17-8s17 3 17 8-7 8-17 8-17-3-17-8Z" />
                   </svg>
-                  <h3>Pallet orders</h3>
+                  <h3>Pallet Orders</h3>
                   <p>Options for buyers seeking larger quantities without committing to a full container.</p>
                 </article>
                 <article>
@@ -11407,7 +11380,7 @@
             <span class="section-overline">OUR COMMITMENT TO COMMERCIAL BUYERS</span>
             <div class="coffee-commercial-layout">
               <div class="coffee-commercial-copy">
-                <h2>Built on clear information <em>and communication</em></h2>
+                <h2>Built On Clear Information <em>And Communication</em></h2>
                 <p>
                   We understand that roasters need more than an appealing origin
                   story. They need consistent specifications, reliable
@@ -11434,7 +11407,7 @@
             <div class="coffee-contact-panel">
               <div class="coffee-contact-copy">
                 <span class="section-overline">CONTACT</span>
-                <h2>Request Green Coffee Samples <em>&amp; the Current Lot Catalog</em></h2>
+                <h2>Request Green Coffee Samples <em>&amp; The Current Lot Catalog</em></h2>
                 <p>
                   Contact CentroFarms™ to discuss available origins, processing
                   methods, cupping profiles, pricing, and export options for
@@ -11465,7 +11438,13 @@
                     <path d="M83 94c2-3 4-5 7-7m8 14c2-4 5-7 9-9m5 15c2-4 5-7 9-9m-29 12c2-3 4-5 7-6" />
                   </g>
                 </svg>
-                <a class="coffee-contact-button" href="#/contact">Contact CentroFarms™ <span aria-hidden="true">↗</span></a>
+                <a
+                  class="coffee-contact-button"
+                  href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=Green%20Coffee%20Samples%20and%20Current%20Lot%20Catalog%20Request%20-%20CentroFarms&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI%20would%20like%20to%20request%20green%20coffee%20samples%20and%20the%20current%20lot%20catalog.%20My%20requirements%20are%3A%0A%0ACoffee%20%2F%20origin%20of%20interest%3A%0A%0AProcessing%20method%20or%20flavor%20profile%3A%0A%0AIntended%20use%20(e.g.%20espresso%2C%20filter%2C%20blend)%3A%0A%0ASample%20quantity%20requested%3A%0A%0AEstimated%20order%20volume%3A%0A%0ADestination%20country%20%2F%20port%3A%0A%0AAdditional%20questions%20or%20requirements%3A%0A%0A%0ACompany%20%2F%20roastery%3A%0A%0AName%3A%0A%0AThank%20you%2C%0A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Contact CentroFarms™ <span aria-hidden="true">↗</span></a
+                >
               </div>
             </div>
           </section>
@@ -11476,13 +11455,13 @@
         const contact = document.createElement("section");
         contact.className = "page contact-page";
         contact.id = "page-contact";
-        contact.innerHTML = `<div class="shell intro-header"><div class="bread"><a href="#/home">CentroFarms™</a><span>›</span><b>Contact</b></div><div class="intro-tag">LET’S CONNECT</div></div><div class="shell contact-hero"><span class="eyebrow">CONTACT CENTROFARMS™</span><h1>Good things grow<br><em>through connection</em></h1><p>Whether you are exploring our specialty coffee, agricultural partnerships or the wider CentroFarms™ portfolio, we welcome a conversation.</p></div><div class="shell contact-grid"><section class="contact-panel"><span class="section-overline">REACH OUR TEAM</span><h2>Let’s start a conversation</h2><div class="contact-detail"><small>OFFICE ADDRESS</small><p>133 G.W. Smith Road<br>Silver Creek, Mississippi, USA</p></div><div class="contact-detail"><small>GENERAL ENQUIRIES</small><a href="mailto:info@centrofarms.com">info@centrofarms.com</a></div></section><aside class="contact-panel contact-side"><span class="section-overline">PARTNERSHIP ENQUIRIES</span><h2>Explore what we can build together</h2><p class="panel-desc">Tell us a little about your interests, experience and the kind of cooperation you have in mind. Our team will be glad to connect.</p><a class="mail-cta" href="mailto:info@centrofarms.com?subject=CentroFarms™%20Partnership%20Enquiry">Start a conversation <span aria-hidden="true">↗</span></a><div class="steps-mini">Specialty green coffee · Farming partnerships<br>Long-term agricultural collaboration</div></aside></div>`;
+        contact.innerHTML = `<div class="shell intro-header"><div class="bread"><a href="#/home">CentroFarms™</a><span>›</span><b>Contact</b></div><div class="intro-tag">LET’S CONNECT</div></div><div class="shell contact-hero"><span class="eyebrow">CONTACT CENTROFARMS™</span><h1>Good Things Grow<br><em>Through Connection</em></h1><p>Whether you are exploring our specialty coffee, agricultural partnerships or the wider CentroFarms™ portfolio, we welcome a conversation.</p></div><div class="shell contact-grid"><section class="contact-panel"><span class="section-overline">REACH OUR TEAM</span><h2>Let’s Start A Conversation</h2><div class="contact-detail"><small>OFFICE ADDRESS</small><p>133 G.W. Smith Road<br>Silver Creek, Mississippi, USA</p></div><div class="contact-detail"><small>GENERAL ENQUIRIES</small><a class="general-enquiry-link" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=CentroFarms%20Partnership%20Enquiry&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI'm%20interested%20in%20exploring%20a%20potential%20partnership%20with%20CentroFarms.%20Here%20is%20a%20little%20about%20me%20and%20what%20I%20have%20in%20mind%3A%0A%0AAbout%20me%20%2F%20my%20organization%3A%0A%0ARelevant%20experience%3A%0A%0AAreas%20of%20interest%3A%0A%0APotential%20collaboration%3A%0A%0AAdditional%20details%20or%20questions%3A%0A%0A%0AThank%20you%2C%0A%5BYour%20name%5D" target="_blank" rel="noopener noreferrer">info@centrofarms.com</a></div></section><aside class="contact-panel contact-side"><span class="section-overline">PARTNERSHIP ENQUIRIES</span><h2>Explore What We Can Build Together</h2><p class="panel-desc">Tell us a little about your interests, experience and the kind of cooperation you have in mind. Our team will be glad to connect.</p><a class="mail-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=CentroFarms%20Partnership%20Enquiry&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI'm%20interested%20in%20exploring%20a%20potential%20partnership%20with%20CentroFarms.%20Here%20is%20a%20little%20about%20me%20and%20what%20I%20have%20in%20mind%3A%0A%0AAbout%20me%20%2F%20my%20organization%3A%0A%0ARelevant%20experience%3A%0A%0AAreas%20of%20interest%3A%0A%0APotential%20collaboration%3A%0A%0AAdditional%20details%20or%20questions%3A%0A%0A%0AThank%20you%2C%0A%5BYour%20name%5D" target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a><div class="steps-mini">Specialty green coffee · Farming partnerships<br>Long-term agricultural collaboration</div></aside></div>`;
         q("main")?.appendChild(contact);
 
         // Footer and site-wide names.
         setHTML(
           ".site-footer .left",
-          "<b>CENTROFARMS™</b><span>Growing with purpose. Building together.</span>",
+          "<b>CENTROFARMS™</b>",
         );
         setHTML(
           ".site-footer .right",
@@ -11501,7 +11480,7 @@
           "aria-label",
           "An invitation to partner with CentroFarms™",
         );
-        letterDialog.innerHTML = `<div class="modal-content"><div class="modal-header"><div><div class="modal-kicker">A LETTER FROM CENTROFARMS™</div><h2>Let us build the American dream together</h2></div><button type="button" class="modal-close" aria-label="Close invitation">×</button></div><p class="letter-salutation">Dear prospective partner,</p><h3>The challenge</h3><p>For many individuals and families, the American dream is not simply about arriving somewhere new. It is about building a foundation: meaningful work, strong relationships and something of value that can endure across generations.</p><h3>Why this matters</h3><p>Turning that ambition into reality takes more than enthusiasm. Agriculture requires a real operating foundation, local knowledge, discipline, thoughtful investment and people willing to work together for the long term.</p><h3>A place to begin</h3><p>CentroFarms™ believes the land can bring people together. Our agricultural direction in Mississippi offers a starting point for exploring cooperation: combining different strengths, practical experience and a shared commitment to responsible growth.</p><h3>Built on substance</h3><p>The farm includes established poultry and egg-production infrastructure, supporting utilities and land. It is a tangible basis for discussion, not a promise of financial performance. Every proposed arrangement will require appropriate review and agreement.</p><h3>Our invitation</h3><p>We welcome conversations with entrepreneurs, agricultural professionals and potential partners who want to develop enduring opportunities in the United States. Where relevant, prospective participants may separately seek qualified immigration advice on E-2, EB-5 or L-1 eligibility. No immigration or investment outcome is guaranteed.</p><p>We would value the opportunity to hear your story and explore what we might build together.</p><div class="letter-bottom">With respect and optimism,<br><strong>CentroFarms™</strong></div><a href="#/contact" class="modal-cta" id="letterContact">Discuss a partnership ↗</a></div>`;
+        letterDialog.innerHTML = `<div class="modal-content"><div class="modal-header"><div><div class="modal-kicker">A LETTER FROM CENTROFARMS™</div><h2>Let Us Build The American Dream Together</h2></div><button type="button" class="modal-close" aria-label="Close invitation">×</button></div><p class="letter-salutation">Dear prospective partner,</p><h3>The Challenge</h3><p>For many individuals and families, the American dream is not simply about arriving somewhere new. It is about building a foundation: meaningful work, strong relationships and something of value that can endure across generations.</p><h3>Why This Matters</h3><p>Turning that ambition into reality takes more than enthusiasm. Agriculture requires a real operating foundation, local knowledge, discipline, thoughtful investment and people willing to work together for the long term.</p><h3>A Place To Begin</h3><p>CentroFarms™ believes the land can bring people together. Our agricultural direction in Mississippi offers a starting point for exploring cooperation: combining different strengths, practical experience and a shared commitment to responsible growth.</p><h3>Built On Substance</h3><p>The farm includes established poultry and egg-production infrastructure, supporting utilities and land. It is a tangible basis for discussion, not a promise of financial performance. Every proposed arrangement will require appropriate review and agreement.</p><h3>Our Invitation</h3><p>We welcome conversations with entrepreneurs, agricultural professionals and potential partners who want to develop enduring opportunities in the United States. Where relevant, prospective participants may separately seek qualified immigration advice on E-2, EB-5 or L-1 eligibility. No immigration or investment outcome is guaranteed.</p><p>We would value the opportunity to hear your story and explore what we might build together.</p><div class="letter-bottom">With respect and optimism,<br><strong>CentroFarms™</strong></div><a href="#/contact" class="modal-cta" id="letterContact">Discuss a partnership ↗</a></div>`;
         document.body.appendChild(letterDialog);
         const closeDialog = (dlg) => {
           if (dlg.open) dlg.close();
@@ -11688,7 +11667,7 @@
           const left = document.createElement("div");
           left.className = "home-v4-left";
           left.innerHTML =
-            '<span class="home-v4-eyebrow">EXPLORE CENTROFARMS™</span><h1 class="home-v4-heading">One shared purpose.</h1><p class="home-v4-sub">Explore our natural products, specialty green coffee, poultry, and soil solutions.</p>';
+            '<span class="home-v4-eyebrow">EXPLORE CENTROFARMS™</span><h1 class="home-v4-heading">One Shared Purpose.</h1><p class="home-v4-sub">Explore our natural products, specialty green coffee, poultry, and soil solutions.</p>';
           portals.insertAdjacentHTML(
             "beforeend",
             '<a class="portal" data-division="agrisolution" href="#/agrisolution"><span class="count">04</span><div><b>CentroFarms™ AgriSolutions</b><p>Black soldier fly frass · Soil amendment</p></div><span class="trailing">→</span></a>',
@@ -11790,7 +11769,7 @@
             `<div class="gallery-v4-heading">
               <div>
                 <span class="section-overline">PHOTO JOURNAL</span>
-                <h2>From the <em>highlands</em></h2>
+                <h2>From The <em>Highlands</em></h2>
                 <p>A selected look at coffee cultivation, harvest, and processing.</p>
               </div>
             </div>
@@ -12072,6 +12051,66 @@
           attributes: true,
           attributeFilter: ["class"],
         });
+      })();
+    </script>
+    <script>
+      (() => {
+        const noteSelector = [
+          ".equipment-note", ".note", ".listing-disclaimer", ".v5-modal-note",
+          ".coffee-editorial-note", ".coffee-sourcing-note", ".coffee-origin-note",
+          ".coffee-logistics-note", ".copy-soft-note", ".ax-formats-note",
+          ".ax-logistics-note", ".ax-note", ".agri-note", ".agri-disclaimer",
+          ".agri-benefits-note", ".agri-results-note", ".agri-logo-note",
+          ".agri-source-note", ".impact-disclaimer", ".resilience-note",
+          ".cf-section-note",
+        ].join(",");
+        const iconMarkup = '<svg class="note-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v6h5M10 13h6m-6 4h6"/></svg>';
+
+        function normalizeNote(note) {
+          if (note.classList.contains("note-block")) return;
+          note.classList.add("note-block");
+
+          let icon = [...note.children].find((child) =>
+            child.matches("svg, .agri-source-icon"),
+          );
+          if (!icon) {
+            note.insertAdjacentHTML("afterbegin", iconMarkup);
+            icon = note.querySelector(":scope > .note-icon");
+          }
+
+          const contentNodes = [...note.childNodes].filter((node) => node !== icon);
+          const meaningfulNodes = contentNodes.filter(
+            (node) => node.nodeType !== Node.TEXT_NODE || node.textContent.trim(),
+          );
+          contentNodes
+            .filter((node) => !meaningfulNodes.includes(node))
+            .forEach((node) => node.remove());
+
+          if (meaningfulNodes.length === 1 && meaningfulNodes[0].nodeType === Node.ELEMENT_NODE) {
+            meaningfulNodes[0].classList.add("note-content");
+          } else {
+            const content = document.createElement(
+              note.tagName === "P" ? "span" : "div",
+            );
+            content.className = "note-content";
+            meaningfulNodes.forEach((node) => content.appendChild(node));
+            note.appendChild(content);
+          }
+        }
+
+        function normalizeTree(root) {
+          if (root instanceof Element && root.matches(noteSelector)) normalizeNote(root);
+          root.querySelectorAll?.(noteSelector).forEach(normalizeNote);
+        }
+
+        normalizeTree(document.body);
+        new MutationObserver((records) => {
+          records.forEach((record) =>
+            record.addedNodes.forEach((node) => {
+              if (node instanceof Element) normalizeTree(node);
+            }),
+          );
+        }).observe(document.body, { childList: true, subtree: true });
       })();
     </script>
   </body>

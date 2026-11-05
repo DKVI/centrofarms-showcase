@@ -288,9 +288,14 @@ body{font-family:"Be Vietnam Pro","DM Sans","Manrope",Arial,sans-serif}
 #page-agrisolution .agri-facts{padding-top:16px}
 @media(max-width:760px){#page-agrisolution .agrisolution-hero{grid-template-columns:1fr;gap:15px;padding:18px 0 30px}#page-agrisolution .agrisolution-copy{padding:20px 0 10px}#page-agrisolution .agrisolution-visual{min-height:390px;aspect-ratio:auto}#page-agrisolution .agri-visual-content{padding:22px}#page-agrisolution .agri-product-mark{font-size:clamp(76px,18vw,96px)}#page-agrisolution .agri-npk b{font-size:34px}#page-agrisolution .agri-npk small{font-size:16px}#page-agrisolution .agri-source-note{padding:10px 12px}#page-agrisolution .agri-source-note strong{font-size:12px}#page-agrisolution .agri-gallery{padding:19px;margin-bottom:36px}#page-agrisolution .agri-gallery-heading{align-items:flex-start;flex-direction:column;gap:7px}#page-agrisolution .agri-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}#page-agrisolution .agri-gallery-card{height:190px}#page-agrisolution .agri-gallery-card figcaption{left:13px;bottom:13px;font-size:11px}}
 @media(max-width:420px){#page-agrisolution .agri-gallery-grid{grid-template-columns:1fr}#page-agrisolution .agri-gallery-card{height:210px}}
+</style><style>
+.note-block{display:flex!important;align-items:center;width:100%;box-sizing:border-box;gap:0!important;margin:18px 0 0!important;padding:13px 17px!important;border:0!important;border-radius:8px!important;background:#e8eddc!important;color:#34443a!important;font-size:12px!important;line-height:1.6!important;text-align:left!important;backdrop-filter:none!important}
+.note-block:before{content:none!important}
+.note-block>svg,.note-block>.note-icon,.note-block>.agri-source-icon{display:block;width:21px;height:21px;flex:0 0 21px;margin:0 12px 0 0;fill:none;stroke:#657832;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7}
+.note-block>.note-content{min-width:0;flex:1 1 auto;padding-left:16px;border-left:1px solid #93a078}
+@media(max-width:650px){.note-block{align-items:flex-start;padding:13px 14px!important}.note-block>.note-content{padding-left:12px}}
 </style></head>
 <body>
-<div class="topline">CENTROFARMS™ &nbsp; / &nbsp; GIẢI PHÁP NÔNG NGHIỆP · CÀ PHÊ ĐẶC SẢN · SẢN PHẨM TỰ NHIÊN · GIA CẦM</div>
 <header class="site-head">
  <div class="shell head-inner">
  <a class="brand" href="#/home" aria-label="CentroFarms™ Home"><img class="brand-image" alt="CentroFarms™ Estate logo" src="../img/a9431ba808bd0123e16594bc6e1e6c3dc072743b.webp" /></a>
@@ -482,7 +487,6 @@ const all=(selector)=>Array.from(document.querySelectorAll(selector));
 
 // Brand voice, consistency and intentional navigation.
 document.documentElement.lang='en';
-const tagline=q('.topline'); if(tagline)tagline.textContent='CENTROFARMS™  /  AGRISOLUTIONS · SPECIALTY COFFEE · NATURALS · POULTRY';
 const natural=q('#naturalGroup > a');if(natural){natural.href='https://centrofarms.com/en/';natural.innerHTML='CentroFarms™ Naturals <span class="external-icon">↗</span>';}
 const salt=q('#naturalDrop a');if(salt)salt.href='https://centrofarms.com/en/';
 const coffeeLink=q('#navCoffee');if(coffeeLink)coffeeLink.textContent='CentroFarms™ Coffee & Herb Estates';
@@ -531,11 +535,11 @@ q('.poultry-first-stage')?.appendChild(inv);
 const float=document.createElement('a');float.className='poultry-float';float.href='#/contact';float.innerHTML='<span class="float-icon" aria-hidden="true">↗</span><span>Explore Partnership</span>';float.setAttribute('aria-label','Explore partnership with CentroFarms™');document.body.appendChild(float);
 
 // Fully integrated English contact page. The mail CTA opens the user's email application.
-const contact=document.createElement('section');contact.className='page contact-page';contact.id='page-contact';contact.innerHTML=`<div class="shell intro-header"><div class="bread"><a href="#/home">CentroFarms™</a><span>›</span><b>Contact</b></div><div class="intro-tag">LET’S CONNECT</div></div><div class="shell contact-hero"><span class="eyebrow">CONTACT CENTROFARMS™</span><h1>Good things grow<br><em>through connection.</em></h1><p>Whether you are exploring our specialty coffee, agricultural partnerships or the wider CentroFarms™ portfolio, we welcome a conversation.</p></div><div class="shell contact-grid"><section class="contact-panel"><span class="section-overline">REACH OUR TEAM</span><h2>Let’s start a conversation.</h2><div class="contact-detail"><small>OFFICE ADDRESS</small><p>133 G.W. Smith Road<br>Silver Creek, Mississippi, USA</p></div><div class="contact-detail"><small>GENERAL ENQUIRIES</small><a href="mailto:info@centrofarms.com">info@centrofarms.com</a></div></section><aside class="contact-panel contact-side"><span class="section-overline">PARTNERSHIP ENQUIRIES</span><h2>Explore what we can build together.</h2><p class="panel-desc">Tell us a little about your interests, experience and the kind of cooperation you have in mind. Our team will be glad to connect.</p><a class="mail-cta" href="mailto:info@centrofarms.com?subject=CentroFarms™%20Partnership%20Enquiry">Start a conversation <span aria-hidden="true">↗</span></a><div class="steps-mini">Specialty green coffee · Farming partnerships<br>Long-term agricultural collaboration</div></aside></div>`;
+const contact=document.createElement('section');contact.className='page contact-page';contact.id='page-contact';contact.innerHTML=`<div class="shell intro-header"><div class="bread"><a href="#/home">CentroFarms™</a><span>›</span><b>Contact</b></div><div class="intro-tag">LET’S CONNECT</div></div><div class="shell contact-hero"><span class="eyebrow">CONTACT CENTROFARMS™</span><h1>Good things grow<br><em>through connection.</em></h1><p>Whether you are exploring our specialty coffee, agricultural partnerships or the wider CentroFarms™ portfolio, we welcome a conversation.</p></div><div class="shell contact-grid"><section class="contact-panel"><span class="section-overline">REACH OUR TEAM</span><h2>Let’s start a conversation.</h2><div class="contact-detail"><small>OFFICE ADDRESS</small><p>133 G.W. Smith Road<br>Silver Creek, Mississippi, USA</p></div><div class="contact-detail"><small>GENERAL ENQUIRIES</small><a class="general-enquiry-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=info%40centrofarms.com&su=General%20Enquiry%20-%20CentroFarms&body=Hi%20CentroFarms%20Team%2C%0A%0AI'm%20reaching%20out%20with%20a%20general%20enquiry.%20Please%20find%20the%20details%20below%3A%0A%0ATopic%20%2F%20area%20of%20interest%3A%0A%0AMy%20question%20or%20message%3A%0A%0AAdditional%20context%3A%0A%0A%0AThank%20you%2C%0A%5BYour%20name%5D" target="_blank" rel="noopener noreferrer">info@centrofarms.com</a></div></section><aside class="contact-panel contact-side"><span class="section-overline">PARTNERSHIP ENQUIRIES</span><h2>Explore what we can build together.</h2><p class="panel-desc">Tell us a little about your interests, experience and the kind of cooperation you have in mind. Our team will be glad to connect.</p><a class="mail-cta" href="mailto:info@centrofarms.com?subject=CentroFarms™%20Partnership%20Enquiry">Start a conversation <span aria-hidden="true">↗</span></a><div class="steps-mini">Specialty green coffee · Farming partnerships<br>Long-term agricultural collaboration</div></aside></div>`;
 q('main')?.appendChild(contact);
 
 // Footer and site-wide names.
-setHTML('.site-footer .left','<b>CENTROFARMS™</b><span>Growing with purpose. Building together.</span>');
+setHTML('.site-footer .left','<b>CENTROFARMS™</b>');
 setHTML('.site-footer .right',`<a href="#/coffee">CentroFarms™ Coffee &amp; Herb Estates</a><a href="#/agrisolution">CentroFarms™ AgriSolutions</a><a href="https://centrofarms.com/en/" target="_blank" rel="noopener noreferrer">CentroFarms™ Naturals ↗</a><a href="#/poultry">CentroFarms™ Poultry Farms</a><a href="#/contact">Liên hệ</a>`);
 
 const productDialog=document.createElement('dialog');productDialog.className='editorial-modal';productDialog.id='productDialog';productDialog.setAttribute('aria-label','Coffee product details');document.body.appendChild(productDialog);
@@ -815,7 +819,6 @@ const translations={
 'Start a conversation':'Bắt đầu trò chuyện',
 'Specialty green coffee · Farming partnerships':'Cà phê xanh đặc sản · Hợp tác trang trại',
 'Long-term agricultural collaboration':'Hợp tác nông nghiệp dài hạn',
-'Growing with purpose. Building together.':'Phát triển có mục tiêu. Cùng nhau kiến tạo.',
 'Naturals ↗':'Sản phẩm tự nhiên ↗',
 'SPECIALTY COFFEE':'CÀ PHÊ ĐẶC SẢN',
 'An invitation to partner with CentroFarms™':'Lời mời hợp tác cùng CentroFarms™',
@@ -1002,7 +1005,8 @@ const homeSummary=document.querySelector('.home-v4-sub');
 if(homeSummary)homeSummary.textContent='Khám phá sản phẩm tự nhiên, cà phê đặc sản, gia cầm và giải pháp cải tạo đất.';
 document.querySelectorAll('.contact-link,.nav-contact-mobile a').forEach(link=>{link.href='#/contact';link.removeAttribute('target');link.removeAttribute('rel');});
 const mailCta=document.querySelector('.mail-cta');
-if(mailCta)mailCta.href='mailto:info@centrofarms.com?subject=Y%C3%AAu%20c%E1%BA%A7u%20h%E1%BB%A3p%20t%C3%A1c%20CentroFarms™';
+if(mailCta){mailCta.href='https://mail.google.com/mail/?view=cm&fs=1&to=info%40centrofarms.com&su=Y%C3%AAu%20c%E1%BA%A7u%20h%E1%BB%A3p%20t%C3%A1c%20CentroFarms&body=Xin%20ch%C3%A0o%20%C4%91%E1%BB%99i%20ng%C5%A9%20CentroFarms%2C%0A%0AT%C3%B4i%20mu%E1%BB%91n%20t%C3%ACm%20hi%E1%BB%83u%20v%E1%BB%81%20c%C6%A1%20h%E1%BB%99i%20h%E1%BB%A3p%20t%C3%A1c%20v%E1%BB%9Bi%20CentroFarms.%20D%C6%B0%E1%BB%9Bi%20%C4%91%C3%A2y%20l%C3%A0%20m%E1%BB%99t%20v%C3%A0i%20th%C3%B4ng%20tin%20v%E1%BB%81%20t%C3%B4i%20v%C3%A0%20%C3%BD%20t%C6%B0%E1%BB%9Fng%20c%E1%BB%A7a%20t%C3%B4i%3A%0A%0ATh%C3%B4ng%20tin%20v%E1%BB%81%20t%C3%B4i%20%2F%20t%E1%BB%95%20ch%E1%BB%A9c%20c%E1%BB%A7a%20t%C3%B4i%3A%0A%0AKinh%20nghi%E1%BB%87m%20li%C3%AAn%20quan%3A%0A%0AL%C4%A9nh%20v%E1%BB%B1c%20t%C3%B4i%20quan%20t%C3%A2m%3A%0A%0AH%C3%ACnh%20th%E1%BB%A9c%20h%E1%BB%A3p%20t%C3%A1c%20d%E1%BB%B1%20ki%E1%BA%BFn%3A%0A%0ATh%C3%B4ng%20tin%20b%E1%BB%95%20sung%20ho%E1%BA%B7c%20c%C3%A2u%20h%E1%BB%8Fi%3A%0A%0A%0ATr%C3%A2n%20tr%E1%BB%8Dng%2C%0A%5BT%C3%AAn%20c%E1%BB%A7a%20b%E1%BA%A1n%5D';mailCta.target='_blank';mailCta.rel='noopener noreferrer';}
+const generalEnquiryLink=document.querySelector('.general-enquiry-link');if(generalEnquiryLink&&mailCta){generalEnquiryLink.href=mailCta.href;generalEnquiryLink.target='_blank';generalEnquiryLink.rel='noopener noreferrer';}
 translateNode(document.body);
 setLocalizedTitle();
 window.addEventListener('hashchange',setLocalizedTitle);
@@ -1058,6 +1062,26 @@ new MutationObserver(records=>{
   else record.addedNodes.forEach(enforceTree);
  }
 }).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['class']});
+})();
+</script>
+<script>
+(()=>{
+const noteSelector='.equipment-note,.note,.listing-disclaimer,.v5-modal-note,.coffee-editorial-note,.coffee-sourcing-note,.coffee-origin-note,.coffee-logistics-note,.copy-soft-note,.ax-formats-note,.ax-logistics-note,.ax-note,.agri-note,.agri-disclaimer,.agri-benefits-note,.agri-results-note,.agri-logo-note,.agri-source-note,.impact-disclaimer,.resilience-note,.cf-section-note';
+const iconMarkup='<svg class="note-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v6h5M10 13h6m-6 4h6"/></svg>';
+function normalizeNote(note){
+ if(note.classList.contains('note-block'))return;
+ note.classList.add('note-block');
+ let icon=[...note.children].find(child=>child.matches('svg,.agri-source-icon'));
+ if(!icon){note.insertAdjacentHTML('afterbegin',iconMarkup);icon=note.querySelector(':scope > .note-icon');}
+ const contentNodes=[...note.childNodes].filter(node=>node!==icon);
+ const meaningfulNodes=contentNodes.filter(node=>node.nodeType!==Node.TEXT_NODE||node.textContent.trim());
+ contentNodes.filter(node=>!meaningfulNodes.includes(node)).forEach(node=>node.remove());
+ if(meaningfulNodes.length===1&&meaningfulNodes[0].nodeType===Node.ELEMENT_NODE)meaningfulNodes[0].classList.add('note-content');
+ else{const content=document.createElement(note.tagName==='P'?'span':'div');content.className='note-content';meaningfulNodes.forEach(node=>content.appendChild(node));note.appendChild(content);}
+}
+function normalizeTree(root){if(root instanceof Element&&root.matches(noteSelector))normalizeNote(root);root.querySelectorAll?.(noteSelector).forEach(normalizeNote);}
+normalizeTree(document.body);
+new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node instanceof Element)normalizeTree(node);}))).observe(document.body,{childList:true,subtree:true});
 })();
 </script>
 </body>
