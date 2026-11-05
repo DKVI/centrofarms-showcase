@@ -2359,6 +2359,7 @@
         align-items: center;
         gap: 16px;
         width: 100%;
+        max-width: none;
         box-sizing: border-box;
         margin: 28px 0 0;
         padding: 18px 24px;
@@ -7232,15 +7233,6 @@
         margin-top: 25px;
         font-size: 12px;
       }
-      #page-poultry .cf-farm-gallery {
-        padding-top: 110px;
-        padding-bottom: 110px;
-      }
-      #page-poultry .cf-gallery-layout {
-        display: grid;
-        grid-template-columns: 1.55fr 0.75fr;
-        gap: 16px;
-      }
       #page-poultry .cf-gallery-main {
         height: 490px;
         border-radius: 16px;
@@ -7282,38 +7274,6 @@
         z-index: 5;
         pointer-events: none;
       }
-      #page-poultry .cf-gallery-aside {
-        display: flex;
-        flex-direction: column;
-        padding: 13px;
-        background: #eaf0e7;
-        border-radius: 16px;
-      }
-      #page-poultry .cf-gallery-aside img {
-        display: block;
-        width: 100%;
-        height: 310px;
-        flex: 0 0 310px;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-      #page-poultry .cf-gallery-aside-copy {
-        padding: 22px 14px 18px;
-      }
-      #page-poultry .cf-gallery-aside-copy span {
-        display: block;
-        color: #42684f;
-        font-size: 11px;
-        font-weight: 800;
-        letter-spacing: 1.4px;
-        line-height: 1.5;
-      }
-      #page-poultry .cf-gallery-aside-copy p {
-        margin: 9px 0 0;
-        color: #53665b;
-        font-size: 14px;
-        line-height: 1.7;
-      }
       #page-poultry .cf-jv {
         padding: 100px 0;
         background: #fff;
@@ -7335,6 +7295,10 @@
         position: relative;
         border-radius: 19px;
         overflow: hidden;
+      }
+      #page-poultry .cf-jv-image .cf-gallery-controls {
+        top: 20px;
+        bottom: auto;
       }
       #page-poultry .cf-jv-image img {
         height: 100%;
@@ -7454,20 +7418,6 @@
         #page-poultry .cf-equity {
           padding-top: 65px;
           padding-bottom: 65px;
-        }
-        #page-poultry .cf-farm-gallery {
-          padding-top: 65px;
-          padding-bottom: 65px;
-        }
-        #page-poultry .cf-gallery-layout {
-          grid-template-columns: 1fr;
-        }
-        #page-poultry .cf-gallery-main {
-          height: 360px;
-        }
-        #page-poultry .cf-gallery-aside img {
-          height: 230px;
-          flex-basis: 230px;
         }
         #page-poultry .cf-jv-image {
           height: 430px;
@@ -9840,10 +9790,6 @@
                 >Meet Build Together <span>↓</span></a
               >
             </div>
-            <div class="cf-hero-foot">
-              <span>REAL ASSETS</span><span>OPERATING BUSINESSES</span
-              ><span>LONG-TERM EQUITY</span>
-            </div>
           </div>
           <div class="cf-hero-visual">
             <img
@@ -10161,18 +10107,45 @@
             </div>
           </div>
         </section>
-        <section class="shell cf-farm-gallery">
-          <div class="cf-section-head">
-            <div>
-              <span class="cf-eyebrow">A LOOK AT THE LAND</span>
-              <h2>See The Working<br /><em>Farm Environment</em></h2>
+        <section class="cf-jv" id="cf-jv">
+          <div class="shell cf-jv-layout">
+            <div class="cf-jv-copy">
+              <span class="cf-eyebrow"
+                >THE BUILD TOGETHER JOINT VENTURE MODEL</span
+              >
+              <h2>Co-Investment<br /><em>Shared Responsibility</em></h2>
+              <p>
+                CentroFarms™ works alongside investors as a co-investment and
+                operating partner. We help identify suitable properties,
+                evaluate existing facilities, coordinate modernization, and
+                develop operating plans designed around the needs of each
+                project.
+              </p>
+              <p>
+                Our approach combines practical farm management with technology,
+                including automated feeding and watering systems, computerized
+                climate controls, modern ventilation, and biosecurity measures.
+                These systems are intended to improve operational consistency,
+                reduce avoidable inefficiencies, and support the long-term
+                performance of the facilities.
+              </p>
+              <p>
+                Through our Build Together model, investors and CentroFarms™
+                work toward a shared goal: building a well-managed agricultural
+                business with tangible assets, disciplined financing, and room
+                for future growth.
+              </p>
+              <p>
+                The focus is straightforward: acquire the right assets, operate
+                them efficiently, manage risk carefully, and build lasting value
+                over time.
+              </p>
+              <a class="cf-btn cf-btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=Build%20Together%20Partnership%20Discussion%20-%20CentroFarms&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20potential%20partnership%20through%20the%20Build%20Together%20model.%20Here%20is%20some%20information%20to%20help%20start%20the%20conversation%3A%0A%0AAbout%20me%20%2F%20my%20organization%3A%0A%0ARelevant%20agricultural%20or%20operating%20experience%3A%0A%0ALocation%20or%20property%20of%20interest%3A%0A%0AAreas%20of%20interest%20(investment%2C%20operations%2C%20modernization%2C%20or%20other)%3A%0A%0APotential%20role%20or%20contribution%3A%0A%0APreferred%20partnership%20structure%20or%20goals%3A%0A%0AExpected%20timing%3A%0A%0AQuestions%20or%20additional%20details%3A%0A%0A%0AName%3A%0AOrganization%3A%0APhone%20(optional)%3A%0A%0AThank%20you%2C%0A" target="_blank" rel="noopener noreferrer">Discuss a partnership <span class="cf-btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
             </div>
-          </div>
-          <div class="cf-gallery-layout">
             <div
-              class="cf-gallery-main"
+              class="cf-jv-image cf-gallery-main"
               role="region"
-              aria-label="Farm photo slideshow"
+              aria-label="Farm photo slideshow in the Build Together section"
               tabindex="0"
             >
               <div class="swiper cf-farm-swiper">
@@ -10221,64 +10194,6 @@
                   >01 / 05</span
                 >
               </div>
-            </div>
-            <div class="cf-gallery-aside">
-              <img
-                src="img/d46a9652d75168b89c4eca930c20a11de7a07dba.webp"
-                loading="lazy"
-                alt="Site plan and aerial property overview"
-              />
-              <div class="cf-gallery-aside-copy">
-                <span>AGRICULTURAL LAND &amp; FACILITIES</span>
-                <p>
-                  Actual assets, site conditions and available infrastructure
-                  vary from project to project.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="cf-jv" id="cf-jv">
-          <div class="shell cf-jv-layout">
-            <div class="cf-jv-copy">
-              <span class="cf-eyebrow"
-                >THE BUILD TOGETHER JOINT VENTURE MODEL</span
-              >
-              <h2>Co-Investment<br /><em>Shared Responsibility</em></h2>
-              <p>
-                CentroFarms™ works alongside investors as a co-investment and
-                operating partner. We help identify suitable properties,
-                evaluate existing facilities, coordinate modernization, and
-                develop operating plans designed around the needs of each
-                project.
-              </p>
-              <p>
-                Our approach combines practical farm management with technology,
-                including automated feeding and watering systems, computerized
-                climate controls, modern ventilation, and biosecurity measures.
-                These systems are intended to improve operational consistency,
-                reduce avoidable inefficiencies, and support the long-term
-                performance of the facilities.
-              </p>
-              <p>
-                Through our Build Together model, investors and CentroFarms™
-                work toward a shared goal: building a well-managed agricultural
-                business with tangible assets, disciplined financing, and room
-                for future growth.
-              </p>
-              <p>
-                The focus is straightforward: acquire the right assets, operate
-                them efficiently, manage risk carefully, and build lasting value
-                over time.
-              </p>
-              <a class="cf-btn cf-btn-primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info%40centrofarms.com&amp;su=Build%20Together%20Partnership%20Discussion%20-%20CentroFarms&amp;body=Hi%20CentroFarms%20Team%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20potential%20partnership%20through%20the%20Build%20Together%20model.%20Here%20is%20some%20information%20to%20help%20start%20the%20conversation%3A%0A%0AAbout%20me%20%2F%20my%20organization%3A%0A%0ARelevant%20agricultural%20or%20operating%20experience%3A%0A%0ALocation%20or%20property%20of%20interest%3A%0A%0AAreas%20of%20interest%20(investment%2C%20operations%2C%20modernization%2C%20or%20other)%3A%0A%0APotential%20role%20or%20contribution%3A%0A%0APreferred%20partnership%20structure%20or%20goals%3A%0A%0AExpected%20timing%3A%0A%0AQuestions%20or%20additional%20details%3A%0A%0A%0AName%3A%0AOrganization%3A%0APhone%20(optional)%3A%0A%0AThank%20you%2C%0A" target="_blank" rel="noopener noreferrer">Discuss a partnership <span class="cf-btn-arrow" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="M3 13 13 3M5 3h8v8" /></svg></span></a>
-            </div>
-            <div class="cf-jv-image">
-              <img
-                src="img/143q4m143q4m143q.png"
-                loading="lazy"
-                alt="Rural farmland and agricultural buildings"
-              />
               <div class="cf-jv-overlay">
                 <span>THE BUILD TOGETHER PRINCIPLE</span
                 ><b
@@ -10346,10 +10261,6 @@
               alt="Close-up texture of black soldier fly larvae frass"
               loading="lazy"
             />
-            <figcaption>
-              <span>INSECT-DERIVED SOIL AMENDMENT</span
-              ><strong>A circular input.<br />A practical purpose.</strong>
-            </figcaption>
           </figure>
         </div>
         <section class="shell ax-section ax-product" id="agrisolution-details">
@@ -10402,10 +10313,6 @@
           </div>
         </section>
         <section class="shell ax-features">
-          <div class="ax-heading">
-            <span class="ax-label">PRODUCT FEATURES</span>
-            <h2>Supporting The Soil<br /><em>Making Resources Count</em></h2>
-          </div>
           <div class="ax-grid-4 ax-feature-grid">
             <button class="ax-feature-button" type="button" aria-label="View details: Balanced Nutrient Profile">
               <span class="ax-feature-number">01</span>
@@ -10714,7 +10621,7 @@
             <div>
               <div class="ax-heading">
                 <span class="ax-label">IN DEVELOPMENT</span>
-                <h2>Planning The<br /><em>Next Field Trials</em></h2>
+                <h2>Planned Field<br /><em>Trial Initiatives</em></h2>
                 <p class="">
                   CentroFarms™ is currently planning multi-hectare split-block
                   evaluation programs to validate EPro 3-2-1 performance across
