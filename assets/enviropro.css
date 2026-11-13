@@ -1,0 +1,109 @@
+/* Compact packaging cards keep product images beside their descriptions. */
+#page-agrisolution .ax-logistics-featured .ax-freight-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+}
+#page-agrisolution .ax-freight-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#page-agrisolution .ax-packaging-card {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  align-items: center;
+  border-radius: 12px;
+}
+#page-agrisolution .ax-logistics-visual.ax-packaging-photo {
+  aspect-ratio: auto;
+  height: 210px;
+  min-width: 0;
+  overflow: hidden;
+  background: #f7eadb;
+}
+#page-agrisolution .ax-packaging-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#page-agrisolution .ax-packaging-card .ax-logistics-card-copy {
+  min-width: 0;
+  padding: 22px;
+}
+#page-agrisolution .ax-packaging-card h3 {
+  font-size: clamp(22px, 1.65vw, 29px);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+#page-agrisolution .ax-packaging-card p {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+@media (min-width: 761px) and (max-width: 1100px) {
+  #page-agrisolution .ax-logistics-options-grid { grid-template-columns: 1fr; }
+  #page-agrisolution .ax-packaging-card { grid-template-columns: minmax(0, .6fr) minmax(0, 1.4fr); }
+}
+@media (max-width: 760px) {
+  #page-agrisolution .ax-packaging-card { grid-template-columns: minmax(100px, .7fr) minmax(0, 1.3fr); }
+  #page-agrisolution .ax-logistics-visual.ax-packaging-photo { height: 180px; }
+  #page-agrisolution .ax-packaging-card .ax-logistics-card-copy { padding: 18px; }
+}
+@media (max-width: 380px) {
+  #page-agrisolution .ax-packaging-card { grid-template-columns: 1fr; }
+  #page-agrisolution .ax-logistics-visual.ax-packaging-photo { height: 150px; }
+}
+
+/* EnviroPro banner: balanced typography and product photography. */
+#page-agrisolution .ax-hero {
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: stretch;
+  min-height: 500px;
+}
+#page-agrisolution .ax-hero-copy {
+  justify-content: center;
+  padding: clamp(32px, 4vw, 58px);
+}
+#page-agrisolution.ax-page .ax-hero h1 {
+  font-size: clamp(46px, 5vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin: 18px 0 25px;
+}
+#page-agrisolution.ax-page .ax-hero-copy p {
+  max-width: 500px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 17px;
+}
+#page-agrisolution .ax-hero-photo { min-height: 0; }
+#page-agrisolution .ax-hero-photo img { object-fit: cover; object-position: center; }
+#page-agrisolution .ax-hero-photo::after { opacity: .55; }
+#page-agrisolution .ax-hero .ax-actions { display: flex; flex-wrap: wrap; gap: 18px 24px; align-items: center; margin-top: 9px; }
+#page-agrisolution .ax-hero-footer { align-self: stretch; margin-top: 28px; padding-top: 18px; border-top: 1px solid #d4deca; line-height: 1.6; }
+
+/* Equivalent adjustments for the Vietnamese product banner. */
+#page-agrisolution .agrisolution-hero { grid-template-columns: minmax(0,1.05fr) minmax(0,1fr); align-items: center; gap: clamp(30px,5vw,70px); padding: 25px 0 45px; }
+#page-agrisolution .agrisolution-copy { padding: 30px 0; }
+#page-agrisolution .agrisolution-copy h1 { font: 400 clamp(46px,5vw,68px)/1.05 Georgia,serif; letter-spacing: -1.5px; margin: 18px 0 25px; }
+#page-agrisolution .agrisolution-copy .desc { max-width: 510px; line-height: 1.8; }
+#page-agrisolution .agrisolution-visual { min-height: 470px; aspect-ratio: auto; }
+@media (max-width: 1000px) and (min-width: 761px) {
+  #page-agrisolution .ax-hero-copy { padding: 32px; }
+  #page-agrisolution .ax-hero { grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); }
+}
+@media (max-width: 760px) {
+  #page-agrisolution .ax-hero,
+  #page-agrisolution .agrisolution-hero { grid-template-columns: 1fr; min-height: 0; }
+  #page-agrisolution .ax-hero-copy { padding: 32px 25px; }
+  #page-agrisolution.ax-page .ax-hero h1,
+  #page-agrisolution .agrisolution-copy h1 { font-size: clamp(42px,10vw,56px); margin: 16px 0 22px; }
+  #page-agrisolution .ax-hero-photo { height: clamp(260px,65vw,380px); min-height: 0; }
+  #page-agrisolution .ax-hero-footer { margin-top: 24px; }
+  #page-agrisolution .agrisolution-hero { padding: 12px 0 30px; gap: 20px; }
+  #page-agrisolution .agrisolution-copy { padding: 20px 0 0; }
+  #page-agrisolution .agrisolution-visual { min-height: 350px; }
+}

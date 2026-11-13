@@ -1,0 +1,17 @@
+/* AgriSolutions overview combines the existing division sections. */
+#page-agrisolutions-overview #page-agrisolution-home { padding-bottom: 60px; }
+#page-agrisolutions-overview .eq-overview { padding-bottom: 65px; }
+#page-agrisolutions-overview .eq-banner .eq-overview-title {
+  color: #fff;
+  font-size: clamp(32px, 3.5vw, 52px);
+  line-height: 1.12;
+  margin: 0 0 24px;
+}
+#page-agrisolutions-overview .eq-banner .eq-overview-title span {
+  color: #fff;
+}
+@media (max-width: 760px) {
+  #page-agrisolutions-overview #page-agrisolution-home { padding-bottom: 38px; }
+  #page-agrisolutions-overview .eq-overview { padding-bottom: 40px; }
+  #page-agrisolutions-overview .eq-banner .eq-overview-title { font-size: clamp(28px, 6.5vw, 42px); }
+}
