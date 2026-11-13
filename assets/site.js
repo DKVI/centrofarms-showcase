@@ -12,7 +12,7 @@
     return;
   }
 
-  function toggleMenu(groupSelector, buttonSelector, className = 'open') {
+  function toggleMenu(groupSelector, buttonSelector, className = 'open', hover = false) {
     const group = q(groupSelector), button = q(buttonSelector);
     if (!group || !button) return;
     const close = () => { group.classList.remove(className); button.setAttribute('aria-expanded', 'false'); };
@@ -22,8 +22,23 @@
     });
     document.addEventListener('click', event => { if (!group.contains(event.target)) close(); });
     document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+    if (hover) {
+      const desktopHover = matchMedia('(min-width: 931px) and (hover: hover) and (pointer: fine)');
+      group.addEventListener('mouseenter', () => {
+        if (!desktopHover.matches) return;
+        group.classList.add(className);
+        button.setAttribute('aria-expanded', 'true');
+      });
+      group.addEventListener('mouseleave', () => {
+        if (desktopHover.matches && !group.contains(document.activeElement)) close();
+      });
+      group.addEventListener('focusout', event => {
+        if (desktopHover.matches && !group.contains(event.relatedTarget) && !group.matches(':hover')) close();
+      });
+      desktopHover.addEventListener('change', close);
+    }
   }
-  toggleMenu('#agrisolutionsGroup', '#agrisolutionsToggle');
+  toggleMenu('#agrisolutionsGroup', '#agrisolutionsToggle', 'open', true);
   toggleMenu('#naturalGroup', '#naturalToggle');
   toggleMenu('#languageSwitch', '#languageToggle');
   toggleMenu('#nav', '#mobileToggle', 'show');
