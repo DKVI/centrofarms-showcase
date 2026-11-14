@@ -39,7 +39,7 @@ Changes should be made on a feature branch and proposed through pull requests fo
 ## Access
 
 Owner: KVI (production)
-
+Contributor: Ma Nhat Phong
 ## Shared assets
 
 - `assets/site.css`: English styles.
