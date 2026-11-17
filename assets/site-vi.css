@@ -328,9 +328,9 @@ body{font-family:"Be Vietnam Pro","DM Sans","Manrope",Arial,sans-serif}
 @media(max-width:650px){.note-block{align-items:flex-start;padding:13px 14px!important}.note-block>.note-content{padding-left:12px}}
 
 @media(max-width:930px){.nav-contact-mobile{display:flex!important}}
-/* AgriSolutions desktop dropdown: rise and fade, with a continuous hover area. */
+/* AgriSolutions and Naturals desktop dropdowns: rise and fade, with a continuous hover area. */
 @media (min-width: 931px) {
-  #agrisolutionsGroup > .dropmenu {
+  :is(#agrisolutionsGroup, #naturalGroup) > .dropmenu {
     display: block;
     opacity: 0;
     visibility: hidden;
@@ -338,14 +338,14 @@ body{font-family:"Be Vietnam Pro","DM Sans","Manrope",Arial,sans-serif}
     transform: translateY(12px);
     transition: opacity 250ms ease, transform 250ms ease, visibility 0s linear 250ms;
   }
-  #agrisolutionsGroup.open > .dropmenu {
+  :is(#agrisolutionsGroup, #naturalGroup).open > .dropmenu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
     transition-delay: 0s;
   }
-  #agrisolutionsGroup::after {
+  :is(#agrisolutionsGroup, #naturalGroup)::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -355,7 +355,7 @@ body{font-family:"Be Vietnam Pro","DM Sans","Manrope",Arial,sans-serif}
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  #agrisolutionsGroup > .dropmenu {
+  :is(#agrisolutionsGroup, #naturalGroup) > .dropmenu {
     transition: none;
     transform: none;
   }
