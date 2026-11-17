@@ -1,0 +1,35 @@
+[
+  {
+    "file": "img/enviromeal/meal.jpg",
+    "url": "https://darl-p-001.sitecorecontenthub.cloud/api/public/content/9f135aaf3b05466ba6663e7d9380a0a0?v=99a43024",
+    "source": "https://www.darlingii.com/enviroflight/products",
+    "credit": "EnviroFlight / Darling Ingredients",
+    "usage": "Manufacturer imagery; no independent license asserted."
+  },
+  {
+    "file": "img/enviromeal/feeding-cat.png",
+    "url": "https://darl-p-001.sitecorecontenthub.cloud/api/public/content/3ba6a98f79184d18900f4a0b3874be2a?v=be78265b",
+    "source": "https://www.darlingii.com/enviroflight/markets",
+    "credit": "EnviroFlight / Darling Ingredients",
+    "usage": "Manufacturer imagery; no independent license asserted."
+  },
+  {
+    "file": "img/enviromeal/aquafeed.jpg",
+    "url": "https://agroobzor.ru/images/articles/2022/march/ryba-17-03.jpg",
+    "source": "https://agroobzor.ru/",
+    "usage": "Illustrative application photography; does not depict or endorse a specific EnviroMeal formulation."
+  },
+  {
+    "file": "img/enviromeal/dog-mealtime.jpg",
+    "url": "https://www.oasy.com/media/immagini/4345_n_come-rendere-felice-il-cane-durante-il-pasto-2.jpg",
+    "source": "https://www.oasy.com/it/pet-news/consigli-utili/come-far-felice-il-cane-durante-il-pasto",
+    "usage": "Illustrative application photography; does not depict or endorse a specific EnviroMeal formulation."
+  },
+  {
+    "file": "img/enviromeal/bsfl-ingredients.jpg",
+    "url": "https://nutrinews.com/wp-content/uploads/2023/02/envroflight.jpg",
+    "source": "https://nutrinews.com/en/black-soldier-fly-larvae-in-livestock-diets-benefits-to-its-inclusion/amp/",
+    "caption": "Figure 2. EnviroFlight?s BSFL-derived ingredients: EnviroMeal, EnviroBug, and EnviroOil.",
+    "usage": "Image accompanying an article specifically about black soldier fly ingredients in livestock diets."
+  }
+]

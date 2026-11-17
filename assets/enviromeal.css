@@ -1,0 +1,103 @@
+/* Independent editorial layout for EnviroMeal. */
+body[data-page="enviromeal"] .meal-page { --meal-gap: clamp(48px,6vw,84px); --meal-heading-size: clamp(32px,3.6vw,48px); --meal-subheading-size: 14px; --meal-card-heading-size: clamp(18px,1.5vw,21px); color: #19392d; padding-bottom: var(--meal-gap); }
+body[data-page="enviromeal"] #page-agrisolution :is(h1,h2,h3,.meal-label) { text-transform: none; }
+body[data-page="enviromeal"] #page-agrisolution h2 { font: 400 var(--meal-heading-size)/1.2 Georgia,serif; letter-spacing: -.025em; margin: 14px 0 24px; }
+body[data-page="enviromeal"] #page-agrisolution h3 { font-size: var(--meal-card-heading-size); line-height: 1.35; margin: 7px 0 10px; }
+body[data-page="enviromeal"] #page-agrisolution p { font-size: 15px; line-height: 1.8; color: #58675b; margin: 0 0 18px; }
+body[data-page="enviromeal"] #page-agrisolution p:last-child { margin-bottom: 0; }
+.meal-page img { display: block; max-width: 100%; }
+.meal-page figure { margin: 0; }
+.meal-label { display: block; font-size: var(--meal-subheading-size); letter-spacing: .09em; font-weight: 700; line-height: 1.6; color: #6a7a5b; }
+.meal-section { margin-top: var(--meal-gap); scroll-margin-top: 120px; }
+.meal-page .bug-icon { display: block; width: 28px; height: 28px; flex: none; }
+.meal-button { display: inline-flex; align-items: center; justify-content: center; gap: 24px; padding: 16px 22px; border-radius: 8px; background: #234b37; color: #fffdf3; font-size: 12px; font-weight: 700; line-height: 1.6; text-align: center; }
+.meal-button-light { background: #e9eedc; color: #19392d; }
+.meal-link { display: inline-block; font-size: 12px; line-height: 1.6; font-weight: 700; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
+.meal-page a:focus-visible { outline: 3px solid #8b9c62; outline-offset: 5px; }
+.meal-hero { position: relative; isolation: isolate; overflow: hidden; border-radius: 24px; min-height: 540px; background: #59472c; display: flex; align-items: flex-end; }
+.meal-hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.meal-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#102b21ed,#102b2180 58%,#102b2100); z-index: -1; }
+.meal-hero-content { padding: clamp(30px,5vw,64px); max-width: 720px; }
+.meal-hero .meal-label { color: #d9e2c6; }
+body[data-page="enviromeal"] #page-agrisolution .meal-hero h1 { color: #fffdf4; font: 400 clamp(58px,8vw,108px)/1.05 Georgia,serif; letter-spacing: -.045em; margin: 18px 0 24px; }
+body[data-page="enviromeal"] #page-agrisolution .meal-hero p { color: #f0efdf; max-width: 490px; font-size: 16px; margin-bottom: 26px; }
+.meal-hero-index { position: absolute; right: 28px; bottom: 28px; color: #fff6dc; font-size: 10px; letter-spacing: .1em; }
+.meal-overview { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1fr); gap: clamp(32px,4vw,64px); align-items: start; }
+.meal-overview > div:first-child { min-width: 0; }
+.meal-overview .meal-label { font-size: var(--meal-subheading-size); font-weight: 700; letter-spacing: .09em; color: #536d59; }
+body[data-page="enviromeal"] #page-agrisolution .meal-overview h2 { font-size: var(--meal-heading-size); line-height: 1.2; letter-spacing: -.025em; margin: 12px 0 22px; padding-bottom: 32px; border-bottom: 1px solid #c8d1c0; }
+body[data-page="enviromeal"] #page-agrisolution .meal-overview > div:first-child p { color: #294638; font-size: clamp(15px,1.25vw,18px); line-height: 1.6; margin-bottom: 28px; }
+.meal-specs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px 18px; padding: clamp(22px,2vw,32px); border-radius: 24px; background: #e9eee2; }
+.meal-spec { display: grid; grid-template-rows: 1fr auto auto; align-items: start; min-width: 0; min-height: clamp(250px,20vw,306px); padding: clamp(18px,1.5vw,24px); border-radius: 14px; background: #fcfaf5; }
+.meal-spec .meal-icon { display: grid; place-items: center; width: clamp(52px,4.4vw,68px); height: clamp(52px,4.4vw,68px); border-radius: 50%; background: #e0e8d7; color: #4c6a4d; }
+.meal-spec strong { display: block; font: 400 clamp(25px,2.45vw,38px)/1.2 Georgia,serif; color: #294638; margin: 28px 0; overflow-wrap: anywhere; }
+.meal-spec > span:last-child { display: block; width: 100%; border-top: 1px solid #ccd5c2; padding-top: 18px; text-align: left; font-size: clamp(12px,1.2vw,17px); line-height: 1.5; color: #536d59; }
+body[data-page="enviromeal"] #page-agrisolution .meal-specs .meal-note { grid-column: 1 / -1; margin: 0; color: #294638; font-size: clamp(14px,1.2vw,17px); line-height: 1.55; }
+body[data-page="enviromeal"] #page-agrisolution .meal-specs .note-block { font-size: 11px !important; padding: 11px 12px !important; line-height: 1.5 !important; }
+body[data-page="enviromeal"] .meal-specs .note-block > .note-icon { width: 18px; height: 18px; flex-basis: 18px; margin-right: 9px; }
+body[data-page="enviromeal"] .meal-specs .note-block > .note-content { padding-left: 10px; }
+.meal-icon { color: #536e45; }
+body[data-page="enviromeal"] #page-agrisolution .meal-note { font-size: 12px; line-height: 1.8; color: #718069; margin: 20px 0 0; }
+.meal-applications-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(28px,5vw,64px); margin-top: 32px; align-items: stretch; }
+.meal-application-photo { position: relative; min-height: 440px; border-radius: 20px; overflow: hidden; background: #eeedee; }
+.meal-application-photo img { position: absolute; width: 100%; height: 100%; padding-bottom: 72px; box-sizing: border-box; object-fit: contain; object-position: center; }
+.meal-application-photo figcaption { position: absolute; inset: auto 0 0; padding: 22px 24px; background: #234536; color: #fffdf2; font: 400 clamp(17px,1.6vw,24px)/1.3 Georgia,serif; }
+.meal-market-list article { display: grid; grid-template-columns: 30px minmax(0,1fr) 28px; gap: 18px; padding: 22px 0; border-bottom: 1px solid #d9dece; }
+.meal-market-list article:first-child { padding-top: 0; }
+.meal-market-list article:last-child { border-bottom: 0; padding-bottom: 0; }
+.meal-market-number { color: #8b9a78; font: 400 20px Georgia,serif; padding-top: 3px; }
+.meal-market-list .meal-icon { padding-top: 18px; }
+.meal-journey { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,7vw,96px); padding: clamp(28px,4vw,52px); background: #edf0e5; border-radius: 22px; }
+.meal-journey-intro { align-self: center; }
+.meal-timeline { list-style: none; padding: 0; margin: 0; }
+.meal-timeline li { position: relative; display: grid; grid-template-columns: 44px minmax(0,1fr) 28px; gap: 18px; padding: 0 0 30px; }
+.meal-timeline li:last-child { padding-bottom: 0; }
+.meal-timeline li:not(:last-child)::after { content: ''; position: absolute; left: 21px; top: 44px; bottom: 0; width: 1px; background: #c4ceb4; }
+.meal-step { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #dce5cc; color: #385638; font-size: 12px; }
+.meal-timeline .bug-icon { color: #657c52; margin-top: 8px; }
+.meal-evidence { width: min(1456px, calc(100% - 76px)); }
+.meal-evidence-top { display: grid; grid-template-columns: 58% 42%; gap: 0; align-items: stretch; min-height: 424px; margin-bottom: 29px; background: #e9eee2; border-radius: 22px; overflow: hidden; }
+.meal-evidence-top > div { display: flex; flex-direction: column; justify-content: center; min-width: 0; padding: 64px 50px 82px; }
+.meal-evidence-top .meal-label { font-size: var(--meal-subheading-size); font-weight: 700; letter-spacing: .09em; line-height: 1.6; color: #536b5c; }
+.meal-evidence-top .meal-label::after { content: ''; display: block; width: 68px; height: 2px; background: #82987a; margin-top: 22px; }
+body[data-page="enviromeal"] #page-agrisolution .meal-evidence-top h2 { font-size: var(--meal-heading-size); line-height: 1.2; letter-spacing: -.025em; margin: 14px 0 0; }
+.meal-evidence-top figure { position: relative; min-width: 0; overflow: hidden; }
+.meal-evidence-top img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 66% center; }
+.meal-evidence-list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+.meal-evidence-list article { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; min-height: 293px; padding: 28px 29px 12px; border: 1px solid #d1dac9; border-radius: 17px; background: #fffdf7; }
+.meal-evidence-list .meal-label { font-size: var(--meal-subheading-size); font-weight: 700; letter-spacing: .09em; color: #536b5c; }
+body[data-page="enviromeal"] #page-agrisolution .meal-evidence-list h3 { font: 400 var(--meal-card-heading-size)/1.35 Georgia,serif; color: #294638; margin: 8px 0 18px; }
+body[data-page="enviromeal"] #page-agrisolution .meal-evidence-list p { font-size: clamp(16px,1.25vw,20px); line-height: 1.3; color: #294638; margin-bottom: 28px; }
+.meal-evidence-list .meal-link { margin-top: auto; font-size: 16px; font-weight: 400; color: #294638; }
+@media(max-width:1100px) { .meal-evidence-top { min-height: 340px; } .meal-evidence-top > div { padding: 34px 30px; } }
+@media(max-width:930px) { .meal-evidence { width: calc(100% - 38px); } }
+.meal-formulation { display: grid; grid-template-columns: 1fr 1.25fr; gap: 28px 48px; align-items: start; padding-block: 32px; border-block: 1px solid #d9dece; }
+.meal-formulation > .meal-button { grid-column: 2; justify-self: start; }
+body[data-page="enviromeal"] #page-agrisolution > .enviro-related { padding-block: 0; }
+.meal-closing { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: clamp(28px,4vw,52px); border-radius: 22px; background: #173b2c; }
+.meal-closing .meal-label { color: #bed0ac; }
+body[data-page="enviromeal"] #page-agrisolution .meal-closing h2 { color: #fffdf1; font-size: var(--meal-heading-size); }
+.meal-closing h2 em { display: inline-block; font-style: normal; font-size: inherit; margin-top: 8px; color: #dbe5bb; }
+body[data-page="enviromeal"] #page-agrisolution .meal-closing p { color: #cad7c3; }
+.meal-closing .meal-button { flex-shrink: 0; }
+@media(max-width:1100px) { .meal-overview { grid-template-columns: 1fr; gap: 28px; } }
+@media(max-width:1000px) { .meal-applications-layout,.meal-journey { gap: 32px; } .meal-closing { flex-direction: column; align-items: flex-start; } }
+@media(max-width:760px) {
+  body[data-page="enviromeal"] .meal-page { --meal-gap: 48px; }
+  .meal-hero { min-height: 480px; }
+  .meal-hero-content { padding-bottom: 64px; }
+  .meal-hero-index { left: 30px; right: auto; bottom: 24px; }
+  .meal-hero::after { background: linear-gradient(0deg,#102b21f5,#102b21b3 70%,#102b2144); }
+  .meal-overview,.meal-applications-layout,.meal-journey,.meal-evidence-top,.meal-formulation { grid-template-columns: 1fr; }
+  .meal-application-photo { min-height: 320px; }
+  .meal-evidence-list { gap: 28px; }
+  .meal-evidence-top { min-height: 0; }
+  .meal-evidence-top > div { padding: 32px 26px; }
+  .meal-evidence-list article { min-height: 0; padding: 24px; }
+  .meal-evidence-top figure { min-height: 260px; }
+  .meal-evidence-top img { object-position: center; }
+  .meal-formulation > .meal-button { grid-column: auto; }
+}
+@media(max-width:600px) { .meal-specs { grid-template-columns: 1fr; gap: 16px; padding: 20px; } .meal-spec { min-height: 0; grid-template-columns: 56px minmax(0,1fr); grid-template-rows: auto auto; gap: 10px 18px; padding: 22px; } .meal-spec .meal-icon { grid-row: 1 / 3; width: 56px; height: 56px; } .meal-spec strong { margin: 0; font-size: 28px; } .meal-spec > span:last-child { grid-column: 2; padding-top: 10px; } }
+@media(max-width:600px) { .meal-evidence-list { grid-template-columns: 1fr; gap: 18px; } }
+@media(max-width:480px) { .meal-market-list article { grid-template-columns: 22px minmax(0,1fr); gap: 12px; } .meal-market-list .meal-icon { display: none; } .meal-journey { padding: 26px 22px; } .meal-timeline li { gap: 12px; } }

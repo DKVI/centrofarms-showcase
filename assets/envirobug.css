@@ -1,0 +1,147 @@
+/* EnviroBug shares EnviroPro's typography, hero and product card system. */
+.bug-process-title-line { white-space: nowrap; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing > div { flex: 1; min-width: 0; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing h2 { font-size: clamp(28px, 2.8vw, 38px); line-height: 1.25; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing .bug-closing-line:last-child { display: inline-block; margin-top: 8px; font-size: clamp(38px, 4vw, 54px); line-height: 1.12; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing .solid-btn { flex-shrink: 0; }
+@media(min-width:1100px) { .bug-closing-line { white-space: nowrap; } }
+@media(min-width:601px) and (max-width:1099px) { body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing { flex-direction: column; align-items: flex-start; } }
+/* Clear hierarchy between section headings, card subheadings and labels. */
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution :is(.bug-market-card, .bug-process) h3 {
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.4;
+  margin: 14px 0 10px;
+}
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution :is(.ax-label, .section-overline, .intro-tag) {
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: .08em;
+}
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-market-copy .ax-label { font-size: 10px; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution :is(h1,h2,h3,h4,h5,h6,.ax-label,.section-overline,.intro-tag) { text-transform: none; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) .bug-subtitle { font-size: clamp(22px, 2.2vw, 30px); line-height: 1.3; margin: 0 0 22px; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) .bug-section { padding-top: 56px; padding-bottom: 32px; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-traits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  padding: clamp(20px, 2.5vw, 34px);
+  background: radial-gradient(ellipse at top right, #315c47 0, transparent 65%), #17382d;
+  border: 1px solid #ffffff18;
+  border-radius: 26px;
+  box-shadow: 0 18px 45px #17382d14;
+}
+.bug-traits strong { display: block; font-size: clamp(22px,2vw,30px); line-height: 1.15; letter-spacing: -.035em; overflow-wrap: anywhere; }
+.bug-traits span { display: block; font-size: 10px; letter-spacing: .1em; margin-top: 9px; line-height: 1.6; }
+#page-agrisolution .bug-traits > p { grid-column: 1 / -1; margin: 6px 0 0; border-top: 1px solid #ffffff25; padding-top: 18px; font-size: 12px; line-height: 1.8; color: #c9d8cb; }
+.bug-market-grid, .bug-process { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.bug-market-card { padding: 28px 24px; background: #f2f3eb; border: 1px solid #dce2d3; border-radius: 12px; }
+.bug-market-card h3, .bug-process h3 { font-size: 23px; line-height: 1.3; margin: 16px 0 12px; }
+.bug-market-card p, .bug-process p, .bug-use p, .bug-sources p { font-size: 15px; line-height: 1.8; }
+.bug-process { list-style: none; padding: 0; margin: 30px 0 0; }
+.bug-process li { border-top: 1px solid #b9c7ad; padding: 24px 12px 0 0; }
+.bug-step { font-size: 38px; color: #697c4d; }
+.bug-use { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; padding-top: 50px; padding-bottom: 40px; border-bottom: 1px solid #dce2d3; }
+.bug-use h2, .bug-sources h2 { font-size: clamp(28px,3vw,40px); line-height: 1.2; }
+.bug-sources ul { padding-left: 20px; line-height: 2; }
+.bug-sources a { text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.bug-sources { margin-bottom: 32px; }
+@media(max-width:1000px) { .bug-market-grid, .bug-process { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .bug-market-grid, .bug-process, .bug-use { grid-template-columns: 1fr; } .bug-use { gap: 16px; } body:is([data-page="envirobug"], [data-page="enviromeal"]) .bug-section { padding-top: 32px; } }
+
+/* Local photography and lightweight inline icons, shared by both languages. */
+.bug-icon { width: 30px; height: 30px; display: block; flex: none; }
+.bug-icon-badge { display: inline-flex; align-items: center; justify-content: center; width: 58px; height: 58px; flex: none; border-radius: 18px; background: #e4ebd8; color: #37563c; }
+.bug-traits .bug-trait { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; min-width: 0; padding: clamp(18px,2vw,26px); border: 1px solid #dbe3ce; border-radius: 18px; background: #e9eedf; color: #17382d; }
+.bug-traits .bug-icon-badge { width: 48px; height: 48px; border-radius: 14px; background: #fffdf5; color: #426044; border: 1px solid #d4dfc6; }
+.bug-ingredient-photo { margin-top: 12px; margin-bottom: 20px; overflow: hidden; border: 1px solid #e0e3d8; border-radius: 18px; background: #eef0ed; }
+.bug-ingredient-photo > img { display: block; width: 100%; height: auto; aspect-ratio: 18/5; object-fit: cover; }
+.bug-ingredient-photo figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; color: #52664f; font-size: 11px; letter-spacing: .06em; }
+.bug-ingredient-photo figcaption span:first-child { display: flex; align-items: center; gap: 10px; }
+.bug-ingredient-photo figcaption .bug-icon { width: 22px; height: 22px; }
+.bug-market-card { padding: 0; overflow: hidden; background: #fffefa; box-shadow: 0 8px 28px #172e2408; transition: transform .25s ease, box-shadow .25s ease; }
+.bug-market-photo { position: relative; aspect-ratio: 4/3; background: #e1e6d9; }
+.bug-market-photo > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.bug-market-card:nth-child(2) .bug-market-photo > img { object-position: 63% center; }
+.bug-market-card:nth-child(3) .bug-market-photo > img { object-position: 60% center; }
+.bug-market-symbol { position: absolute; bottom: -24px; left: 22px; display: grid; place-items: center; width: 52px; height: 52px; border: 4px solid #fffefa; border-radius: 50%; color: #fffefa; background: #244a35; }
+.bug-market-symbol .bug-icon { width: 25px; height: 25px; }
+.bug-market-copy { padding: 38px 22px 24px; }
+.bug-market-copy .ax-label { font-size: 10px; }
+.bug-photo-credit { margin: 16px 0 0; color: #64715f; font-size: 11px; line-height: 1.6; }
+.bug-photo-credit a { text-decoration: underline; text-underline-offset: 3px; }
+.bug-process li { position: relative; padding: 24px; border: 1px solid #dce2d3; border-radius: 16px; background: #f4f5ee; }
+.bug-process-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.bug-step { font-size: 26px; opacity: .7; }
+.bug-process li:not(:last-child)::after { content: '→'; position: absolute; top: 40px; right: -20px; width: 20px; text-align: center; color: #697c4d; z-index: 1; }
+@media (hover:hover) and (pointer:fine) { .bug-market-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px #172e2412; } }
+@media(max-width:1000px) { .bug-process li:nth-child(2)::after { display: none; } }
+@media(max-width:600px) { .bug-ingredient-photo > img { aspect-ratio: 2/1; } .bug-ingredient-photo figcaption { padding: 14px; flex-wrap: wrap; } .bug-process li:not(:last-child)::after { display: none; } .bug-market-photo { aspect-ratio: 16/9; } .bug-trait { gap: 14px; } }
+@media(prefers-reduced-motion:reduce) { .bug-market-card { transition: none; } .bug-market-card:hover { transform: none; } }
+@media(max-width:600px) { body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-traits { grid-template-columns: 1fr; } .bug-traits .bug-trait { flex-direction: row; align-items: center; gap: 18px; } }
+@media(max-width:380px) { body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-traits { gap: 12px; padding: 16px; } .bug-traits .bug-trait { padding: 18px; } }
+
+/* One spacing rhythm prevents inherited section padding from accumulating. */
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution {
+  --bug-section-gap: clamp(48px, 6vw, 80px);
+  --bug-heading-gap: clamp(24px, 3vw, 32px);
+  --bug-card-gap: clamp(18px, 2vw, 24px);
+  display: flow-root;
+  padding-bottom: var(--bug-section-gap);
+}
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution > :is(.ax-product, .bug-ingredient-photo, .bug-section, .bug-use, .enviro-related) {
+  margin-top: var(--bug-section-gap);
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution > .agri-closing {
+  margin-top: var(--bug-section-gap);
+  margin-bottom: 0;
+  padding: clamp(26px, 3vw, 40px);
+}
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .ax-product {
+  column-gap: clamp(28px, 4vw, 56px);
+  row-gap: 32px;
+}
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-section-heading { margin: 0 0 var(--bug-heading-gap); }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .enviro-related h2 { margin: 0 0 var(--bug-heading-gap); }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution :is(.bug-market-grid, .bug-process, .enviro-related-grid) { gap: var(--bug-card-gap); }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-process { margin: 0; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-use { gap: var(--bug-heading-gap); border-bottom: 0; align-items: start; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-use h2 { margin: 0; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution :is(.ax-product-copy, .bug-use) p { margin-top: 0; margin-bottom: 18px; line-height: 1.8; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution :is(.ax-product-copy, .bug-market-copy, .bug-process li) > p:last-child { margin-bottom: 0; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-process li:not(:last-child)::after { right: calc(-1 * var(--bug-card-gap)); width: var(--bug-card-gap); }
+@media(max-width:600px) {
+  body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution { --bug-section-gap: 44px; --bug-heading-gap: 24px; --bug-card-gap: 20px; }
+  body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .ax-product { row-gap: 28px; }
+  body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing { flex-direction: column; align-items: flex-start; gap: 24px; }
+  body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .agri-closing .solid-btn { white-space: normal; }
+}
+
+/* Feeding guidance banner: one uninterrupted image beside the content. */
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution > .bug-use {
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+  overflow: hidden;
+  background: #e8eddf;
+  border: 1px solid #d5dfc9;
+  border-radius: 24px;
+}
+.bug-use-visual { position: relative; margin: 0; min-width: 0; min-height: 350px; background: #c7d5c7; }
+.bug-use-visual > img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: cover; object-position: 54% center; }
+.bug-use-content { display: grid; align-content: center; gap: 20px; padding: clamp(24px, 3vw, 38px); min-width: 0; }
+.bug-use-heading { display: grid; justify-items: start; gap: 16px; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-use .section-overline { color: #4b6546; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-use h2 { max-width: none; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; }
+body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution .bug-use-copy p { color: #405344; }
+.bug-use-copy .ax-button { margin-top: 8px; }
+@media(max-width:760px) {
+  body:is([data-page="envirobug"], [data-page="enviromeal"]) #page-agrisolution > .bug-use { grid-template-columns: 1fr; gap: 0; }
+  .bug-use-visual { min-height: 0; aspect-ratio: 16/9; }
+  .bug-use-content { padding: 28px 24px; }
+}

@@ -20,6 +20,10 @@ Each page has its own directory and HTML document. Content is present in the HTM
 | AgriSolutions | `/agrisolutions/` | `/vi/agrisolutions/` |
 | Enviroflight | `/agrisolutions/enviroflight/` | `/vi/agrisolutions/enviroflight/` |
 | EnviroPro | `/agrisolutions/enviroflight/enviropro/` | `/vi/agrisolutions/enviroflight/enviropro/` |
+| EnviroFeed | `/agrisolutions/enviroflight/envirofeed/` | `/vi/agrisolutions/enviroflight/envirofeed/` |
+| EnviroOil | `/agrisolutions/enviroflight/envirooil/` | `/vi/agrisolutions/enviroflight/envirooil/` |
+| EnviroMeal | `/agrisolutions/enviroflight/enviromeal/` | `/vi/agrisolutions/enviroflight/enviromeal/` |
+| EnviroBug | `/agrisolutions/enviroflight/envirobug/` | `/vi/agrisolutions/enviroflight/envirobug/` |
 | Equipment Systems | `/agrisolutions/equipment-systems/` | `/vi/agrisolutions/equipment-systems/` |
 
 Every directory contains an `index.html`. AgriSolutions is temporarily empty. Enviroflight contains the product overview, and its EnviroPro card opens the dedicated product detail page. The language menu switches to the corresponding page in the other language.

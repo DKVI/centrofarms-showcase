@@ -5,8 +5,8 @@
   const page = document.body.dataset.page;
   const vi = document.body.dataset.language === 'vi';
   const prefix = vi ? 'vi/' : '';
-  const routes = { home: '', coffee: 'coffee/', poultry: 'poultry/', contact: 'contact/', naturals: 'naturals/', agrisolution: 'agrisolutions/', enviroflight: 'agrisolutions/enviroflight/', enviropro: 'agrisolutions/enviroflight/enviropro/', 'equipment-system': 'agrisolutions/equipment-systems/', 'equipment-systems': 'agrisolutions/equipment-systems/' };
-  const legacy = location.hash.match(/^#\/(home|coffee|poultry|contact|naturals|agrisolution|enviroflight|enviropro|equipment-systems?)$/);
+  const routes = { home: '', coffee: 'coffee/', poultry: 'poultry/', contact: 'contact/', naturals: 'naturals/', agrisolution: 'agrisolutions/', enviroflight: 'agrisolutions/enviroflight/', enviropro: 'agrisolutions/enviroflight/enviropro/', envirobug: 'agrisolutions/enviroflight/envirobug/', enviromeal: 'agrisolutions/enviroflight/enviromeal/', envirooil: 'agrisolutions/enviroflight/envirooil/', envirofeed: 'agrisolutions/enviroflight/envirofeed/', 'equipment-system': 'agrisolutions/equipment-systems/', 'equipment-systems': 'agrisolutions/equipment-systems/' };
+  const legacy = location.hash.match(/^#\/(home|coffee|poultry|contact|naturals|agrisolution|enviroflight|enviropro|envirobug|enviromeal|envirooil|envirofeed|equipment-systems?)$/);
   if (legacy) {
     location.replace(new URL(prefix + routes[legacy[1]], document.baseURI));
     return;
