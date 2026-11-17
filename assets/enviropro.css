@@ -107,3 +107,61 @@
   #page-agrisolution .agrisolution-copy { padding: 20px 0 0; }
   #page-agrisolution .agrisolution-visual { min-height: 350px; }
 }
+
+/* Other EnviroProducts, before the product enquiry section. */
+#page-agrisolution .enviro-related { padding-block: 48px; }
+#page-agrisolution .enviro-related h2 {
+  font: 400 clamp(30px, 3vw, 44px)/1.15 Georgia, serif;
+  margin: 0 0 26px;
+}
+.enviro-related-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+.enviro-related-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #eee9dc;
+  aspect-ratio: 4 / 3;
+}
+#page-agrisolution .enviro-related-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+.enviro-related-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 26px 16px;
+  background: linear-gradient(0deg, #17352ce6, #17352c66);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #f7f8e9;
+  font: 400 clamp(24px, 2vw, 32px)/1.15 Georgia, serif;
+  transition: transform .4s ease;
+}
+.enviro-related-card:focus-visible { outline: 3px solid #78936d; outline-offset: 4px; }
+@media (hover: hover) and (pointer: fine) {
+  .enviro-related-overlay { transform: translateY(100%); }
+  .enviro-related-card:hover .enviro-related-overlay,
+  .enviro-related-card:focus-visible .enviro-related-overlay { transform: none; }
+  #page-agrisolution .enviro-related-card:hover img { transform: scale(1.04); }
+}
+@media (max-width: 900px) {
+  .enviro-related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+}
+@media (max-width: 380px) {
+  .enviro-related-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #page-agrisolution .enviro-related-card img,
+  .enviro-related-overlay { transition: none; }
+}

@@ -5,8 +5,8 @@
   const page = document.body.dataset.page;
   const vi = document.body.dataset.language === 'vi';
   const prefix = vi ? 'vi/' : '';
-  const routes = { home: '', coffee: 'coffee/', poultry: 'poultry/', contact: 'contact/', agrisolution: 'agrisolutions/', enviroflight: 'agrisolutions/enviroflight/', enviropro: 'agrisolutions/enviroflight/enviropro/', 'equipment-system': 'agrisolutions/equipment-systems/', 'equipment-systems': 'agrisolutions/equipment-systems/' };
-  const legacy = location.hash.match(/^#\/(home|coffee|poultry|contact|agrisolution|enviroflight|enviropro|equipment-systems?)$/);
+  const routes = { home: '', coffee: 'coffee/', poultry: 'poultry/', contact: 'contact/', naturals: 'naturals/', agrisolution: 'agrisolutions/', enviroflight: 'agrisolutions/enviroflight/', enviropro: 'agrisolutions/enviroflight/enviropro/', 'equipment-system': 'agrisolutions/equipment-systems/', 'equipment-systems': 'agrisolutions/equipment-systems/' };
+  const legacy = location.hash.match(/^#\/(home|coffee|poultry|contact|naturals|agrisolution|enviroflight|enviropro|equipment-systems?)$/);
   if (legacy) {
     location.replace(new URL(prefix + routes[legacy[1]], document.baseURI));
     return;
@@ -39,7 +39,7 @@
     }
   }
   toggleMenu('#agrisolutionsGroup', '#agrisolutionsToggle', 'open', true);
-  toggleMenu('#naturalGroup', '#naturalToggle');
+  toggleMenu('#naturalGroup', '#naturalToggle', 'open', true);
   toggleMenu('#languageSwitch', '#languageToggle');
   toggleMenu('#nav', '#mobileToggle', 'show');
 
@@ -79,6 +79,7 @@
     dialog.setAttribute('aria-labelledby', heading.id); openDialog(dialog);
   }
   q('#openLetter')?.addEventListener('click', () => openDialog(q('#letterDialog')));
+  q('#openInvestmentContact')?.addEventListener('click', () => openDialog(q('#investmentContactDialog')));
   q('#coffeeProcess')?.addEventListener('click', event => {
     event.preventDefault();
     q('#coffee-collection')?.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' });
