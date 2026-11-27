@@ -176,7 +176,7 @@ main{min-height:calc(100vh - 205px)}.page{display:none;animation:rise .35s ease}
 .home-v4-left{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:12px 0}
 .home-v4-eyebrow{font-size:10px;font-weight:850;letter-spacing:2.4px;text-transform:uppercase;color:#7d967e;display:block;margin:0 0 12px}
 .home-v4-heading{font:normal clamp(32px,3.15vw,49px)/1.1 Georgia,serif;letter-spacing:-1.6px;color:#244833;margin:0 0 10px}
-.home-v4-sub{font-size:13px;color:#768577;line-height:1.65;max-width:370px;margin:0 0 23px}
+.home-v4-sub{font-size:13px;color:#768577;line-height:1.65;margin:0 0 23px}
 .home-v4 .portals{width:100%;max-width:none;display:flex;flex-direction:column;gap:13px;min-width:0;margin:0}
 .home-v4 .portal{display:flex;align-items:center;min-height:113px;padding:19px 20px;border-radius:20px;background:#fffefa;border:1px solid #dde4d7;box-shadow:0 7px 22px #1b412c0a;gap:17px}
 .home-v4 .portal .count{flex:0 0 48px;font-size:27px}
