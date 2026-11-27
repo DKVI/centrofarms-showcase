@@ -9,7 +9,7 @@ This private repository is the collaborative development copy of the CentroFarms
 
 ## Showcase pages
 
-Version: v27.11.26
+Version: v1
 
 Each page has its own directory and HTML document. Content is present in the HTML; shared styling and browser interactions live in `assets/`.
 
